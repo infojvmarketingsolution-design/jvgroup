@@ -84,6 +84,12 @@ export default function DynamicInquiryForm({
     });
   };
 
+  const activeWhatsapp = (
+    selectedEntity?.whatsappPhone ||
+    selectedEntity?.phone ||
+    whatsappNumber
+  ).replace(/[^0-9]/g, "");
+
   const whatsappMessage = encodeURIComponent(
     `Hello ${selectedEntity?.shortName || entityName},\nI am inquiring via jvgroupco.in regarding ${selectedService}.\nName: ${formData.name || "Client"}\nCompany: ${formData.company || "Not specified"}\nBudget: ${selectedBudget}\nScope: ${formData.projectScope || "Please share growth proposal."}`
   );
@@ -406,7 +412,7 @@ export default function DynamicInquiryForm({
             </button>
 
             <a
-              href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+              href={`https://wa.me/${activeWhatsapp}?text=${whatsappMessage}`}
               target="_blank"
               rel="noreferrer"
               className="w-full sm:w-auto px-6 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all whitespace-nowrap cursor-pointer"

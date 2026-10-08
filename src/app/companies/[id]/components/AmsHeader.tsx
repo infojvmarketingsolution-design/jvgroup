@@ -85,11 +85,11 @@ export default function AmsHeader() {
             </span>
             <span className="text-[#475569] hidden md:inline">|</span>
             <a
-              href="tel:+919909700606"
+              href="tel:+916354070709"
               className="text-[var(--color-jv-orange)] hover:underline flex items-center gap-1.5 transition-colors font-extrabold"
             >
               <Phone size={12} />
-              <span>Direct Desk: +91 99097 00606</span>
+              <span>Call &amp; WhatsApp: +91 63540 70709</span>
             </a>
           </div>
 
@@ -142,23 +142,23 @@ export default function AmsHeader() {
             <div className="hidden lg:flex items-center gap-1.5 xl:gap-2.5 shrink-0">
               {/* Direct Call with Full Phone Number */}
               <a
-                href="tel:+919909700606"
-                aria-label="Call +91 99097 00606"
+                href="tel:+916354070709"
+                aria-label="Call +91 63540 70709"
                 className="px-2.5 xl:px-3 py-2 rounded-xl bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#18191C] hover:text-[var(--color-jv-orange)] text-[11.5px] xl:text-xs font-bold border border-[#CBD5E1] flex items-center gap-1.5 transition-all whitespace-nowrap shadow-2xs cursor-pointer"
-                title="Call Domestic Desk: +91 99097 00606"
+                title="Call & WhatsApp: +91 63540 70709"
               >
                 <Phone size={13} className="text-[var(--color-jv-orange)] shrink-0" />
-                <span>+91 99097 00606</span>
+                <span>+91 63540 70709</span>
               </a>
 
               {/* Direct WhatsApp Action */}
               <a
-                href="https://wa.me/919909700606?text=Hello%20Ahmedabad%20Marketing%20Solution,%20I%20want%20to%20discuss%20local%20marketing%20for%20my%20business%20in%20Ahmedabad."
+                href="https://wa.me/916354070709?text=Hello%20Ahmedabad%20Marketing%20Solution,%20I%20want%20to%20discuss%20local%20marketing%20for%20my%20business%20in%20Ahmedabad."
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Chat on WhatsApp"
                 className="p-2 xl:p-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white flex items-center justify-center shadow-2xs transition-all cursor-pointer shrink-0"
-                title="WhatsApp Direct Inquiries"
+                title="WhatsApp Direct Inquiries (+91 63540 70709)"
               >
                 <MessageSquare size={15} />
               </a>
@@ -210,11 +210,11 @@ export default function AmsHeader() {
 
             <div className="mt-4 pt-4 border-t border-[#E2E8F0] flex flex-col gap-3">
               <a 
-                href="tel:+919909700606" 
+                href="tel:+916354070709" 
                 className="flex items-center gap-2 text-xs font-bold text-[#18191C] p-2.5 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1]"
               >
                 <Phone size={14} className="text-[var(--color-jv-orange)]" />
-                <span>India Direct: +91 99097 00606</span>
+                <span>Call &amp; WhatsApp: +91 63540 70709</span>
               </a>
               <Link
                 href="/companies/ahmedabad-marketing-solution/contact"

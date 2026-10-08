@@ -142,10 +142,10 @@ export default function AmsFooter() {
                 <Phone size={14} className="text-[var(--color-jv-orange)] shrink-0 mt-0.5" />
                 <div>
                   <span className="block text-[10px] uppercase font-bold text-[#94A3B8]">
-                    Direct India Hotline:
+                    Call &amp; WhatsApp Desk:
                   </span>
-                  <a href="tel:+919909700606" className="font-heading font-black text-sm text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors">
-                    +91 99097 00606
+                  <a href="tel:+916354070709" className="font-heading font-black text-sm text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors">
+                    +91 63540 70709
                   </a>
                 </div>
               </div>
@@ -154,10 +154,10 @@ export default function AmsFooter() {
                 <Mail size={14} className="text-[var(--color-jv-orange)] shrink-0 mt-0.5" />
                 <div>
                   <span className="block text-[10px] uppercase font-bold text-[#94A3B8]">
-                    Corporate Directorate:
+                    Official Email:
                   </span>
-                  <a href="mailto:info@jvgroupco.in" className="font-bold text-xs text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors">
-                    info@jvgroupco.in
+                  <a href="mailto:info@ahmedabadmarketingsolution.com" className="font-bold text-xs text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors">
+                    info@ahmedabadmarketingsolution.com
                   </a>
                 </div>
               </div>

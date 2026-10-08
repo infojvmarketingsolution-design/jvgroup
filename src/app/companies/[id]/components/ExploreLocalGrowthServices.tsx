@@ -567,7 +567,7 @@ export default function ExploreLocalGrowthServices({
 
                   <div className="flex items-center gap-2">
                     <a
-                      href={`https://wa.me/919909700606?text=${encodeURIComponent(
+                      href={`https://wa.me/916354070709?text=${encodeURIComponent(
                         `Hello AMS, I am inquiring about ${service.name} (${service.tag}). Please share details and pricing proposal.`
                       )}`}
                       target="_blank"

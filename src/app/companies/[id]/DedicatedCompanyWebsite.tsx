@@ -123,10 +123,10 @@ export default function DedicatedCompanyWebsite({ entity }: Props) {
     directDesk: {
       phone: entity.phone,
       phoneLabel: entity.phoneLabel,
-      email: JV_GROUP_META.email,
+      email: entity.email || JV_GROUP_META.email,
       workingHours: "Monday – Saturday: 9:30 AM – 7:30 PM IST",
       officeLocation: "Corporate Hub, Ahmedabad & Gandhinagar Corridor, Gujarat, India",
-      whatsappNumber: entity.phone.replace(/[^0-9]/g, "")
+      whatsappNumber: (entity.whatsappPhone || entity.phone).replace(/[^0-9]/g, "")
     }
   };
 

@@ -94,7 +94,7 @@ function DynamicContactContent() {
     setFormSubmitted(true);
   };
 
-  const cleanPhone = entity.phone.replace(/[^0-9]/g, "");
+  const cleanPhone = (entity.whatsappPhone || entity.phone).replace(/[^0-9]/g, "");
   const whatsappDeskUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(
     `Hello ${entity.shortName}, I am submitting an enterprise inquiry regarding ${selectedService || "Services"}.\nName: ${formData.name || "Client"}\nCompany: ${formData.companyName || "Organization"}\nTimeline: ${timeline}\nBudget: ${budgetRange || "To be discussed"}\nNotes: ${formData.notes || "Please share preliminary consultation."}`
   )}`;
@@ -167,10 +167,10 @@ function DynamicContactContent() {
                 Official Email
               </span>
               <a
-                href={`mailto:${JV_GROUP_META.email}`}
+                href={`mailto:${entity.email || JV_GROUP_META.email}`}
                 className="text-xs sm:text-sm font-black text-slate-900 hover:text-[var(--color-jv-orange)] transition-colors block break-all sm:break-normal"
               >
-                {JV_GROUP_META.email}
+                {entity.email || JV_GROUP_META.email}
               </a>
             </div>
           </div>
@@ -472,6 +472,14 @@ function DynamicContactContent() {
                     >
                       {entity.phone}
                     </a>
+                    {entity.secondaryPhone && (
+                      <a
+                        href={`tel:${entity.secondaryPhone}`}
+                        className="text-sm font-black text-slate-900 hover:text-[var(--color-jv-orange)] block transition-colors mt-1"
+                      >
+                        {entity.secondaryPhone}
+                      </a>
+                    )}
                   </div>
                 </div>
 
@@ -496,14 +504,40 @@ function DynamicContactContent() {
                   <Mail size={16} className="text-[var(--color-jv-orange)] shrink-0 mt-0.5" />
                   <div>
                     <span className="block text-[10px] uppercase font-bold text-slate-400">
-                      Corporate Email
+                      Official Email
                     </span>
                     <a
-                      href={`mailto:${JV_GROUP_META.email}`}
-                      className="text-sm font-black text-slate-900 hover:text-[var(--color-jv-orange)] block transition-colors mt-0.5"
+                      href={`mailto:${entity.email || JV_GROUP_META.email}`}
+                      className="text-sm font-black text-slate-900 hover:text-[var(--color-jv-orange)] block transition-colors mt-0.5 break-all"
                     >
-                      {JV_GROUP_META.email}
+                      {entity.email || JV_GROUP_META.email}
                     </a>
+                    {entity.supportEmail && (
+                      <div className="mt-2 pt-2 border-t border-slate-200/60">
+                        <span className="block text-[10px] uppercase font-bold text-slate-400">
+                          Support Email
+                        </span>
+                        <a
+                          href={`mailto:${entity.supportEmail}`}
+                          className="text-sm font-black text-slate-900 hover:text-[var(--color-jv-orange)] block transition-colors mt-0.5 break-all"
+                        >
+                          {entity.supportEmail}
+                        </a>
+                      </div>
+                    )}
+                    {entity.b2bEmail && (
+                      <div className="mt-2 pt-2 border-t border-slate-200/60">
+                        <span className="block text-[10px] uppercase font-bold text-slate-400">
+                          B2B Email
+                        </span>
+                        <a
+                          href={`mailto:${entity.b2bEmail}`}
+                          className="text-sm font-black text-slate-900 hover:text-[var(--color-jv-orange)] block transition-colors mt-0.5 break-all"
+                        >
+                          {entity.b2bEmail}
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
 

@@ -10,8 +10,8 @@ export default function AmsJsonLd() {
     "logo": "https://jvgroupco.in/logos/ahmedabad-marketing-solution.jpg",
     "image": "https://jvgroupco.in/images/about/ams-poster.png",
     "description": "Ahmedabad Marketing Solution is Gujarat's premier regional SME growth agency, providing Google Maps 3-Pack optimization, Meta Click-to-WhatsApp funnels, bilingual Gujarati-Hindi-English creative campaigns, and AI Generative Engine Optimization (GEO).",
-    "telephone": "+919909700606",
-    "email": "info@jvgroupco.in",
+    "telephone": "+916354070709",
+    "email": "info@ahmedabadmarketingsolution.com",
     "priceRange": "₹12000 - ₹50000 INR per month",
     "address": {
       "@type": "PostalAddress",

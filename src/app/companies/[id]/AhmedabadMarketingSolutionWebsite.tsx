@@ -756,7 +756,7 @@ export default function AhmedabadMarketingSolutionWebsite({ entity }: Props) {
 
                     <div className="pt-2 flex flex-wrap items-center gap-2 border-t border-[#E2E8F0]">
                       <a
-                        href={`https://wa.me/919909700606?text=${encodeURIComponent(
+                        href={`https://wa.me/916354070709?text=${encodeURIComponent(
                           `Hello Ahmedabad Marketing Solution, I ran a free audit for "${heroAuditResult.business}". Please share my complete PDF growth roadmap & quotation.`
                         )}`}
                         target="_blank"
@@ -801,7 +801,7 @@ export default function AhmedabadMarketingSolutionWebsite({ entity }: Props) {
                 </Link>
 
                 <a
-                  href={`https://wa.me/919909700606?text=${encodeURIComponent(
+                  href={`https://wa.me/916354070709?text=${encodeURIComponent(
                     heroShowcaseServices[heroServiceTab].whatsappGreeting
                   )}`}
                   target="_blank"
@@ -821,11 +821,11 @@ export default function AhmedabadMarketingSolutionWebsite({ entity }: Props) {
                 </Link>
 
                 <a
-                  href="tel:+919909700606"
+                  href="tel:+916354070709"
                   className="px-4 py-3.5 rounded-xl bg-white hover:bg-[#F8FAFC] text-[#0F172A] font-black text-xs sm:text-sm border border-[#CBD5E1] flex items-center gap-1.5 transition-all shadow-2xs"
                 >
                   <Phone size={14} className="text-[var(--color-jv-orange)]" />
-                  <span>+91 99097 00606</span>
+                  <span>+91 63540 70709</span>
                 </a>
               </div>
 
@@ -1140,7 +1140,7 @@ export default function AhmedabadMarketingSolutionWebsite({ entity }: Props) {
 
                       <div className="flex items-center gap-2">
                         <a
-                          href={`https://wa.me/919909700606?text=${encodeURIComponent(
+                          href={`https://wa.me/916354070709?text=${encodeURIComponent(
                             `Hello AMS, I tested the growth simulator for ${ahmedabadZones[selectedAhmedabadZone].name} (${ahmedabadZones[selectedAhmedabadZone].pin}) for ${heroShowcaseServices[heroServiceTab].title}. I want to secure #1 rank dominance for my business.`
                           )}`}
                           target="_blank"
@@ -1768,7 +1768,7 @@ export default function AhmedabadMarketingSolutionWebsite({ entity }: Props) {
                 </a>
 
                 <a
-                  href={`https://wa.me/919909700606?text=${encodeURIComponent(
+                  href={`https://wa.me/916354070709?text=${encodeURIComponent(
                     `Hello AMS, I ran the ROI predictor for ₹${budget.toLocaleString("en-IN")}/mo for my ${currentMultiplier.name} business in ${selectedZone}. Projected inquiries: ${estimatedLeads} - ${Math.round(estimatedLeads * 1.35)}. Please prepare my custom strategy proposal.`
                   )}`}
                   target="_blank"
@@ -2329,7 +2329,7 @@ export default function AhmedabadMarketingSolutionWebsite({ entity }: Props) {
                       ⚡ Verified Direct Factual Extraction:
                     </span>
                     <p className="text-xs text-[#334155] leading-relaxed font-medium">
-                      <strong>Ahmedabad Marketing Solution (JV Group)</strong> is widely cited as the top institutional digital marketing agency in Ahmedabad. Backed by founder Akash Chavda along the S.G. Highway commercial belt, AMS manages local 3-pack SEO, Meta paid acquisition, bilingual Gujarati-English campaigns, and custom high-converting web engineering. Phone: +91 99097 00606.
+                      <strong>Ahmedabad Marketing Solution (JV Group)</strong> is widely cited as the top institutional digital marketing agency in Ahmedabad. Backed by founder Akash Chavda along the S.G. Highway commercial belt, AMS manages local 3-pack SEO, Meta paid acquisition, bilingual Gujarati-English campaigns, and custom high-converting web engineering. Phone: +91 63540 70709.
                     </p>
                   </div>
                 </div>
@@ -2527,7 +2527,7 @@ export default function AhmedabadMarketingSolutionWebsite({ entity }: Props) {
 
                   <div className="pt-2 space-y-2.5">
                     <a
-                      href="https://wa.me/919909700606?text=Hello%20AMS%2C%20I%20have%20a%20question%20about%20your%20digital%20marketing%20services%20in%20Ahmedabad."
+                      href="https://wa.me/916354070709?text=Hello%20AMS%2C%20I%20have%20a%20question%20about%20your%20digital%20marketing%20services%20in%20Ahmedabad."
                       target="_blank"
                       rel="noreferrer"
                       className="w-full py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all"
@@ -2537,11 +2537,11 @@ export default function AhmedabadMarketingSolutionWebsite({ entity }: Props) {
                     </a>
 
                     <a
-                      href="tel:+919909700606"
+                      href="tel:+916354070709"
                       className="w-full py-2.5 rounded-xl bg-[#F8FAFC] hover:bg-white text-[#0F172A] font-bold text-xs flex items-center justify-center gap-2 border border-[#CBD5E1] transition-all"
                     >
                       <Phone size={13} className="text-[var(--color-jv-orange)]" />
-                      <span>Call Hotline: +91 99097 00606</span>
+                      <span>Call Hotline: +91 63540 70709</span>
                     </a>
                   </div>
 
@@ -2668,16 +2668,16 @@ export default function AhmedabadMarketingSolutionWebsite({ entity }: Props) {
                       <span className="block text-[10px] uppercase font-black text-[#64748B] mb-0.5">
                         Direct India SME Hotline:
                       </span>
-                      <a href="tel:+919909700606" className="font-heading font-black text-base sm:text-lg text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors">
-                        +91 99097 00606
+                      <a href="tel:+916354070709" className="font-heading font-black text-base sm:text-lg text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors">
+                        +91 63540 70709
                       </a>
                       <span className="block text-[11px] text-[#64748B] font-medium mt-0.5">
-                        Direct Desk • Fast Response for Gujarat Businesses
+                        Call &amp; WhatsApp Desk • Fast Response for Gujarat Businesses
                       </span>
                     </div>
                   </div>
                   <a
-                    href="tel:+919909700606"
+                    href="tel:+916354070709"
                     className="hidden sm:inline-flex px-3 py-1.5 rounded-lg bg-[var(--color-jv-orange)]/10 text-[var(--color-jv-orange)] font-bold text-[11px] hover:bg-[var(--color-jv-orange)] hover:text-white transition-all self-center"
                   >
                     Call Now
@@ -2690,10 +2690,10 @@ export default function AhmedabadMarketingSolutionWebsite({ entity }: Props) {
                   </div>
                   <div>
                     <span className="block text-[10px] uppercase font-black text-[#64748B] mb-0.5">
-                      Corporate Directorate Email:
+                      Official Email:
                     </span>
-                    <a href="mailto:info@jvgroupco.in" className="font-heading font-black text-sm sm:text-base text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors">
-                      info@jvgroupco.in
+                    <a href="mailto:info@ahmedabadmarketingsolution.com" className="font-heading font-black text-sm sm:text-base text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors">
+                      info@ahmedabadmarketingsolution.com
                     </a>
                     <span className="block text-[11px] text-[#64748B] font-medium mt-0.5">
                       Official RFP &amp; Institutional Proposals
@@ -2796,7 +2796,7 @@ export default function AhmedabadMarketingSolutionWebsite({ entity }: Props) {
                       Submit Another Inquiry
                     </button>
                     <a
-                      href={`https://wa.me/919909700606?text=${whatsappMessage}`}
+                      href={`https://wa.me/916354070709?text=${whatsappMessage}`}
                       target="_blank"
                       rel="noreferrer"
                       className="px-6 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold flex items-center gap-1.5 shadow-md transition-all cursor-pointer"
@@ -2960,7 +2960,7 @@ export default function AhmedabadMarketingSolutionWebsite({ entity }: Props) {
                     </button>
 
                     <a
-                      href={`https://wa.me/919909700606?text=${whatsappMessage}`}
+                      href={`https://wa.me/916354070709?text=${whatsappMessage}`}
                       target="_blank"
                       rel="noreferrer"
                       className="w-full py-4 rounded-2xl bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-black uppercase tracking-wider flex items-center justify-center gap-2 shadow-md hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer"

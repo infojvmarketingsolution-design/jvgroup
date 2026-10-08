@@ -57,7 +57,10 @@ export interface EntityLandingData {
   directDesk: {
     phone: string;
     phoneLabel: string;
+    secondaryPhone?: string;
     email: string;
+    supportEmail?: string;
+    b2bEmail?: string;
     workingHours: string;
     officeLocation: string;
     whatsappNumber: string;
@@ -208,12 +211,12 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
       }
     ],
     directDesk: {
-      phone: "+91 99097 00606",
-      phoneLabel: "Domestic India Desk",
-      email: "info@jvgroupco.in",
+      phone: "+91 63540 70709",
+      phoneLabel: "Call & WhatsApp: +91 63540 70709",
+      email: "info@ahmedabadmarketingsolution.com",
       workingHours: "Monday – Saturday: 9:30 AM – 7:00 PM IST",
       officeLocation: "B/201, Vitthal A Square, Motera Stadium Road, Motera, Ahmedabad 380005",
-      whatsappNumber: "919909700606"
+      whatsappNumber: "916354070709"
     }
   },
 
@@ -366,12 +369,13 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
       }
     ],
     directDesk: {
-      phone: "+91 99097 00606",
-      phoneLabel: "India Desk: +91 99097 00606 | Global: +44 7344556070",
-      email: "info@jvgroupco.in",
+      phone: "+91 63540 70709",
+      phoneLabel: "India Desk (Call & WhatsApp): +91 63540 70709",
+      email: "info@jvmarketingsolution.com",
+      supportEmail: "support@jvmarketingsolution.com",
       workingHours: "24/7 Global B2B Operations (EST / GMT / IST Overlap)",
       officeLocation: "International B2B Desk — UK, USA & Corporate Hub India",
-      whatsappNumber: "919909700606"
+      whatsappNumber: "916354070709"
     }
   },
 
@@ -517,11 +521,13 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
     ],
     directDesk: {
       phone: "+44 7344556070",
-      phoneLabel: "Global Office: +44 7344556070",
-      email: "info@jvgroupco.in",
+      phoneLabel: "Global Office: +44 7344556070 | WhatsApp: +91 63540 70709",
+      email: "sales@jvmarketingsolution.com",
+      supportEmail: "support@jvmarketingsolution.com",
+      b2bEmail: "business@jvmarketingsolution.com",
       workingHours: "24/7 International Desk (US, UK, Canada & Global Overlap)",
       officeLocation: "2 Earlham Street, London, WC2H 9RY, United Kingdom",
-      whatsappNumber: "447344556070"
+      whatsappNumber: "916354070709"
     }
   },
 
@@ -668,12 +674,12 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
       }
     ],
     directDesk: {
-      phone: "+91 99097 00606",
-      phoneLabel: "Tech Lab Desk: +91 99097 00606 | Global: +44 7344556070",
-      email: "info@jvgroupco.in",
+      phone: "+91 63540 70709",
+      phoneLabel: "Tech Lab Desk (Call & WhatsApp): +91 63540 70709",
+      email: "info@ekatotech.com",
       workingHours: "Monday – Saturday: 9:30 AM – 7:30 PM IST (24/7 NOC Active)",
       officeLocation: "Corporate Tech Lab, Ahmedabad & Gandhinagar Corridor, Gujarat, India",
-      whatsappNumber: "919909700606"
+      whatsappNumber: "916354070709"
     }
   },
 
@@ -818,12 +824,12 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
       }
     ],
     directDesk: {
-      phone: "+91 99097 00606",
-      phoneLabel: "Freight & Logistics Desk: +91 99097 00606 | Global: +44 7344556070",
-      email: "info@jvgroupco.in",
+      phone: "+91 63540 70709",
+      phoneLabel: "Freight & Logistics Desk (Call & WhatsApp): +91 63540 70709",
+      email: "contact@jvgroupco.in",
       workingHours: "Monday – Saturday: 9:00 AM – 7:30 PM IST (24/7 Cargo Operations)",
       officeLocation: "Logistics Hub — Ahmedabad & Major Port Liaisons (Mundra & Nhava Sheva)",
-      whatsappNumber: "919909700606"
+      whatsappNumber: "916354070709"
     }
   },
 
@@ -968,12 +974,13 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
       }
     ],
     directDesk: {
-      phone: "+91 99097 00606",
-      phoneLabel: "Property & Land Desk: +91 99097 00606",
-      email: "info@jvgroupco.in",
+      phone: "+91 63512 08891",
+      secondaryPhone: "+91 63540 70709",
+      phoneLabel: "Chandrakant Chavda: +91 63512 08891 | Property Desk: +91 63540 70709",
+      email: "contact@jvgroupco.in",
       workingHours: "Monday – Saturday: 10:00 AM – 7:30 PM IST",
       officeLocation: "S.G. Highway & Sindhu Bhavan Corridor, Ahmedabad, Gujarat, India",
-      whatsappNumber: "919909700606"
+      whatsappNumber: "916354070709"
     }
   },
 
@@ -1118,12 +1125,12 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
       }
     ],
     directDesk: {
-      phone: "+91 99097 00606",
-      phoneLabel: "IT Operations: +91 99097 00606 | Global: +44 7344556070",
-      email: "info@jvgroupco.in",
+      phone: "+91 63540 70709",
+      phoneLabel: "IT Operations (Call & WhatsApp): +91 63540 70709",
+      email: "contact@jvgroupco.in",
       workingHours: "24/7/365 NOC Operations (Always Active)",
       officeLocation: "Enterprise NOC & Server Lab, Ahmedabad & Gandhinagar, Gujarat, India",
-      whatsappNumber: "919909700606"
+      whatsappNumber: "916354070709"
     }
   },
 
@@ -1268,12 +1275,12 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
       }
     ],
     directDesk: {
-      phone: "+91 99097 00606",
-      phoneLabel: "Visa Counseling Desk: +91 99097 00606",
-      email: "info@jvgroupco.in",
+      phone: "+91 63540 70709",
+      phoneLabel: "Visa Counseling (Call & WhatsApp): +91 63540 70709",
+      email: "contact@jvgroupco.in",
       workingHours: "Monday – Saturday: 10:00 AM – 7:00 PM IST",
       officeLocation: "Corporate Overseas Center, Ahmedabad & Gandhinagar Corridor, Gujarat, India",
-      whatsappNumber: "919909700606"
+      whatsappNumber: "916354070709"
     }
   },
 
@@ -1418,12 +1425,12 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
       }
     ],
     directDesk: {
-      phone: "+91 99097 00606",
-      phoneLabel: "Platform Desk: +91 99097 00606",
-      email: "info@jvgroupco.in",
+      phone: "+91 63540 70709",
+      phoneLabel: "Platform Desk (Call & WhatsApp): +91 63540 70709",
+      email: "sales@campusdekho.in",
       workingHours: "Monday – Saturday: 9:30 AM – 7:00 PM IST",
       officeLocation: "Campus Dekho Headquarters — Ahmedabad & Gandhinagar, Gujarat, India",
-      whatsappNumber: "919909700606"
+      whatsappNumber: "916354070709"
     }
   },
 
@@ -1588,12 +1595,14 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
       }
     ],
     directDesk: {
-      phone: "+91 99097 00606",
-      phoneLabel: "WhatsApp Platform Desk: +91 99097 00606 | Global: +44 7344556070",
-      email: "info@jvgroupco.in",
+      phone: "+91 63597 00606",
+      secondaryPhone: "+91 63540 70709",
+      phoneLabel: "Call & WhatsApp: +91 63597 00606 / +91 63540 70709",
+      email: "info@wapipulse.com",
+      supportEmail: "support@wapipulse.com",
       workingHours: "Monday – Saturday: 9:30 AM – 7:30 PM IST (24/7 Platform Uptime)",
       officeLocation: "Corporate Tech Lab, Ahmedabad & Gandhinagar Corridor, Gujarat, India",
-      whatsappNumber: "919909700606"
+      whatsappNumber: "916354070709"
     }
   },
 
@@ -1758,12 +1767,14 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
       }
     ],
     directDesk: {
-      phone: "+91 99097 00606",
-      phoneLabel: "Helpdesk Platform Desk: +91 99097 00606 | Global: +44 7344556070",
-      email: "info@jvgroupco.in",
+      phone: "+91 63597 00606",
+      secondaryPhone: "+91 63540 70709",
+      phoneLabel: "Call & WhatsApp: +91 63597 00606 / +91 63540 70709",
+      email: "info@ticket4service.com",
+      supportEmail: "support@ticket4service.com",
       workingHours: "Monday – Saturday: 9:30 AM – 7:30 PM IST (24/7 Operations Desk)",
       officeLocation: "Corporate Tech Lab, Ahmedabad & Gandhinagar Corridor, Gujarat, India",
-      whatsappNumber: "919909700606"
+      whatsappNumber: "916354070709"
     }
   }
 };

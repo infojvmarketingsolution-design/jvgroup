@@ -220,7 +220,7 @@ export default function JvMarketingContactView({ entity }: Props) {
 
   // WhatsApp formatted URLs
   const globalPhoneRaw = "447344556070";
-  const indiaPhoneRaw = "919909700606";
+  const indiaPhoneRaw = "916354070709";
 
   const customWhatsAppText = encodeURIComponent(
     `Hello J.V Marketing Solution Private Limited (India) team,\n\nI would like to inquire about: *${selectedService}*.\n\n• Name: ${formData.name || "Client"}\n• Company: ${formData.companyName || "Enterprise"}\n• Website: ${formData.websiteUrl || "Not specified"}\n• Target Market: ${selectedGeo}\n• Estimated Budget: ${selectedBudget}\n• Notes: ${formData.requirements || "Please share preliminary proposal & schedule a consultation."}`
@@ -496,13 +496,13 @@ export default function JvMarketingContactView({ entity }: Props) {
                   </span>
                   <div className="flex items-center justify-between">
                     <a
-                      href="tel:+919909700606"
+                      href="tel:+916354070709"
                       className="text-xl font-heading font-black text-[#18191C] hover:text-[var(--color-jv-orange)] transition-colors"
                     >
-                      +91 99097 00606
+                      +91 63540 70709
                     </a>
                     <button
-                      onClick={() => copyToClipboard("+919909700606", "india")}
+                      onClick={() => copyToClipboard("+916354070709", "india")}
                       className="text-xs text-[#64748B] hover:text-[#18191C] p-1.5 rounded-lg hover:bg-slate-100 transition-colors"
                       title="Copy phone number"
                     >
@@ -510,7 +510,7 @@ export default function JvMarketingContactView({ entity }: Props) {
                     </button>
                   </div>
                   <span className="text-[11px] text-[#64748B] block pt-1">
-                    Operating Hours: Mon – Sat: 9:30 AM – 7:30 PM IST
+                    Operating Hours: Mon – Sat: 9:30 AM – 7:30 PM IST (Call &amp; WhatsApp)
                   </span>
                 </div>
               </div>
@@ -523,10 +523,10 @@ export default function JvMarketingContactView({ entity }: Props) {
                   className="w-full py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all"
                 >
                   <MessageSquare size={16} />
-                  <span>Chat on WhatsApp (+91 99097 00606)</span>
+                  <span>Chat on WhatsApp (+91 63540 70709)</span>
                 </a>
                 <a
-                  href="tel:+919909700606"
+                  href="tel:+916354070709"
                   className="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#18191C] text-xs font-bold flex items-center justify-center gap-2 transition-all"
                 >
                   <PhoneCall size={14} />
@@ -555,25 +555,49 @@ export default function JvMarketingContactView({ entity }: Props) {
                   Submit detailed technical requirements, analytics access requests, RFP documentation, or procurement guidelines for formal quotes.
                 </p>
 
-                <div className="p-4 rounded-2xl bg-white border border-[#E2E8F0] mb-5 space-y-1">
-                  <span className="text-[10px] uppercase font-bold text-[#64748B] block">
-                    Corporate Inquiries Directorate
-                  </span>
-                  <div className="flex items-center justify-between">
-                    <a
-                      href={`mailto:${JV_GROUP_META.email}`}
-                      className="text-base font-heading font-black text-[#18191C] hover:text-[var(--color-jv-orange)] transition-colors break-all"
-                    >
-                      {JV_GROUP_META.email}
-                    </a>
-                    <button
-                      onClick={() => copyToClipboard(JV_GROUP_META.email, "email")}
-                      className="text-xs text-[#64748B] hover:text-[#18191C] p-1.5 rounded-lg hover:bg-slate-100 transition-colors"
-                      title="Copy email address"
-                    >
-                      {copiedDesk === "email" ? <Check size={14} className="text-emerald-600" /> : <Copy size={14} />}
-                    </button>
+                <div className="p-4 rounded-2xl bg-white border border-[#E2E8F0] mb-5 space-y-2">
+                  <div>
+                    <span className="text-[10px] uppercase font-bold text-[#64748B] block mb-0.5">
+                      Official Directorate Email
+                    </span>
+                    <div className="flex items-center justify-between">
+                      <a
+                        href="mailto:info@jvmarketingsolution.com"
+                        className="text-sm font-heading font-black text-[#18191C] hover:text-[var(--color-jv-orange)] transition-colors break-all"
+                      >
+                        info@jvmarketingsolution.com
+                      </a>
+                      <button
+                        onClick={() => copyToClipboard("info@jvmarketingsolution.com", "email")}
+                        className="text-xs text-[#64748B] hover:text-[#18191C] p-1 rounded-lg hover:bg-slate-100 transition-colors"
+                        title="Copy email address"
+                      >
+                        {copiedDesk === "email" ? <Check size={14} className="text-emerald-600" /> : <Copy size={14} />}
+                      </button>
+                    </div>
                   </div>
+
+                  <div className="pt-2 border-t border-slate-100">
+                    <span className="text-[10px] uppercase font-bold text-[#64748B] block mb-0.5">
+                      Client Support Desk
+                    </span>
+                    <div className="flex items-center justify-between">
+                      <a
+                        href="mailto:support@jvmarketingsolution.com"
+                        className="text-sm font-heading font-black text-[#18191C] hover:text-[var(--color-jv-orange)] transition-colors break-all"
+                      >
+                        support@jvmarketingsolution.com
+                      </a>
+                      <button
+                        onClick={() => copyToClipboard("support@jvmarketingsolution.com", "support-email")}
+                        className="text-xs text-[#64748B] hover:text-[#18191C] p-1 rounded-lg hover:bg-slate-100 transition-colors"
+                        title="Copy support email address"
+                      >
+                        {copiedDesk === "support-email" ? <Check size={14} className="text-emerald-600" /> : <Copy size={14} />}
+                      </button>
+                    </div>
+                  </div>
+
                   <span className="text-[11px] text-[#64748B] block pt-1">
                     Formal SLA Proposal Turnaround: 24 – 48 Hours
                   </span>
@@ -582,7 +606,7 @@ export default function JvMarketingContactView({ entity }: Props) {
 
               <div className="space-y-2.5 pt-2">
                 <a
-                  href={`mailto:${JV_GROUP_META.email}?subject=${encodeURIComponent(`Enterprise Proposal Inquiry for J.V Marketing Solution Private Limited (India)`)}`}
+                  href={`mailto:info@jvmarketingsolution.com?subject=${encodeURIComponent(`Enterprise Proposal Inquiry for J.V Marketing Solution Private Limited (India)`)}`}
                   className="w-full py-3 px-4 rounded-xl bg-[#18191C] hover:bg-[var(--color-jv-orange)] text-white text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all"
                 >
                   <Mail size={16} />

@@ -154,9 +154,14 @@ export default function CompanyFooter({ entity }: Props) {
                   <span className="block text-[10px] uppercase font-bold text-[#94A3B8]">
                     {entity.phoneLabel || "Direct Hotline"}:
                   </span>
-                  <a href={`tel:${entity.phone}`} className="font-heading font-black text-sm text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors">
+                  <a href={`tel:${entity.phone}`} className="font-heading font-black text-sm text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors block">
                     {entity.phone}
                   </a>
+                  {entity.secondaryPhone && (
+                    <a href={`tel:${entity.secondaryPhone}`} className="font-heading font-black text-sm text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors block mt-0.5">
+                      {entity.secondaryPhone}
+                    </a>
+                  )}
                 </div>
               </div>
 
@@ -164,11 +169,31 @@ export default function CompanyFooter({ entity }: Props) {
                 <Mail size={14} className="text-[var(--color-jv-orange)] shrink-0 mt-0.5" />
                 <div>
                   <span className="block text-[10px] uppercase font-bold text-[#94A3B8]">
-                    Corporate Email:
+                    Official Email:
                   </span>
-                  <a href={`mailto:${JV_GROUP_META.email}`} className="font-bold text-xs text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors">
-                    {JV_GROUP_META.email}
+                  <a href={`mailto:${entity.email || JV_GROUP_META.email}`} className="font-bold text-xs text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors block">
+                    {entity.email || JV_GROUP_META.email}
                   </a>
+                  {entity.supportEmail && (
+                    <div className="mt-1">
+                      <span className="block text-[10px] uppercase font-bold text-[#94A3B8]">
+                        Support Email:
+                      </span>
+                      <a href={`mailto:${entity.supportEmail}`} className="font-bold text-xs text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors block">
+                        {entity.supportEmail}
+                      </a>
+                    </div>
+                  )}
+                  {entity.b2bEmail && (
+                    <div className="mt-1">
+                      <span className="block text-[10px] uppercase font-bold text-[#94A3B8]">
+                        B2B Email:
+                      </span>
+                      <a href={`mailto:${entity.b2bEmail}`} className="font-bold text-xs text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors block">
+                        {entity.b2bEmail}
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
 

@@ -23,6 +23,12 @@ export interface BusinessEntity {
   primaryCountries: string[];
   phone: string;
   phoneLabel: string;
+  secondaryPhone?: string;
+  secondaryPhoneLabel?: string;
+  whatsappPhone?: string;
+  email?: string;
+  supportEmail?: string;
+  b2bEmail?: string;
   websiteUrl?: string;
   category: "marketing" | "tech" | "logistics" | "realestate" | "itinfrastructure" | "education";
   categoryLabel: string;
@@ -106,8 +112,10 @@ export const BUSINESS_ENTITIES: BusinessEntity[] = [
     positioning: "End-to-End Marketing Support Provider for SMEs",
     marketFocus: "India (Regional Business Clients)",
     primaryCountries: ["India (Gujarat & Western India)"],
-    phone: "+91 99097 00606",
-    phoneLabel: "Domestic India Desk",
+    phone: "+91 63540 70709",
+    phoneLabel: "Call & WhatsApp: +91 63540 70709",
+    whatsappPhone: "+91 63540 70709",
+    email: "info@ahmedabadmarketingsolution.com",
     category: "marketing",
     categoryLabel: "Marketing & Advertising",
     badge: "Regional SME Growth",
@@ -167,8 +175,11 @@ export const BUSINESS_ENTITIES: BusinessEntity[] = [
     positioning: "Rank #1 on Google & AI Platforms with Generative Engine Optimization (GEO)",
     marketFocus: "USA, UK, Canada (B2B Priority) & Pan-India Corporate",
     primaryCountries: ["USA", "UK", "Canada", "India", "Global"],
-    phone: "+91 99097 00606",
-    phoneLabel: "India Desk: +91 99097 00606 | Global: +44 7344556070",
+    phone: "+91 63540 70709",
+    phoneLabel: "India Desk (Call & WhatsApp): +91 63540 70709",
+    whatsappPhone: "+91 63540 70709",
+    email: "info@jvmarketingsolution.com",
+    supportEmail: "support@jvmarketingsolution.com",
     category: "marketing",
     categoryLabel: "AI SEO & Growth Marketing",
     badge: "AI SEO & GEO Pioneer",
@@ -231,7 +242,11 @@ export const BUSINESS_ENTITIES: BusinessEntity[] = [
     marketFocus: "USA, UK, Canada (B2B Priority)",
     primaryCountries: ["USA", "UK", "Canada", "Europe", "Middle East"],
     phone: "+44 7344556070",
-    phoneLabel: "Global Office: +44 7344556070",
+    phoneLabel: "Global Office: +44 7344556070 | WhatsApp: +91 63540 70709",
+    whatsappPhone: "+91 63540 70709",
+    email: "sales@jvmarketingsolution.com",
+    supportEmail: "support@jvmarketingsolution.com",
+    b2bEmail: "business@jvmarketingsolution.com",
     category: "marketing",
     categoryLabel: "Marketing & Advertising",
     badge: "Global Enterprise Brand",
@@ -283,8 +298,10 @@ export const BUSINESS_ENTITIES: BusinessEntity[] = [
     positioning: "Full-Stack Digital Product & Platform Developer",
     marketFocus: "Global B2B Technology Clients",
     primaryCountries: ["Global", "USA", "UK", "Canada", "India"],
-    phone: "+91 99097 00606",
-    phoneLabel: "Tech Lab: +91 99097 00606 | Global: +44 7344556070",
+    phone: "+91 63540 70709",
+    phoneLabel: "Tech Lab (Call & WhatsApp): +91 63540 70709",
+    whatsappPhone: "+91 63540 70709",
+    email: "info@ekatotech.com",
     websiteUrl: "https://ekatotech.com",
     category: "tech",
     categoryLabel: "Technology & Software",
@@ -369,8 +386,10 @@ export const BUSINESS_ENTITIES: BusinessEntity[] = [
     positioning: "End-to-End International Cargo & Supply Chain Partner",
     marketFocus: "International Trade Businesses & Importers/Exporters",
     primaryCountries: ["Global Trade Routes", "USA", "UK", "Canada", "UAE", "Asia", "Europe"],
-    phone: "+91 99097 00606",
-    phoneLabel: "Logistics Desk: +91 99097 00606 | Global: +44 7344556070",
+    phone: "+91 63540 70709",
+    phoneLabel: "Logistics Desk (Call & WhatsApp): +91 63540 70709",
+    whatsappPhone: "+91 63540 70709",
+    email: "contact@jvgroupco.in",
     category: "logistics",
     categoryLabel: "Freight & Logistics",
     badge: "Global Cargo Partner",
@@ -422,8 +441,11 @@ export const BUSINESS_ENTITIES: BusinessEntity[] = [
     positioning: "Regional Property Acquisition & Leasing Partner",
     marketFocus: "Ahmedabad & Gandhinagar (Gujarat, India)",
     primaryCountries: ["India (Ahmedabad, Gandhinagar, GIFT City Corridor)"],
-    phone: "+91 99097 00606",
-    phoneLabel: "Property Desk: +91 99097 00606",
+    phone: "+91 63512 08891",
+    secondaryPhone: "+91 63540 70709",
+    phoneLabel: "Chandrakant Chavda: +91 63512 08891 | Desk (Call & WhatsApp): +91 63540 70709",
+    whatsappPhone: "+91 63540 70709",
+    email: "contact@jvgroupco.in",
     category: "realestate",
     categoryLabel: "Real Estate & Land",
     badge: "Ahmedabad & Gandhinagar",
@@ -474,8 +496,10 @@ export const BUSINESS_ENTITIES: BusinessEntity[] = [
     positioning: "End-to-End IT Infrastructure & Support Provider",
     marketFocus: "Business & Enterprise Clients (India & Global)",
     primaryCountries: ["India", "USA", "UK", "Canada"],
-    phone: "+91 99097 00606",
-    phoneLabel: "IT Operations: +91 99097 00606 | Global: +44 7344556070",
+    phone: "+91 63540 70709",
+    phoneLabel: "IT Operations (Call & WhatsApp): +91 63540 70709",
+    whatsappPhone: "+91 63540 70709",
+    email: "contact@jvgroupco.in",
     category: "itinfrastructure",
     categoryLabel: "IT Infrastructure",
     badge: "Enterprise IT Backbone",
@@ -526,8 +550,10 @@ export const BUSINESS_ENTITIES: BusinessEntity[] = [
     positioning: "Trusted Global Education, Master Programs & Work Visa Partner",
     marketFocus: "Students & Professionals in India heading to UK, USA, Canada, Australia, NZ & Europe",
     primaryCountries: ["UK", "USA", "Canada", "Australia", "New Zealand", "Europe (Overall)"],
-    phone: "+91 99097 00606",
-    phoneLabel: "Visa Counseling: +91 99097 00606",
+    phone: "+91 63540 70709",
+    phoneLabel: "Visa Counseling (Call & WhatsApp): +91 63540 70709",
+    whatsappPhone: "+91 63540 70709",
+    email: "contact@jvgroupco.in",
     category: "education",
     categoryLabel: "Overseas & Education",
     badge: "Study & Work Abroad",
@@ -579,8 +605,10 @@ export const BUSINESS_ENTITIES: BusinessEntity[] = [
     positioning: "Student-to-College Discovery & Admission Platform",
     marketFocus: "Students & Colleges Across India",
     primaryCountries: ["India (National Coverage)"],
-    phone: "+91 99097 00606",
-    phoneLabel: "Platform Desk: +91 99097 00606",
+    phone: "+91 63540 70709",
+    phoneLabel: "Platform Desk (Call & WhatsApp): +91 63540 70709",
+    whatsappPhone: "+91 63540 70709",
+    email: "sales@campusdekho.in",
     websiteUrl: "https://campusdekho.in",
     category: "education",
     categoryLabel: "Overseas & Education",
@@ -626,8 +654,12 @@ export const BUSINESS_ENTITIES: BusinessEntity[] = [
     positioning: "Official Meta WhatsApp Business Cloud API & Conversational Automation",
     marketFocus: "Global B2B, E-Commerce, Real Estate, Education & Enterprise Brands",
     primaryCountries: ["Global", "India", "USA", "UK", "UAE", "Canada", "Singapore"],
-    phone: "+91 99097 00606",
-    phoneLabel: "WhatsApp Solutions: +91 99097 00606 | Global: +44 7344556070",
+    phone: "+91 63597 00606",
+    secondaryPhone: "+91 63540 70709",
+    phoneLabel: "Platform Desk: +91 63597 00606 / +91 63540 70709 (Call & WhatsApp)",
+    whatsappPhone: "+91 63540 70709",
+    email: "info@wapipulse.com",
+    supportEmail: "support@wapipulse.com",
     websiteUrl: "https://wapipulse.com",
     category: "tech",
     categoryLabel: "Proprietary SaaS & Conversational AI",
@@ -680,8 +712,12 @@ export const BUSINESS_ENTITIES: BusinessEntity[] = [
     positioning: "Enterprise Omnichannel Helpdesk & Automated Ticket Operations Platform",
     marketFocus: "IT MSPs, Software Companies, Corporate Operations, Field Service & E-Commerce",
     primaryCountries: ["Global", "USA", "UK", "India", "Canada", "Europe", "Australia"],
-    phone: "+91 99097 00606",
-    phoneLabel: "Helpdesk Platform: +91 99097 00606 | Global: +44 7344556070",
+    phone: "+91 63597 00606",
+    secondaryPhone: "+91 63540 70709",
+    phoneLabel: "Helpdesk Platform: +91 63597 00606 / +91 63540 70709 (Call & WhatsApp)",
+    whatsappPhone: "+91 63540 70709",
+    email: "info@ticket4service.com",
+    supportEmail: "support@ticket4service.com",
     websiteUrl: "https://ticket4service.com",
     category: "tech",
     categoryLabel: "Enterprise Operations & Helpdesk SaaS",
@@ -833,7 +869,7 @@ export const WORLDWIDE_HIGH_DEMAND_SERVICES: WorldwideDemandService[] = [
       "Future-proof search optimization moving beyond traditional blue links. We optimize entity graphs, schema matrices, and direct answer vaults so ChatGPT, Google AI Overviews, Perplexity, and Claude cite your brand as the #1 authority.",
     leadSubsidiary: "Ahmedabad Marketing Solution & J.V Marketing Solution Private Limited (India)",
     subsidiaryUrl: "/ai-seo",
-    phoneDesk: "Domestic: +91 99097 00606 | Global: +44 7344556070",
+    phoneDesk: "Call & WhatsApp: +91 63540 70709 | Global: +44 7344556070",
     roiImpact: "Citations across 5+ frontier LLMs + 3.8x higher conversion than organic links"
   },
   {
@@ -854,7 +890,7 @@ export const WORLDWIDE_HIGH_DEMAND_SERVICES: WorldwideDemandService[] = [
       "Enterprise digital marketing combining algorithmic media buying, behavioural psychographics, and direct WhatsApp / CRM integrations to generate qualified international business sales pipelines.",
     leadSubsidiary: "J.V Marketing Solutions Limited (Global)",
     subsidiaryUrl: "/companies/jv-marketing-solutions-ltd-global",
-    phoneDesk: "Global: +44 7344556070 | India: +91 99097 00606",
+    phoneDesk: "Global: +44 7344556070 | WhatsApp: +91 63540 70709",
     roiImpact: "Average 4.2x - 6.5x Return on Ad Spend (ROAS) across international campaigns"
   },
   {
@@ -875,7 +911,7 @@ export const WORLDWIDE_HIGH_DEMAND_SERVICES: WorldwideDemandService[] = [
       "Full-stack digital engineering studio building resilient web applications, mobile platforms, bespoke enterprise ERPs, and automated workflows. Also creators of 4 proprietary SaaS products including Wapipulse.",
     leadSubsidiary: "Ekato Tech (ekatotech.com)",
     subsidiaryUrl: "/companies/ekato-tech",
-    phoneDesk: "Tech Desk: +91 99097 00606 | Global: +44 7344556070",
+    phoneDesk: "Tech Desk (Call & WhatsApp): +91 63540 70709",
     roiImpact: "Up to 60% engineering cost savings with enterprise-grade SLA code delivery"
   },
   {
@@ -895,7 +931,7 @@ export const WORLDWIDE_HIGH_DEMAND_SERVICES: WorldwideDemandService[] = [
       "Enterprise IT systems operations ensuring zero unplanned downtime. Deploying scalable Linux/Windows cloud clusters, next-gen hardware firewalls, proactive monitoring, and certified network maintenance.",
     leadSubsidiary: "J.V IT Infrastructure Management",
     subsidiaryUrl: "/companies/jv-it-infrastructure-management",
-    phoneDesk: "IT Operations: +91 99097 00606 | Global: +44 7344556070",
+    phoneDesk: "IT Operations (Call & WhatsApp): +91 63540 70709",
     roiImpact: "99.99% system availability SLA and zero data loss architecture"
   },
   {
@@ -915,7 +951,7 @@ export const WORLDWIDE_HIGH_DEMAND_SERVICES: WorldwideDemandService[] = [
       "Physical supply chain gateway connecting India's manufacturing belts to worldwide ports. Handling full container maritime freight, temperature-controlled air cargo, port terminal logistics, and DGFT compliance.",
     leadSubsidiary: "J.V Infinity (Import Export - Freight & Logistics)",
     subsidiaryUrl: "/companies/jv-infinity-import-export",
-    phoneDesk: "Logistics Desk: +91 99097 00606 | Global: +44 7344556070",
+    phoneDesk: "Logistics Desk (Call & WhatsApp): +91 63540 70709",
     roiImpact: "Guaranteed shipping schedules with transparent end-to-end freight visibility"
   },
   {
@@ -935,7 +971,7 @@ export const WORLDWIDE_HIGH_DEMAND_SERVICES: WorldwideDemandService[] = [
       "Strategic property advisory for corporate headquarters, industrial land parcels in Sanand & Changodar, Grade-A offices along Sindhu Bhavan & S.G. Highway, and high-yield NRI real estate portfolios.",
     leadSubsidiary: "J.V Real Estate",
     subsidiaryUrl: "/companies/jv-real-estate",
-    phoneDesk: "Property Hotline: +91 99097 00606",
+    phoneDesk: "Chandrakant Chavda: +91 63512 08891 | Desk: +91 63540 70709",
     roiImpact: "High capital appreciation corridors with 100% legal title diligence"
   },
   {
@@ -955,7 +991,7 @@ export const WORLDWIDE_HIGH_DEMAND_SERVICES: WorldwideDemandService[] = [
       "International higher education advisory helping thousands of students enroll in prestigious Master programs and secure official study/work permits across tier-1 global universities with end-to-end guidance.",
     leadSubsidiary: "J.V OVERSEAS & Campus Dekho",
     subsidiaryUrl: "/companies/jv-overseas",
-    phoneDesk: "Admissions Desk: +91 99097 00606",
+    phoneDesk: "Admissions Desk (Call & WhatsApp): +91 63540 70709",
     roiImpact: "Consistently high visa success rate with direct institutional liaisons"
   },
   {
@@ -974,7 +1010,7 @@ export const WORLDWIDE_HIGH_DEMAND_SERVICES: WorldwideDemandService[] = [
       "Proprietary in-house platforms developed by Ekato Tech: Wapipulse.com (Official WhatsApp API) and Ticket4service.com (Enterprise helpdesk) enabling automated customer engagement and sales follow-ups.",
     leadSubsidiary: "Ekato Tech (Wapipulse.com & Ticket4service.com)",
     subsidiaryUrl: "/companies/ekato-tech",
-    phoneDesk: "Platform Desk: +91 99097 00606 | Global: +44 7344556070",
+    phoneDesk: "Call & WhatsApp: +91 63597 00606 / +91 63540 70709",
     roiImpact: "Over 85% open rates and 3x faster customer response velocity"
   }
 ];

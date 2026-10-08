@@ -78,12 +78,12 @@ export default function JvMarketingSolutionWebsite({ entity }: Props) {
     specialFeature: { title: "", subtitle: "", badge: "", description: "", items: [] },
     faqs: [],
     directDesk: {
-      phone: "+91 99097 00606",
-      phoneLabel: "India Desk: +91 99097 00606 | Global: +44 7344556070",
-      email: JV_GROUP_META.email,
+      phone: "+91 63540 70709",
+      phoneLabel: "India Desk (Call & WhatsApp): +91 63540 70709",
+      email: "info@jvmarketingsolution.com",
       workingHours: "24/7 Global B2B Operations",
       officeLocation: "Corporate Hub India & International B2B Desk",
-      whatsappNumber: "919909700606"
+      whatsappNumber: "916354070709"
     }
   };
 
@@ -358,12 +358,12 @@ export default function JvMarketingSolutionWebsite({ entity }: Props) {
                 {/* Direct Hotlines (India & Global) */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   <a
-                    href="tel:+919909700606"
+                    href="tel:+916354070709"
                     className="px-3 py-2.5 rounded-xl bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#18191C] hover:text-[var(--color-jv-orange)] font-bold text-xs uppercase tracking-wider border border-[#CBD5E1] flex items-center justify-center gap-2 transition-all shadow-2xs"
-                    title="Call Domestic Corporate Desk in India"
+                    title="Call India Desk (Call & WhatsApp): +91 63540 70709"
                   >
                     <Phone size={13} className="text-[var(--color-jv-orange)] shrink-0" />
-                    <span>India: +91 99097 00606</span>
+                    <span>India: +91 63540 70709</span>
                   </a>
 
                   <a
