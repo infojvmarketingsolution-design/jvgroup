@@ -37,9 +37,21 @@ import {
   ENTITY_HERO_SHOWCASE_DATA,
   HeroServiceImageItem,
 } from "@/data/entityHeroShowcaseData";
-import Hero3DCanvas from "@/components/3d/Hero3DCanvas";
-import Hero3DBackground from "@/components/3d/Hero3DBackground";
+import dynamic from "next/dynamic";
 import Tilt3DCard from "@/components/3d/Tilt3DCard";
+
+const Hero3DCanvas = dynamic(() => import("@/components/3d/Hero3DCanvas"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full flex items-center justify-center bg-[#07090E]">
+      <div className="w-8 h-8 rounded-full border-2 border-orange-500/30 border-t-orange-500 animate-spin" />
+    </div>
+  ),
+});
+
+const Hero3DBackground = dynamic(() => import("@/components/3d/Hero3DBackground"), {
+  ssr: false,
+});
 
 interface Props {
   entity: BusinessEntity;
