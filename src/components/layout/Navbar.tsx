@@ -13,7 +13,8 @@ import {
   Layers, 
   ArrowUpRight,
   Phone,
-  Globe2
+  Globe2,
+  Sparkles
 } from "lucide-react";
 import { BUSINESS_ENTITIES, JV_GROUP_META } from "@/data/businesses";
 
@@ -88,7 +89,18 @@ export default function Navbar() {
           <span className="font-semibold text-[#18191C]">jvgroupco.in</span>
         </div>
 
-        <div className="flex items-center gap-3.5 font-semibold shrink-0">
+        <div className="flex items-center gap-3 font-semibold shrink-0">
+          <Link
+            href="/ai-seo"
+            className="group px-2.5 py-0.5 rounded-full bg-[#FFF4ED] hover:bg-[var(--color-jv-orange)] text-[var(--color-jv-orange)] hover:text-white border border-[var(--color-jv-orange)]/30 transition-all flex items-center gap-1.5 text-[10px] font-bold shadow-2xs"
+          >
+            <Sparkles size={11} className="text-[var(--color-jv-orange)] group-hover:text-white transition-colors" />
+            <span>AI SEO / GEO</span>
+            <span className="text-[8px] font-black uppercase px-1 py-0.2 rounded bg-[var(--color-jv-orange)] text-white group-hover:bg-white group-hover:text-[var(--color-jv-orange)] transition-colors">
+              AI
+            </span>
+          </Link>
+          <span className="text-[#CBD5E1]">|</span>
           <a
             href="tel:+447344556070"
             className="hover:text-[var(--color-jv-orange)] transition-colors flex items-center gap-1.5"
@@ -276,15 +288,6 @@ export default function Navbar() {
             Services
           </Link>
 
-          <Link
-            href="/ai-seo"
-            className="px-2.5 xl:px-3 py-1.5 rounded-lg text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all flex items-center gap-1 whitespace-nowrap"
-          >
-            <span>AI SEO / GEO</span>
-            <span className="text-[8px] font-black uppercase px-1 py-0.2 rounded bg-[var(--color-jv-orange)] text-white">
-              AI
-            </span>
-          </Link>
 
           <Link
             href="/global"
