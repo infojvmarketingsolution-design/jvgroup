@@ -115,7 +115,7 @@ export default function SeasonalAtmosphere({
 }: SeasonalAtmosphereProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const isVisibleRef = useRef<boolean>(true);
+  const isVisibleRef = useRef<boolean>(false);
   const mouseRef = useRef<{ x: number; y: number; active: boolean; vx: number; vy: number }>({
     x: -999,
     y: -999,
@@ -136,12 +136,26 @@ export default function SeasonalAtmosphere({
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let animId: number;
+    let animId = 0;
+    let isRunning = false;
+
+    const startLoop = () => {
+      if (!isRunning && isVisibleRef.current) {
+        isRunning = true;
+        animId = requestAnimationFrame(render);
+      }
+    };
+
+    const stopLoop = () => {
+      isRunning = false;
+      cancelAnimationFrame(animId);
+    };
+
     let width = 0;
     let height = 0;
     let lastTime = performance.now();
 
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
 
     const resize = () => {
       if (!container || !canvas) return;
@@ -154,6 +168,7 @@ export default function SeasonalAtmosphere({
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
 
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.scale(dpr, dpr);
     };
 
@@ -164,8 +179,13 @@ export default function SeasonalAtmosphere({
     const observer = new IntersectionObserver(
       ([entry]) => {
         isVisibleRef.current = entry.isIntersecting;
+        if (entry.isIntersecting) {
+          startLoop();
+        } else {
+          stopLoop();
+        }
       },
-      { threshold: 0.05 }
+      { threshold: 0.02, rootMargin: "100px 0px 100px 0px" }
     );
     observer.observe(container);
 
@@ -174,9 +194,8 @@ export default function SeasonalAtmosphere({
 
     const onMouseMove = (e: MouseEvent) => {
       if (!container || !interactive) return;
-      const rect = container.getBoundingClientRect();
-      const currentX = e.clientX - rect.left;
-      const currentY = e.clientY - rect.top;
+      const currentX = (e as any).offsetX !== undefined ? (e as any).offsetX : e.clientX - container.offsetLeft;
+      const currentY = (e as any).offsetY !== undefined ? (e as any).offsetY : e.clientY - container.offsetTop;
 
       if (lastMouseX !== -999) {
         mouseRef.current.vx = (currentX - lastMouseX) * 0.35;
@@ -200,8 +219,8 @@ export default function SeasonalAtmosphere({
       lastMouseY = -999;
     };
 
-    window.addEventListener("mousemove", onMouseMove, { passive: true });
-    window.addEventListener("mouseleave", onMouseLeave, { passive: true });
+    container.addEventListener("mousemove", onMouseMove, { passive: true });
+    container.addEventListener("mouseleave", onMouseLeave, { passive: true });
 
     const intensityMult = intensity === "subtle" ? 0.7 : intensity === "vibrant" ? 1.35 : 1.0;
 
@@ -1078,9 +1097,12 @@ export default function SeasonalAtmosphere({
     // RENDER LOOP
     // ==========================================
 
-    const render = (time: number) => {
+    function render(time: number) {
+      if (!ctx || !isVisibleRef.current) {
+        isRunning = false;
+        return;
+      }
       animId = requestAnimationFrame(render);
-      if (!isVisibleRef.current) return;
 
       lastTime = time;
       ctx.clearRect(0, 0, width, height);
@@ -1578,14 +1600,14 @@ export default function SeasonalAtmosphere({
       }
     };
 
-    animId = requestAnimationFrame(render);
+    // Loop is triggered reactively by IntersectionObserver when in viewport
 
     return () => {
-      cancelAnimationFrame(animId);
+      stopLoop();
       observer.disconnect();
       resizeObserver.disconnect();
-      window.removeEventListener("mousemove", onMouseMove);
-      window.removeEventListener("mouseleave", onMouseLeave);
+      container.removeEventListener("mousemove", onMouseMove);
+      container.removeEventListener("mouseleave", onMouseLeave);
     };
   }, [season, intensity, interactive]);
 

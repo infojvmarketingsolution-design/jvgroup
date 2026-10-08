@@ -93,27 +93,35 @@ export default function SeasonalIndicator() {
   const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      const centerPos = window.innerHeight * 0.45;
-      let foundIndex = 0;
-      let minDistance = Infinity;
+      if (ticking) return;
+      ticking = true;
 
-      SECTION_IDS.forEach((sec, idx) => {
-        const el = document.getElementById(sec.id);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          const dist = Math.abs(rect.top - centerPos);
-          if (rect.top <= centerPos && rect.bottom >= centerPos) {
-            foundIndex = idx;
-            minDistance = 0;
-          } else if (dist < minDistance) {
-            minDistance = dist;
-            foundIndex = idx;
+      window.requestAnimationFrame(() => {
+        const centerPos = window.innerHeight * 0.45;
+        let foundIndex = 0;
+        let minDistance = Infinity;
+
+        SECTION_IDS.forEach((sec, idx) => {
+          const el = document.getElementById(sec.id);
+          if (el) {
+            const rect = el.getBoundingClientRect();
+            const dist = Math.abs(rect.top - centerPos);
+            if (rect.top <= centerPos && rect.bottom >= centerPos) {
+              foundIndex = idx;
+              minDistance = 0;
+            } else if (dist < minDistance) {
+              minDistance = dist;
+              foundIndex = idx;
+            }
           }
-        }
-      });
+        });
 
-      setActiveSectionIndex(foundIndex);
+        setActiveSectionIndex((prev) => (prev !== foundIndex ? foundIndex : prev));
+        ticking = false;
+      });
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
