@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { BUSINESS_ENTITIES } from "@/data/businesses";
+import { INITIAL_BLOG_POSTS } from "@/data/blogPosts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://jvgroupco.in";
@@ -49,6 +50,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/blog`,
+      lastModified: currentDate,
+      changeFrequency: "daily",
+      priority: 0.95,
+    },
   ];
 
   // Dynamic Company & Sub-Website Routes
@@ -71,6 +78,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority,
     };
   });
+
+  // Dynamic Daily AI & SEO Blog Post Routes
+  const blogRoutes: MetadataRoute.Sitemap = INITIAL_BLOG_POSTS.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.updatedAt || post.publishedAt),
+    changeFrequency: "daily",
+    priority: 0.90,
+  }));
 
   // Dedicated Enterprise AI SEO & Pillar Routes for J.V Marketing Solution
   const jvMarketingSubRoutes: MetadataRoute.Sitemap = [
@@ -118,5 +133,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  return [...staticRoutes, ...companyRoutes, ...jvMarketingSubRoutes];
+  return [...staticRoutes, ...companyRoutes, ...blogRoutes, ...jvMarketingSubRoutes];
 }

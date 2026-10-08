@@ -61,6 +61,13 @@ export default function Footer() {
               Ecosystem Strategy
             </Link>
             <Link
+              href="/blog"
+              className="px-5 py-2.5 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-800 text-xs font-bold border border-amber-200 transition-colors w-full sm:w-auto text-center flex items-center justify-center gap-1.5"
+            >
+              <span>Daily AI Blog</span>
+              <span className="text-[9px] font-black uppercase px-1.5 py-0.2 rounded bg-amber-500 text-white">6AM</span>
+            </Link>
+            <Link
               href="/global"
               className="px-5 py-2.5 rounded-full bg-[#FFF4ED] text-[var(--color-jv-orange)] hover:bg-[var(--color-jv-orange)] hover:text-white border border-[var(--color-jv-orange)]/30 text-xs font-bold transition-all w-full sm:w-auto text-center"
             >
@@ -168,6 +175,12 @@ export default function Footer() {
               <li>
                 <Link href="/ai-seo" className="hover:text-[var(--color-jv-orange)] transition-colors font-bold text-[var(--color-jv-orange)]">
                   AI SEO & GEO Intelligence Hub
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-[var(--color-jv-orange)] transition-colors font-bold text-amber-600 flex items-center justify-between">
+                  <span>Daily AI Blog (6:00 AM)</span>
+                  <span className="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-amber-500 text-white">6AM</span>
                 </Link>
               </li>
               <li>
