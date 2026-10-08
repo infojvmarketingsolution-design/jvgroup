@@ -85,9 +85,10 @@ export default function DynamicInquiryForm({
   };
 
   const activeWhatsapp = (
-    selectedEntity?.whatsappPhone ||
+    selectedEntity?.whatsappNumber ||
+    whatsappNumber ||
     selectedEntity?.phone ||
-    whatsappNumber
+    "916354070709"
   ).replace(/[^0-9]/g, "");
 
   const whatsappMessage = encodeURIComponent(

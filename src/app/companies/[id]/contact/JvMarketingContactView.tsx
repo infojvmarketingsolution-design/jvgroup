@@ -490,26 +490,50 @@ export default function JvMarketingContactView({ entity }: Props) {
                   Frontline headquarters for Pan-India enterprise SEO, local search dominance, Meta CAPI setups, and regional corporate accounts.
                 </p>
 
-                <div className="p-4 rounded-2xl bg-white border border-[#E2E8F0] mb-5 space-y-1">
-                  <span className="text-[10px] uppercase font-bold text-[var(--color-jv-orange)] block">
-                    Direct India Hotline
-                  </span>
-                  <div className="flex items-center justify-between">
-                    <a
-                      href="tel:+916354070709"
-                      className="text-xl font-heading font-black text-[#18191C] hover:text-[var(--color-jv-orange)] transition-colors"
-                    >
-                      +91 63540 70709
-                    </a>
-                    <button
-                      onClick={() => copyToClipboard("+916354070709", "india")}
-                      className="text-xs text-[#64748B] hover:text-[#18191C] p-1.5 rounded-lg hover:bg-slate-100 transition-colors"
-                      title="Copy phone number"
-                    >
-                      {copiedDesk === "india" ? <Check size={14} className="text-emerald-600" /> : <Copy size={14} />}
-                    </button>
+                <div className="p-4 rounded-2xl bg-white border border-[#E2E8F0] mb-5 space-y-3">
+                  <div>
+                    <span className="text-[10px] uppercase font-bold text-[var(--color-jv-orange)] block mb-0.5">
+                      Direct India Hotline
+                    </span>
+                    <div className="flex items-center justify-between">
+                      <a
+                        href="tel:+919909700606"
+                        className="text-lg font-heading font-black text-[#18191C] hover:text-[var(--color-jv-orange)] transition-colors"
+                      >
+                        +91 99097 00606
+                      </a>
+                      <button
+                        onClick={() => copyToClipboard("+919909700606", "india-hotline")}
+                        className="text-xs text-[#64748B] hover:text-[#18191C] p-1.5 rounded-lg hover:bg-slate-100 transition-colors"
+                        title="Copy phone number"
+                      >
+                        {copiedDesk === "india-hotline" ? <Check size={14} className="text-emerald-600" /> : <Copy size={14} />}
+                      </button>
+                    </div>
                   </div>
-                  <span className="text-[11px] text-[#64748B] block pt-1">
+
+                  <div className="pt-2 border-t border-slate-100">
+                    <span className="text-[10px] uppercase font-bold text-emerald-700 block mb-0.5">
+                      Call &amp; WhatsApp Desk
+                    </span>
+                    <div className="flex items-center justify-between">
+                      <a
+                        href="tel:+916354070709"
+                        className="text-base font-heading font-black text-[#18191C] hover:text-[var(--color-jv-orange)] transition-colors"
+                      >
+                        +91 63540 70709
+                      </a>
+                      <button
+                        onClick={() => copyToClipboard("+916354070709", "india-whatsapp")}
+                        className="text-xs text-[#64748B] hover:text-[#18191C] p-1.5 rounded-lg hover:bg-slate-100 transition-colors"
+                        title="Copy WhatsApp number"
+                      >
+                        {copiedDesk === "india-whatsapp" ? <Check size={14} className="text-emerald-600" /> : <Copy size={14} />}
+                      </button>
+                    </div>
+                  </div>
+
+                  <span className="text-[11px] text-[#64748B] block pt-0.5">
                     Operating Hours: Mon – Sat: 9:30 AM – 7:30 PM IST (Call &amp; WhatsApp)
                   </span>
                 </div>
@@ -525,13 +549,24 @@ export default function JvMarketingContactView({ entity }: Props) {
                   <MessageSquare size={16} />
                   <span>Chat on WhatsApp (+91 63540 70709)</span>
                 </a>
-                <a
-                  href="tel:+916354070709"
-                  className="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#18191C] text-xs font-bold flex items-center justify-center gap-2 transition-all"
-                >
-                  <PhoneCall size={14} />
-                  <span>Call India Hotline Directly</span>
-                </a>
+                <div className="grid grid-cols-2 gap-2">
+                  <a
+                    href="tel:+919909700606"
+                    className="py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#18191C] text-[11px] font-bold flex items-center justify-center gap-1.5 transition-all text-center truncate"
+                    title="Call +91 99097 00606"
+                  >
+                    <PhoneCall size={13} className="shrink-0" />
+                    <span>Call Hotline</span>
+                  </a>
+                  <a
+                    href="tel:+916354070709"
+                    className="py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-[#18191C] text-[11px] font-bold flex items-center justify-center gap-1.5 transition-all text-center truncate"
+                    title="Call +91 63540 70709"
+                  >
+                    <PhoneCall size={13} className="shrink-0" />
+                    <span>Call Direct</span>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -541,7 +576,7 @@ export default function JvMarketingContactView({ entity }: Props) {
                 <div className="flex items-center justify-between mb-4">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50 text-purple-700 text-[11px] font-bold border border-purple-200">
                     <FileText size={12} />
-                    <span>RFPs & Written Blueprint</span>
+                    <span>RFPs &amp; Written Blueprint</span>
                   </span>
                   <span className="text-[10px] font-bold text-[#64748B] uppercase tracking-wider">
                     Official Inquiries
@@ -549,13 +584,13 @@ export default function JvMarketingContactView({ entity }: Props) {
                 </div>
 
                 <h3 className="text-lg font-heading font-black text-[#18191C] mb-1">
-                  Executive Proposal & RFP Desk
+                  Executive Proposal &amp; RFP Desk
                 </h3>
                 <p className="text-xs text-[#64748B] mb-5 leading-relaxed">
                   Submit detailed technical requirements, analytics access requests, RFP documentation, or procurement guidelines for formal quotes.
                 </p>
 
-                <div className="p-4 rounded-2xl bg-white border border-[#E2E8F0] mb-5 space-y-2">
+                <div className="p-4 rounded-2xl bg-white border border-[#E2E8F0] mb-5 space-y-2.5">
                   <div>
                     <span className="text-[10px] uppercase font-bold text-[#64748B] block mb-0.5">
                       Official Directorate Email
@@ -568,11 +603,11 @@ export default function JvMarketingContactView({ entity }: Props) {
                         info@jvmarketingsolution.com
                       </a>
                       <button
-                        onClick={() => copyToClipboard("info@jvmarketingsolution.com", "email")}
-                        className="text-xs text-[#64748B] hover:text-[#18191C] p-1 rounded-lg hover:bg-slate-100 transition-colors"
+                        onClick={() => copyToClipboard("info@jvmarketingsolution.com", "email-official")}
+                        className="text-xs text-[#64748B] hover:text-[#18191C] p-1.5 rounded-lg hover:bg-slate-100 transition-colors"
                         title="Copy email address"
                       >
-                        {copiedDesk === "email" ? <Check size={14} className="text-emerald-600" /> : <Copy size={14} />}
+                        {copiedDesk === "email-official" ? <Check size={14} className="text-emerald-600" /> : <Copy size={14} />}
                       </button>
                     </div>
                   </div>
@@ -589,11 +624,32 @@ export default function JvMarketingContactView({ entity }: Props) {
                         support@jvmarketingsolution.com
                       </a>
                       <button
-                        onClick={() => copyToClipboard("support@jvmarketingsolution.com", "support-email")}
-                        className="text-xs text-[#64748B] hover:text-[#18191C] p-1 rounded-lg hover:bg-slate-100 transition-colors"
+                        onClick={() => copyToClipboard("support@jvmarketingsolution.com", "email-support")}
+                        className="text-xs text-[#64748B] hover:text-[#18191C] p-1.5 rounded-lg hover:bg-slate-100 transition-colors"
                         title="Copy support email address"
                       >
-                        {copiedDesk === "support-email" ? <Check size={14} className="text-emerald-600" /> : <Copy size={14} />}
+                        {copiedDesk === "email-support" ? <Check size={14} className="text-emerald-600" /> : <Copy size={14} />}
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="pt-2 border-t border-slate-100">
+                    <span className="text-[10px] uppercase font-bold text-[#64748B] block mb-0.5">
+                      JV Group Corporate HQ
+                    </span>
+                    <div className="flex items-center justify-between">
+                      <a
+                        href={`mailto:${JV_GROUP_META.email}`}
+                        className="text-xs font-heading font-bold text-[#64748B] hover:text-[var(--color-jv-orange)] transition-colors break-all"
+                      >
+                        {JV_GROUP_META.email}
+                      </a>
+                      <button
+                        onClick={() => copyToClipboard(JV_GROUP_META.email, "email-hq")}
+                        className="text-xs text-[#64748B] hover:text-[#18191C] p-1 rounded-lg hover:bg-slate-100 transition-colors"
+                        title="Copy HQ email address"
+                      >
+                        {copiedDesk === "email-hq" ? <Check size={14} className="text-emerald-600" /> : <Copy size={14} />}
                       </button>
                     </div>
                   </div>

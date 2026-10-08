@@ -150,46 +150,59 @@ export default function CompanyFooter({ entity }: Props) {
             <div className="space-y-2.5 text-xs">
               <div className="flex items-start gap-2.5">
                 <Phone size={14} className="text-[var(--color-jv-orange)] shrink-0 mt-0.5" />
-                <div>
+                <div className="space-y-1">
                   <span className="block text-[10px] uppercase font-bold text-[#94A3B8]">
                     {entity.phoneLabel || "Direct Hotline"}:
                   </span>
                   <a href={`tel:${entity.phone}`} className="font-heading font-black text-sm text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors block">
                     {entity.phone}
                   </a>
-                  {entity.secondaryPhone && (
-                    <a href={`tel:${entity.secondaryPhone}`} className="font-heading font-black text-sm text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors block mt-0.5">
-                      {entity.secondaryPhone}
-                    </a>
-                  )}
+                  {entity.additionalPhones?.map((ap, apIdx) => (
+                    <div key={apIdx} className="pt-0.5">
+                      <span className="block text-[9.5px] uppercase font-bold text-[#94A3B8]">
+                        {ap.label}:
+                      </span>
+                      {ap.isCall !== false ? (
+                        <a href={`tel:${ap.number}`} className="font-heading font-black text-xs text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors block">
+                          {ap.number}
+                        </a>
+                      ) : (
+                        <span className="font-heading font-black text-xs text-[#0F172A] block">
+                          {ap.number}
+                        </span>
+                      )}
+                    </div>
+                  ))}
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5">
                 <Mail size={14} className="text-[var(--color-jv-orange)] shrink-0 mt-0.5" />
-                <div>
-                  <span className="block text-[10px] uppercase font-bold text-[#94A3B8]">
-                    Official Email:
-                  </span>
-                  <a href={`mailto:${entity.email || JV_GROUP_META.email}`} className="font-bold text-xs text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors block">
-                    {entity.email || JV_GROUP_META.email}
-                  </a>
+                <div className="space-y-1">
+                  <div>
+                    <span className="block text-[10px] uppercase font-bold text-[#94A3B8]">
+                      Official Email:
+                    </span>
+                    <a href={`mailto:${entity.email || JV_GROUP_META.email}`} className="font-bold text-xs text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors block break-all">
+                      {entity.email || JV_GROUP_META.email}
+                    </a>
+                  </div>
                   {entity.supportEmail && (
-                    <div className="mt-1">
+                    <div>
                       <span className="block text-[10px] uppercase font-bold text-[#94A3B8]">
                         Support Email:
                       </span>
-                      <a href={`mailto:${entity.supportEmail}`} className="font-bold text-xs text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors block">
+                      <a href={`mailto:${entity.supportEmail}`} className="font-bold text-xs text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors block break-all">
                         {entity.supportEmail}
                       </a>
                     </div>
                   )}
                   {entity.b2bEmail && (
-                    <div className="mt-1">
+                    <div>
                       <span className="block text-[10px] uppercase font-bold text-[#94A3B8]">
                         B2B Email:
                       </span>
-                      <a href={`mailto:${entity.b2bEmail}`} className="font-bold text-xs text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors block">
+                      <a href={`mailto:${entity.b2bEmail}`} className="font-bold text-xs text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors block break-all">
                         {entity.b2bEmail}
                       </a>
                     </div>

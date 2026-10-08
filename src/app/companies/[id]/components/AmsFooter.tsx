@@ -140,13 +140,23 @@ export default function AmsFooter() {
             <div className="space-y-2.5 text-xs">
               <div className="flex items-start gap-2.5">
                 <Phone size={14} className="text-[var(--color-jv-orange)] shrink-0 mt-0.5" />
-                <div>
-                  <span className="block text-[10px] uppercase font-bold text-[#94A3B8]">
-                    Call &amp; WhatsApp Desk:
-                  </span>
-                  <a href="tel:+916354070709" className="font-heading font-black text-sm text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors">
-                    +91 63540 70709
-                  </a>
+                <div className="space-y-1">
+                  <div>
+                    <span className="block text-[10px] uppercase font-bold text-[#94A3B8]">
+                      Direct India Hotline:
+                    </span>
+                    <a href="tel:+919909700606" className="font-heading font-black text-sm text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors">
+                      +91 99097 00606
+                    </a>
+                  </div>
+                  <div>
+                    <span className="block text-[10px] uppercase font-bold text-[#94A3B8]">
+                      Call &amp; WhatsApp Desk:
+                    </span>
+                    <a href="tel:+916354070709" className="font-heading font-black text-xs text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors">
+                      +91 63540 70709
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -156,7 +166,7 @@ export default function AmsFooter() {
                   <span className="block text-[10px] uppercase font-bold text-[#94A3B8]">
                     Official Email:
                   </span>
-                  <a href="mailto:info@ahmedabadmarketingsolution.com" className="font-bold text-xs text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors">
+                  <a href="mailto:info@ahmedabadmarketingsolution.com" className="font-bold text-xs text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors block break-all">
                     info@ahmedabadmarketingsolution.com
                   </a>
                 </div>

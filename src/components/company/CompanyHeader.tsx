@@ -62,8 +62,9 @@ export default function CompanyHeader({ entity }: Props) {
     return pathname.startsWith(href);
   };
 
-  const cleanPhone = (entity.whatsappPhone || entity.phone).replace(/[^0-9]/g, "");
-  const whatsappUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(
+  const cleanPhone = entity.phone.replace(/[^0-9]/g, "");
+  const targetWhatsapp = entity.whatsappNumber || cleanPhone;
+  const whatsappUrl = `https://wa.me/${targetWhatsapp}?text=${encodeURIComponent(
     `Hello ${entity.shortName}, I am inquiring via your dedicated website on jvgroupco.in.`
   )}`;
 

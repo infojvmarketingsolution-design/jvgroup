@@ -78,9 +78,13 @@ export default function JvMarketingSolutionWebsite({ entity }: Props) {
     specialFeature: { title: "", subtitle: "", badge: "", description: "", items: [] },
     faqs: [],
     directDesk: {
-      phone: "+91 63540 70709",
-      phoneLabel: "India Desk (Call & WhatsApp): +91 63540 70709",
+      phone: "+91 99097 00606",
+      phoneLabel: "India Desk: +91 99097 00606 | +91 63540 70709 | Global: +44 7344556070",
+      additionalPhones: [
+        { number: "+91 63540 70709", label: "Call & WhatsApp Number", isCall: true, isWhatsapp: true }
+      ],
       email: "info@jvmarketingsolution.com",
+      supportEmail: "support@jvmarketingsolution.com",
       workingHours: "24/7 Global B2B Operations",
       officeLocation: "Corporate Hub India & International B2B Desk",
       whatsappNumber: "916354070709"
@@ -120,7 +124,7 @@ export default function JvMarketingSolutionWebsite({ entity }: Props) {
     }, 450);
   };
 
-  const whatsappDeskUrl = `https://wa.me/447344556070?text=${encodeURIComponent(
+  const whatsappDeskUrl = `https://wa.me/916354070709?text=${encodeURIComponent(
     `Hello J.V Marketing Solution Private Limited (India), I want to schedule an enterprise growth consultation.`
   )}`;
 
@@ -154,8 +158,8 @@ export default function JvMarketingSolutionWebsite({ entity }: Props) {
           "name": "Akash Chavda",
           "jobTitle": "Group Founder & Managing Director"
         },
-        "telephone": "+44 7344556070",
-        "email": "info@jvgroupco.in",
+        "telephone": ["+919909700606", "+916354070709", "+447344556070"],
+        "email": "info@jvmarketingsolution.com",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "B/201, Vitthal A Square, Motera Stadium Road, Motera",
@@ -356,23 +360,32 @@ export default function JvMarketingSolutionWebsite({ entity }: Props) {
                 </div>
 
                 {/* Direct Hotlines (India & Global) */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                   <a
-                    href="tel:+916354070709"
-                    className="px-3 py-2.5 rounded-xl bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#18191C] hover:text-[var(--color-jv-orange)] font-bold text-xs uppercase tracking-wider border border-[#CBD5E1] flex items-center justify-center gap-2 transition-all shadow-2xs"
-                    title="Call India Desk (Call & WhatsApp): +91 63540 70709"
+                    href="tel:+919909700606"
+                    className="px-2.5 py-2.5 rounded-xl bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#18191C] hover:text-[var(--color-jv-orange)] font-bold text-xs uppercase tracking-wider border border-[#CBD5E1] flex items-center justify-center gap-1.5 transition-all shadow-2xs truncate"
+                    title="Call Domestic Corporate Desk in India: +91 99097 00606"
                   >
                     <Phone size={13} className="text-[var(--color-jv-orange)] shrink-0" />
-                    <span>India: +91 63540 70709</span>
+                    <span className="truncate">+91 99097 00606</span>
+                  </a>
+
+                  <a
+                    href="tel:+916354070709"
+                    className="px-2.5 py-2.5 rounded-xl bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#18191C] hover:text-[var(--color-jv-orange)] font-bold text-xs uppercase tracking-wider border border-[#CBD5E1] flex items-center justify-center gap-1.5 transition-all shadow-2xs truncate"
+                    title="Call & WhatsApp: +91 63540 70709"
+                  >
+                    <Phone size={13} className="text-[var(--color-jv-orange)] shrink-0" />
+                    <span className="truncate">+91 63540 70709</span>
                   </a>
 
                   <a
                     href="tel:+447344556070"
-                    className="px-3 py-2.5 rounded-xl bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#18191C] hover:text-[var(--color-jv-orange)] font-bold text-xs uppercase tracking-wider border border-[#CBD5E1] flex items-center justify-center gap-2 transition-all shadow-2xs"
+                    className="px-2.5 py-2.5 rounded-xl bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#18191C] hover:text-[var(--color-jv-orange)] font-bold text-xs uppercase tracking-wider border border-[#CBD5E1] flex items-center justify-center gap-1.5 transition-all shadow-2xs truncate"
                     title="Call Global B2B Desk in London / UK"
                   >
                     <Phone size={13} className="text-[var(--color-jv-orange)] shrink-0" />
-                    <span>Global: +44 7344556070</span>
+                    <span className="truncate">+44 7344556070</span>
                   </a>
                 </div>
               </div>

@@ -123,10 +123,13 @@ export default function DedicatedCompanyWebsite({ entity }: Props) {
     directDesk: {
       phone: entity.phone,
       phoneLabel: entity.phoneLabel,
+      additionalPhones: entity.additionalPhones,
       email: entity.email || JV_GROUP_META.email,
+      supportEmail: entity.supportEmail,
+      b2bEmail: entity.b2bEmail,
       workingHours: "Monday – Saturday: 9:30 AM – 7:30 PM IST",
       officeLocation: "Corporate Hub, Ahmedabad & Gandhinagar Corridor, Gujarat, India",
-      whatsappNumber: (entity.whatsappPhone || entity.phone).replace(/[^0-9]/g, "")
+      whatsappNumber: entity.whatsappNumber || entity.phone.replace(/[^0-9]/g, "")
     }
   };
 
@@ -155,8 +158,8 @@ export default function DedicatedCompanyWebsite({ entity }: Props) {
     }
   };
 
-  const cleanPhone = entity.phone.replace(/[^0-9]/g, "");
-  const whatsappUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(
+  const targetWhatsapp = entity.whatsappNumber || entity.phone.replace(/[^0-9]/g, "");
+  const whatsappUrl = `https://wa.me/${targetWhatsapp}?text=${encodeURIComponent(
     `Hello ${entity.shortName}, I am inquiring via your website on jvgroupco.in.`
   )}`;
 
@@ -241,10 +244,23 @@ export default function DedicatedCompanyWebsite({ entity }: Props) {
                   <a
                     href={`tel:${entity.phone}`}
                     className="w-full sm:w-auto px-4 sm:px-5 py-3.5 rounded-xl bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#18191C] hover:text-[var(--color-jv-orange)] font-bold text-xs uppercase tracking-wider border border-[#CBD5E1] flex items-center justify-center gap-2 transition-all text-center"
+                    title={`Call Primary Hotline: ${entity.phone}`}
                   >
                     <Phone size={14} className="text-[var(--color-jv-orange)]" />
-                    <span>Call Desk: {entity.phone}</span>
+                    <span>Call Hotline: {entity.phone}</span>
                   </a>
+
+                  {entity.additionalPhones?.map((ap, apIdx) => (
+                    <a
+                      key={apIdx}
+                      href={`tel:${ap.number}`}
+                      className="w-full sm:w-auto px-3 sm:px-4 py-3.5 rounded-xl bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#18191C] hover:text-[var(--color-jv-orange)] font-bold text-xs uppercase tracking-wider border border-[#CBD5E1] flex items-center justify-center gap-1.5 transition-all text-center"
+                      title={ap.label}
+                    >
+                      <Phone size={13} className="text-[var(--color-jv-orange)] shrink-0" />
+                      <span>{ap.label}: {ap.number}</span>
+                    </a>
+                  ))}
 
                   <a
                     href={whatsappUrl}

@@ -16,7 +16,8 @@ import {
   Compass,
   FileCheck2,
   Cpu,
-  MapPin
+  MapPin,
+  Mail
 } from "lucide-react";
 
 export default function AmsHeader() {
@@ -84,13 +85,25 @@ export default function AmsHeader() {
               <span>S.G. Highway, Ahmedabad</span>
             </span>
             <span className="text-[#475569] hidden md:inline">|</span>
-            <a
-              href="tel:+916354070709"
-              className="text-[var(--color-jv-orange)] hover:underline flex items-center gap-1.5 transition-colors font-extrabold"
-            >
-              <Phone size={12} />
-              <span>Call &amp; WhatsApp: +91 63540 70709</span>
-            </a>
+            <div className="flex items-center gap-2 sm:gap-3">
+              <a
+                href="tel:+919909700606"
+                className="text-slate-300 hover:text-white flex items-center gap-1.5 transition-colors font-bold"
+                title="Call Domestic Hotline: +91 99097 00606"
+              >
+                <Phone size={12} />
+                <span>+91 99097 00606</span>
+              </a>
+              <span className="text-[#475569]">|</span>
+              <a
+                href="tel:+916354070709"
+                className="text-[var(--color-jv-orange)] hover:underline flex items-center gap-1.5 transition-colors font-extrabold"
+                title="Call & WhatsApp: +91 63540 70709"
+              >
+                <Phone size={12} />
+                <span>+91 63540 70709</span>
+              </a>
+            </div>
           </div>
 
         </div>
@@ -142,13 +155,13 @@ export default function AmsHeader() {
             <div className="hidden lg:flex items-center gap-1.5 xl:gap-2.5 shrink-0">
               {/* Direct Call with Full Phone Number */}
               <a
-                href="tel:+916354070709"
-                aria-label="Call +91 63540 70709"
+                href="tel:+919909700606"
+                aria-label="Call +91 99097 00606"
                 className="px-2.5 xl:px-3 py-2 rounded-xl bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#18191C] hover:text-[var(--color-jv-orange)] text-[11.5px] xl:text-xs font-bold border border-[#CBD5E1] flex items-center gap-1.5 transition-all whitespace-nowrap shadow-2xs cursor-pointer"
-                title="Call & WhatsApp: +91 63540 70709"
+                title="Call Domestic Desk: +91 99097 00606"
               >
                 <Phone size={13} className="text-[var(--color-jv-orange)] shrink-0" />
-                <span>+91 63540 70709</span>
+                <span>+91 99097 00606</span>
               </a>
 
               {/* Direct WhatsApp Action */}
@@ -208,13 +221,27 @@ export default function AmsHeader() {
               })}
             </div>
 
-            <div className="mt-4 pt-4 border-t border-[#E2E8F0] flex flex-col gap-3">
+            <div className="mt-4 pt-4 border-t border-[#E2E8F0] flex flex-col gap-2.5">
+              <a 
+                href="tel:+919909700606" 
+                className="flex items-center gap-2 text-xs font-bold text-[#18191C] p-2.5 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1]"
+              >
+                <Phone size={14} className="text-[var(--color-jv-orange)]" />
+                <span>Domestic Hotline: +91 99097 00606</span>
+              </a>
               <a 
                 href="tel:+916354070709" 
                 className="flex items-center gap-2 text-xs font-bold text-[#18191C] p-2.5 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1]"
               >
                 <Phone size={14} className="text-[var(--color-jv-orange)]" />
                 <span>Call &amp; WhatsApp: +91 63540 70709</span>
+              </a>
+              <a 
+                href="mailto:info@ahmedabadmarketingsolution.com" 
+                className="flex items-center gap-2 text-xs font-bold text-[#18191C] p-2.5 rounded-xl bg-[#F8FAFC] border border-[#CBD5E1] truncate"
+              >
+                <Mail size={14} className="text-[var(--color-jv-orange)]" />
+                <span className="truncate">info@ahmedabadmarketingsolution.com</span>
               </a>
               <Link
                 href="/companies/ahmedabad-marketing-solution/contact"

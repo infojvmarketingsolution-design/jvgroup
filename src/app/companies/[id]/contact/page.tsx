@@ -94,8 +94,9 @@ function DynamicContactContent() {
     setFormSubmitted(true);
   };
 
-  const cleanPhone = (entity.whatsappPhone || entity.phone).replace(/[^0-9]/g, "");
-  const whatsappDeskUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(
+  const cleanPhone = entity.phone.replace(/[^0-9]/g, "");
+  const targetWhatsapp = entity.whatsappNumber || cleanPhone;
+  const whatsappDeskUrl = `https://wa.me/${targetWhatsapp}?text=${encodeURIComponent(
     `Hello ${entity.shortName}, I am submitting an enterprise inquiry regarding ${selectedService || "Services"}.\nName: ${formData.name || "Client"}\nCompany: ${formData.companyName || "Organization"}\nTimeline: ${timeline}\nBudget: ${budgetRange || "To be discussed"}\nNotes: ${formData.notes || "Please share preliminary consultation."}`
   )}`;
 
@@ -136,6 +137,16 @@ function DynamicContactContent() {
               >
                 {entity.phone}
               </a>
+              {entity.additionalPhones?.map((ap, apIdx) => (
+                <a
+                  key={apIdx}
+                  href={`tel:${ap.number}`}
+                  className="text-[11px] font-black text-slate-700 hover:text-[var(--color-jv-orange)] transition-colors block truncate"
+                  title={ap.label}
+                >
+                  {ap.number}
+                </a>
+              ))}
             </div>
           </div>
 
@@ -153,7 +164,7 @@ function DynamicContactContent() {
                 rel="noreferrer"
                 className="text-xs sm:text-sm font-black text-slate-900 hover:text-emerald-600 transition-colors truncate block"
               >
-                Instant WhatsApp Desk
+                +{targetWhatsapp}
               </a>
             </div>
           </div>
@@ -172,6 +183,14 @@ function DynamicContactContent() {
               >
                 {entity.email || JV_GROUP_META.email}
               </a>
+              {entity.supportEmail && (
+                <a
+                  href={`mailto:${entity.supportEmail}`}
+                  className="text-[11px] font-bold text-slate-600 hover:text-[var(--color-jv-orange)] transition-colors block break-all"
+                >
+                  {entity.supportEmail}
+                </a>
+              )}
             </div>
           </div>
 
@@ -462,7 +481,7 @@ function DynamicContactContent() {
               <div className="space-y-3 text-xs">
                 <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3">
                   <Phone size={16} className="text-[var(--color-jv-orange)] shrink-0 mt-0.5" />
-                  <div>
+                  <div className="space-y-1">
                     <span className="block text-[10px] uppercase font-bold text-slate-400">
                       Telephone Hotline
                     </span>
@@ -472,14 +491,25 @@ function DynamicContactContent() {
                     >
                       {entity.phone}
                     </a>
-                    {entity.secondaryPhone && (
-                      <a
-                        href={`tel:${entity.secondaryPhone}`}
-                        className="text-sm font-black text-slate-900 hover:text-[var(--color-jv-orange)] block transition-colors mt-1"
-                      >
-                        {entity.secondaryPhone}
-                      </a>
-                    )}
+                    {entity.additionalPhones?.map((ap, apIdx) => (
+                      <div key={apIdx} className="pt-1">
+                        <span className="block text-[9.5px] uppercase font-bold text-slate-400">
+                          {ap.label}
+                        </span>
+                        {ap.isCall !== false ? (
+                          <a
+                            href={`tel:${ap.number}`}
+                            className="text-xs font-black text-slate-800 hover:text-[var(--color-jv-orange)] block transition-colors"
+                          >
+                            {ap.number}
+                          </a>
+                        ) : (
+                          <span className="text-xs font-black text-slate-800 block">
+                            {ap.number}
+                          </span>
+                        )}
+                      </div>
+                    ))}
                   </div>
                 </div>
 
@@ -495,44 +525,46 @@ function DynamicContactContent() {
                       rel="noreferrer"
                       className="text-sm font-black text-slate-900 hover:text-emerald-700 block transition-colors mt-0.5"
                     >
-                      Chat on WhatsApp (+{cleanPhone})
+                      Chat on WhatsApp (+{targetWhatsapp})
                     </a>
                   </div>
                 </div>
 
                 <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3">
                   <Mail size={16} className="text-[var(--color-jv-orange)] shrink-0 mt-0.5" />
-                  <div>
-                    <span className="block text-[10px] uppercase font-bold text-slate-400">
-                      Official Email
-                    </span>
-                    <a
-                      href={`mailto:${entity.email || JV_GROUP_META.email}`}
-                      className="text-sm font-black text-slate-900 hover:text-[var(--color-jv-orange)] block transition-colors mt-0.5 break-all"
-                    >
-                      {entity.email || JV_GROUP_META.email}
-                    </a>
+                  <div className="space-y-1.5">
+                    <div>
+                      <span className="block text-[10px] uppercase font-bold text-slate-400">
+                        Official Email
+                      </span>
+                      <a
+                        href={`mailto:${entity.email || JV_GROUP_META.email}`}
+                        className="text-sm font-black text-slate-900 hover:text-[var(--color-jv-orange)] block transition-colors mt-0.5 break-all"
+                      >
+                        {entity.email || JV_GROUP_META.email}
+                      </a>
+                    </div>
                     {entity.supportEmail && (
-                      <div className="mt-2 pt-2 border-t border-slate-200/60">
+                      <div>
                         <span className="block text-[10px] uppercase font-bold text-slate-400">
                           Support Email
                         </span>
                         <a
                           href={`mailto:${entity.supportEmail}`}
-                          className="text-sm font-black text-slate-900 hover:text-[var(--color-jv-orange)] block transition-colors mt-0.5 break-all"
+                          className="text-xs font-black text-slate-800 hover:text-[var(--color-jv-orange)] block transition-colors break-all"
                         >
                           {entity.supportEmail}
                         </a>
                       </div>
                     )}
                     {entity.b2bEmail && (
-                      <div className="mt-2 pt-2 border-t border-slate-200/60">
+                      <div>
                         <span className="block text-[10px] uppercase font-bold text-slate-400">
-                          B2B Email
+                          B2B Desk Email
                         </span>
                         <a
                           href={`mailto:${entity.b2bEmail}`}
-                          className="text-sm font-black text-slate-900 hover:text-[var(--color-jv-orange)] block transition-colors mt-0.5 break-all"
+                          className="text-xs font-black text-slate-800 hover:text-[var(--color-jv-orange)] block transition-colors break-all"
                         >
                           {entity.b2bEmail}
                         </a>
