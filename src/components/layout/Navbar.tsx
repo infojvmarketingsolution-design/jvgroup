@@ -13,8 +13,7 @@ import {
   Layers, 
   ArrowUpRight,
   Phone,
-  Globe2,
-  Sparkles
+  Globe2
 } from "lucide-react";
 import { BUSINESS_ENTITIES, JV_GROUP_META } from "@/data/businesses";
 
@@ -77,7 +76,7 @@ export default function Navbar() {
       }`}
     >
       {/* Top Utility Strip (Ultra-Clean, Never Overflows on Any Laptop Screen) */}
-      <div className="hidden lg:flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-1 mb-1 border-b border-[#F1F5F9] text-[11px] text-[#64748B]">
+      <div className="hidden lg:flex items-center justify-between max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pb-1 mb-1 border-b border-[#F1F5F9] text-[11px] text-[#64748B]">
         <div className="flex items-center gap-2.5">
           <span className="flex items-center gap-1.5 font-medium">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-jv-orange)] animate-pulse" />
@@ -90,17 +89,6 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-3 font-semibold shrink-0">
-          <Link
-            href="/ai-seo"
-            className="group px-2.5 py-0.5 rounded-full bg-[#FFF4ED] hover:bg-[var(--color-jv-orange)] text-[var(--color-jv-orange)] hover:text-white border border-[var(--color-jv-orange)]/30 transition-all flex items-center gap-1.5 text-[10px] font-bold shadow-2xs"
-          >
-            <Sparkles size={11} className="text-[var(--color-jv-orange)] group-hover:text-white transition-colors" />
-            <span>AI SEO / GEO</span>
-            <span className="text-[8px] font-black uppercase px-1 py-0.2 rounded bg-[var(--color-jv-orange)] text-white group-hover:bg-white group-hover:text-[var(--color-jv-orange)] transition-colors">
-              AI
-            </span>
-          </Link>
-          <span className="text-[#CBD5E1]">|</span>
           <a
             href="tel:+447344556070"
             className="hover:text-[var(--color-jv-orange)] transition-colors flex items-center gap-1.5"
@@ -116,11 +104,18 @@ export default function Navbar() {
             <Phone size={12} className="text-[var(--color-jv-orange)]" />
             <span>India: +91 99097 00606</span>
           </a>
+          <Link
+            href="/contact"
+            className="ml-2 px-3 py-1 rounded-full bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white text-[10px] font-bold tracking-wider uppercase hover:shadow-[0_2px_12px_rgba(243,99,35,0.4)] hover:-translate-y-0.5 transition-all flex items-center gap-1 whitespace-nowrap shadow-xs cursor-pointer"
+          >
+            <span>Partner With JV</span>
+            <ArrowUpRight size={11} />
+          </Link>
         </div>
       </div>
 
       {/* Main Navigation Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-2 xl:gap-4">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-2 xl:gap-4">
         
         {/* Brand / Logo */}
         <Link href="/" className="flex items-center gap-2.5 shrink-0 group">
@@ -288,6 +283,15 @@ export default function Navbar() {
             Services
           </Link>
 
+          <Link
+            href="/ai-seo"
+            className="px-2.5 xl:px-3 py-1.5 rounded-lg text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all flex items-center gap-1 whitespace-nowrap"
+          >
+            <span>AI SEO / GEO</span>
+            <span className="text-[8px] font-black uppercase px-1 py-0.2 rounded bg-[var(--color-jv-orange)] text-white">
+              AI
+            </span>
+          </Link>
 
           <Link
             href="/global"
@@ -315,10 +319,10 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setPhoneDropdownOpen(!phoneDropdownOpen)}
-              className="px-2.5 xl:px-3 py-2 rounded-xl bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#18191C] hover:text-[var(--color-jv-orange)] text-xs font-bold border border-[#E2E8F0] flex items-center gap-1.5 transition-all whitespace-nowrap cursor-pointer"
+              className="px-3 py-2 rounded-xl bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#18191C] hover:text-[var(--color-jv-orange)] text-xs font-bold border border-[#E2E8F0] flex items-center gap-2 transition-all whitespace-nowrap cursor-pointer shadow-xs"
             >
-              <Phone size={12} className="text-[var(--color-jv-orange)]" />
-              <span className="hidden xl:inline">+91 99097 00606</span>
+              <Phone size={13} className="text-[var(--color-jv-orange)]" />
+              <span>+91 99097 00606</span>
               <ChevronDown size={11} className="text-[#64748B]" />
             </button>
 
@@ -353,15 +357,6 @@ export default function Navbar() {
               </div>
             )}
           </div>
-
-          {/* Primary CTA Button */}
-          <Link
-            href="/contact"
-            className="px-3.5 xl:px-5 py-2.5 rounded-xl bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white text-xs font-bold tracking-wide uppercase hover:shadow-[0_4px_18px_rgba(243,99,35,0.4)] hover:-translate-y-0.5 transition-all flex items-center gap-1.5 whitespace-nowrap shrink-0 cursor-pointer"
-          >
-            <span>Partner With JV</span>
-            <ArrowUpRight size={13} />
-          </Link>
         </div>
 
         {/* Mobile Hamburger Button */}
