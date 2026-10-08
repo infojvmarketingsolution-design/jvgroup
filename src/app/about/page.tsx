@@ -188,17 +188,28 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Right: Meaning Poster Graphic Card */}
+            {/* Right: Jashodaben Vitthalbhai Chavda Heritage Portrait */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-md rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-2xl bg-[#18191C] group">
-                <div className="relative aspect-[819/1024] w-full">
+              <div className="relative w-full max-w-md rounded-3xl overflow-hidden border-2 border-[#E2E8F0] shadow-2xl bg-white p-2.5 sm:p-3 group hover:border-[var(--color-jv-orange)]/40 transition-all duration-300">
+                <div className="relative aspect-[839/1024] w-full rounded-2xl overflow-hidden bg-[#F8FAFC]">
                   <Image
                     src="/images/about/jv-meaning-legacy.jpg"
-                    alt="The Meaning Behind J.V Group - Jashodaben Vitthalbhai Chavda"
+                    alt="Jashodaben Vitthalbhai Chavda (Aajol) - Foundational Legacy of JV Group"
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
                     priority
                   />
+                </div>
+                <div className="pt-3 pb-1 px-2 text-center">
+                  <span className="block text-[11px] font-black uppercase tracking-wider text-[var(--color-jv-orange)]">
+                    In Loving Inspiration &amp; Heritage
+                  </span>
+                  <span className="block text-sm sm:text-base font-black text-[#18191C] mt-0.5">
+                    Late Smt. Jashodaben Vitthalbhai Chavda (Aajol)
+                  </span>
+                  <span className="block text-xs text-[#64748B] mt-0.5">
+                    The Living Inspiration Behind the &quot;J.V&quot; Initials of JV Group
+                  </span>
                 </div>
               </div>
             </div>

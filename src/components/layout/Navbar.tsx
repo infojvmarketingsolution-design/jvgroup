@@ -27,6 +27,31 @@ export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
   const dropdownRef = useRef<HTMLDivElement>(null);
   const phoneRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
+  const [headerHeight, setHeaderHeight] = useState(56);
+
+  // Dynamically track exact header height so mobile drawer docks seamlessly below it
+  useEffect(() => {
+    const updateHeaderHeight = () => {
+      if (headerRef.current) {
+        setHeaderHeight(headerRef.current.offsetHeight);
+      }
+    };
+    updateHeaderHeight();
+    window.addEventListener("resize", updateHeaderHeight);
+    return () => window.removeEventListener("resize", updateHeaderHeight);
+  }, [isScrolled, mobileMenuOpen]);
+
+  // Auto-close mobile drawer if viewport expands to desktop
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // Prevent background scroll when mobile navigation is active
   useEffect(() => {
@@ -81,13 +106,15 @@ export default function Navbar() {
   );
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/95 backdrop-blur-md border-b border-[#E2E8F0] shadow-[0_4px_25px_rgba(43,45,49,0.06)] py-1.5"
-          : "bg-white/95 backdrop-blur-sm border-b border-[#E2E8F0]/80 py-2 sm:py-2.5"
-      }`}
-    >
+    <>
+      <header
+        ref={headerRef}
+        className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
+          isScrolled || mobileMenuOpen
+            ? "bg-white border-b border-[#E2E8F0] shadow-[0_4px_25px_rgba(43,45,49,0.06)] py-1.5"
+            : "bg-white/95 backdrop-blur-sm border-b border-[#E2E8F0]/80 py-2 sm:py-2.5"
+        }`}
+      >
       {/* Top Utility Strip (Ultra-Clean, Never Overflows on Any Laptop Screen) */}
       <div className="hidden lg:flex items-center justify-between max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pb-1 mb-1 border-b border-[#F1F5F9] text-[11px] text-[#64748B]">
         <div className="flex items-center gap-2.5">
@@ -380,10 +407,15 @@ export default function Navbar() {
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
+    </header>
 
-      {/* Mobile Drawer (100% Full Viewport Responsive on all Phones & Tablets) */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 bottom-0 top-[54px] sm:top-[60px] bg-white z-40 p-5 sm:p-6 flex flex-col justify-between overflow-y-auto border-t border-[#E2E8F0]">
+    {/* Mobile Drawer (Moved OUTSIDE <header> to ensure fixed positioning covers the full viewport) */}
+    {mobileMenuOpen && (
+      <div 
+        style={{ top: `${headerHeight}px` }}
+        className="lg:hidden fixed inset-x-0 bottom-0 bg-white z-40 overflow-y-auto overscroll-contain border-t border-[#E2E8F0] shadow-2xl"
+      >
+        <div className="p-5 sm:p-6 flex flex-col justify-between min-h-full pb-12">
           <div className="flex flex-col gap-3">
             <Link
               href="/"
@@ -511,7 +543,8 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
-      )}
-    </header>
+      </div>
+    )}
+  </>
   );
 }

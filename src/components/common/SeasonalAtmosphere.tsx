@@ -1246,6 +1246,13 @@ export default function SeasonalAtmosphere({
       // 3. AUTUMN (Realistic Tree, 10s Road Accumulation & Air Flow Blast)
       // ------------------------------------------
       else if (season === "autumn") {
+        // Remove tree and leaf effect on mobile responsive only (< 1024px)
+        const isMobile = (typeof window !== "undefined" && window.innerWidth < 1024) || width < 1024;
+        if (isMobile) {
+          // Canvas remains clear on mobile responsive so header & hero text remain unobscured
+          return;
+        }
+
         const ACCUMULATE_DURATION = 10000; // 10.0s of leaves landing & resting on the road
         const GUST_DURATION = 2600;        // 2.6s of strong air flow gust
         const TOTAL_CYCLE = ACCUMULATE_DURATION + GUST_DURATION;
@@ -1380,6 +1387,11 @@ export default function SeasonalAtmosphere({
 
           ctx.save();
           if (p.extra.isFrostLeaf) {
+            const isMobile = (typeof window !== "undefined" && window.innerWidth < 1024) || width < 1024;
+            if (isMobile) {
+              ctx.restore();
+              continue;
+            }
             ctx.translate(p.x, p.y);
             ctx.rotate(p.rotation);
             ctx.globalAlpha = p.alpha;
