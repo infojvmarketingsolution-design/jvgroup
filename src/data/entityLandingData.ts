@@ -217,7 +217,7 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
     }
   },
 
-  // 2. J.V Marketing Solution Pvt Ltd. (India)
+  // 2. J.V Marketing Solution Private Limited (India)
   "jv-marketing-solution-pvt-ltd": {
     tagline: "Rank #1 on Google & AI Platforms | Best AI SEO & Generative Engine Optimization (GEO)",
     heroHeadline: "Rank #1 on Google & AI Engines. Scale Enterprise Pipeline with AI SEO & GEO.",
@@ -375,12 +375,12 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
     }
   },
 
-  // 3. J.V Marketing Solutions Ltd. (Global Brand)
+  // 3. J.V Marketing Solutions Limited (Global)
   "jv-marketing-solutions-ltd-global": {
     tagline: "Global Corporate Brand Uniting Marketing, Software & IT Infrastructure",
     heroHeadline: "Integrated Enterprise IT, Mobile Engineering & Multi-Network Advertising.",
     heroSubtitle:
-      "J.V Marketing Solutions Ltd. is the global contracting vehicle of JV Group, built specifically for enterprise clients across London, New York, Toronto, and global commercial hubs. We unify mission-critical IT infrastructure, custom mobile and web applications, and multi-network ad buying across Meta, Instagram, Google, LinkedIn, TikTok, and Snapchat.",
+      "J.V Marketing Solutions Limited (Global) is the global contracting vehicle of JV Group, built specifically for enterprise clients across London, New York, Toronto, and global commercial hubs. We unify mission-critical IT infrastructure, custom mobile and web applications, and multi-network ad buying across Meta, Instagram, Google, LinkedIn, TikTok, and Snapchat.",
     stats: [
       { value: "6+", label: "Ad Networks Managed", detail: "Meta, Google, LinkedIn, TikTok, Snap" },
       { value: "99.99%", label: "Infrastructure Uptime", detail: "Cloud Architecture SLA" },
@@ -500,7 +500,7 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
     faqs: [
       {
         question: "Can our company execute a single contract covering both IT management and advertising?",
-        answer: "Yes. J.V Marketing Solutions Ltd. was established specifically to provide consolidated Master Services Agreements (MSAs), eliminating the friction of managing separate vendors for software, cloud hosting, and marketing."
+        answer: "Yes. J.V Marketing Solutions Limited (Global) was established specifically to provide consolidated Master Services Agreements (MSAs), eliminating the friction of managing separate vendors for software, cloud hosting, and marketing."
       },
       {
         question: "What currencies do you accept for international enterprise contracts?",

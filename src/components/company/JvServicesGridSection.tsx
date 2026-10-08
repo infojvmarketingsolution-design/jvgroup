@@ -156,7 +156,7 @@ export default function JvServicesGridSection({
           </h2>
 
           <p className="mt-3 text-sm sm:text-base text-[#475569] leading-relaxed font-normal">
-            J.V Marketing Solution Pvt Ltd brings together full-funnel digital marketing, modern web engineering, custom software &amp; app development, corporate branding, and enterprise AI automation under one master service framework.
+            J.V Marketing Solution Private Limited (India) brings together full-funnel digital marketing, modern web engineering, custom software &amp; app development, corporate branding, and enterprise AI automation under one master service framework.
           </p>
         </div>
 

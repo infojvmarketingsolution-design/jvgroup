@@ -45,7 +45,7 @@ export default function JvMarketingContactView({ entity }: Props) {
   const searchParams = useSearchParams();
   const companyData = COMPANY_WEBSITES_DATA[entity.id];
 
-  // Pre-configured services specific to J.V Marketing Solution Pvt Ltd
+  // Pre-configured services specific to J.V Marketing Solution Private Limited (India)
   const serviceOptions = [
     {
       id: "geo-ai-seo",
@@ -223,13 +223,13 @@ export default function JvMarketingContactView({ entity }: Props) {
   const indiaPhoneRaw = "919909700606";
 
   const customWhatsAppText = encodeURIComponent(
-    `Hello J.V Marketing Solution Pvt Ltd team,\n\nI would like to inquire about: *${selectedService}*.\n\n• Name: ${formData.name || "Client"}\n• Company: ${formData.companyName || "Enterprise"}\n• Website: ${formData.websiteUrl || "Not specified"}\n• Target Market: ${selectedGeo}\n• Estimated Budget: ${selectedBudget}\n• Notes: ${formData.requirements || "Please share preliminary proposal & schedule a consultation."}`
+    `Hello J.V Marketing Solution Private Limited (India) team,\n\nI would like to inquire about: *${selectedService}*.\n\n• Name: ${formData.name || "Client"}\n• Company: ${formData.companyName || "Enterprise"}\n• Website: ${formData.websiteUrl || "Not specified"}\n• Target Market: ${selectedGeo}\n• Estimated Budget: ${selectedBudget}\n• Notes: ${formData.requirements || "Please share preliminary proposal & schedule a consultation."}`
   );
 
   const globalWhatsAppUrl = `https://wa.me/${globalPhoneRaw}?text=${customWhatsAppText}`;
   const indiaWhatsAppUrl = `https://wa.me/${indiaPhoneRaw}?text=${customWhatsAppText}`;
 
-  // FAQs specific to J.V Marketing Solution Pvt Ltd
+  // FAQs specific to J.V Marketing Solution Private Limited (India)
   const faqs = [
     {
       q: "How fast can J.V Marketing Solution begin our campaign?",
@@ -323,7 +323,7 @@ export default function JvMarketingContactView({ entity }: Props) {
             {/* Pill Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF4ED] border border-[var(--color-jv-orange)]/30 text-[var(--color-jv-orange)] text-xs font-black uppercase tracking-wider mb-5 shadow-xs">
               <Sparkles size={14} className="animate-spin-slow" />
-              <span>Direct Operating Directorate • J.V Marketing Solution Pvt Ltd</span>
+              <span>Direct Operating Directorate • J.V Marketing Solution Private Limited (India)</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-heading font-black text-[#18191C] tracking-tight leading-[1.12] mb-6">
@@ -581,7 +581,7 @@ export default function JvMarketingContactView({ entity }: Props) {
 
               <div className="space-y-2.5 pt-2">
                 <a
-                  href={`mailto:${JV_GROUP_META.email}?subject=${encodeURIComponent(`Enterprise Proposal Inquiry for J.V Marketing Solution Pvt Ltd`)}`}
+                  href={`mailto:${JV_GROUP_META.email}?subject=${encodeURIComponent(`Enterprise Proposal Inquiry for J.V Marketing Solution Private Limited (India)`)}`}
                   className="w-full py-3 px-4 rounded-xl bg-[#18191C] hover:bg-[var(--color-jv-orange)] text-white text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all"
                 >
                   <Mail size={16} />
@@ -1025,7 +1025,7 @@ export default function JvMarketingContactView({ entity }: Props) {
                     Direct Corporate Directorate
                   </span>
                   <h3 className="text-xl font-heading font-black text-[#18191C]">
-                    J.V Marketing Solution Pvt Ltd
+                    J.V Marketing Solution Private Limited (India)
                   </h3>
                   <p className="text-xs text-[#64748B] mt-1">
                     Flagship AI SEO & B2B Performance Marketing arm of JV Group.
@@ -1109,7 +1109,7 @@ export default function JvMarketingContactView({ entity }: Props) {
                   <span>The JV Group Ecosystem Advantage</span>
                 </div>
                 <p className="text-xs text-[#4E5058] leading-relaxed">
-                  Unlike isolated digital agencies, J.V Marketing Solution Pvt Ltd is integrated directly with <strong>Ekato Tech</strong> (custom software & app engineering) and <strong>J.V Infinity</strong> (global supply chain logistics). All contracts share unified governance, cross-domain billing, and institutional SLA protections.
+                  Unlike isolated digital agencies, J.V Marketing Solution Private Limited (India) is integrated directly with <strong>Ekato Tech</strong> (custom software & app engineering) and <strong>J.V Infinity</strong> (global supply chain logistics). All contracts share unified governance, cross-domain billing, and institutional SLA protections.
                 </p>
                 <Link
                   href="/ecosystem"
@@ -1217,7 +1217,7 @@ export default function JvMarketingContactView({ entity }: Props) {
               Frequently Asked Questions Before Inquiring
             </h2>
             <p className="text-xs sm:text-sm text-[#64748B] mt-2">
-              Everything you need to know about working with J.V Marketing Solution Pvt Ltd.
+              Everything you need to know about working with J.V Marketing Solution Private Limited (India).
             </p>
           </div>
 

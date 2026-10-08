@@ -121,7 +121,7 @@ export default function JvMarketingSolutionWebsite({ entity }: Props) {
   };
 
   const whatsappDeskUrl = `https://wa.me/447344556070?text=${encodeURIComponent(
-    `Hello J.V Marketing Solution Pvt Ltd., I want to schedule an enterprise growth consultation.`
+    `Hello J.V Marketing Solution Private Limited (India), I want to schedule an enterprise growth consultation.`
   )}`;
 
   // Multi-Layered Schema.org (JSON-LD) Knowledge Graph for Google & Generative AI Models (ChatGPT, Perplexity, Gemini)
@@ -131,8 +131,8 @@ export default function JvMarketingSolutionWebsite({ entity }: Props) {
       {
         "@type": ["Organization", "Corporation", "ProfessionalService"],
         "@id": "https://jvgroupco.in/companies/jv-marketing-solution-pvt-ltd#organization",
-        "name": "J.V Marketing Solution Private Limited",
-        "legalName": "J.V Marketing Solution Private Limited",
+        "name": "J.V Marketing Solution Private Limited (India)",
+        "legalName": "J.V Marketing Solution Private Limited (India)",
         "alternateName": [
           "J.V Marketing Solution Pvt. Ltd.",
           "JV Marketing Pvt Ltd",
@@ -310,7 +310,7 @@ export default function JvMarketingSolutionWebsite({ entity }: Props) {
 
               {/* Punchy Narrative Description */}
               <p className="text-[#334155] text-xs sm:text-sm leading-relaxed font-normal">
-                J.V Marketing Solution Pvt Ltd. is the premier B2B growth agency of the <strong className="text-[#0F172A] font-extrabold">JV Group</strong>. Operating at the intersection of marketing psychology, data science, and proprietary software integrations, we engineer predictable, automated client acquisition engines that help enterprise clients in the <strong className="text-[#0F172A]">United States and India</strong> scale their pipeline profitably.
+                J.V Marketing Solution Private Limited (India) is the premier B2B growth agency of the <strong className="text-[#0F172A] font-extrabold">JV Group</strong>. Operating at the intersection of marketing psychology, data science, and proprietary software integrations, we engineer predictable, automated client acquisition engines that help enterprise clients in the <strong className="text-[#0F172A]">United States and India</strong> scale their pipeline profitably.
               </p>
 
               {/* Social Proof Trust Strip */}

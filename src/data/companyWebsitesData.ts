@@ -295,7 +295,7 @@ export const COMPANY_WEBSITES_DATA: Record<string, CompanyWebsiteDetails> = {
     ]
   },
 
-  // 2. J.V Marketing Solution Pvt Ltd. (India)
+  // 2. J.V Marketing Solution Private Limited (India)
   "jv-marketing-solution-pvt-ltd": {
     id: "jv-marketing-solution-pvt-ltd",
     serviceCategories: [
@@ -894,7 +894,7 @@ export const COMPANY_WEBSITES_DATA: Record<string, CompanyWebsiteDetails> = {
     }
   },
 
-  // 3. J.V Marketing Solutions Ltd. (Global Brand)
+  // 3. J.V Marketing Solutions Limited (Global)
   "jv-marketing-solutions-ltd-global": {
     id: "jv-marketing-solutions-ltd-global",
     serviceCategories: [

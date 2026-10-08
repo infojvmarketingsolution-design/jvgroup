@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "Why J.V Marketing Solution Private Limited",
       "Why choose J.V Marketing Solution",
       "J.V Marketing Solution Private Limited reviews",
-      "J.V Marketing Solution Pvt Ltd advantages",
+      "J.V Marketing Solution Private Limited (India) advantages",
       "JV Marketing Pvt Ltd",
       "best AI SEO agency India",
       "Generative Engine Optimization GEO company",
@@ -131,7 +131,7 @@ export default async function WhyJvMarketingPage({ params }: Props) {
         "@id": `https://jvgroupco.in/companies/${entity.id}#organization`,
         "name": entity.name,
         "legalName": entity.name,
-        "alternateName": ["JV Marketing Pvt Ltd", "J.V Marketing Solution Pvt Ltd", "J.V. Marketing Solution"],
+        "alternateName": ["JV Marketing Pvt Ltd", "J.V Marketing Solution Private Limited (India)", "J.V Marketing Solution Private Limited", "J.V. Marketing Solution"],
         "url": `https://jvgroupco.in/companies/${entity.id}`,
         "founder": {
           "@type": "Person",

@@ -22,7 +22,7 @@ const CAPABILITY_OPTIONS = [
     label: "AI Marketing & Performance Ads (Meta, Google, LinkedIn, TikTok)",
     category: "Marketing",
     entityId: "jv-marketing-solution-pvt-ltd",
-    entityName: "J.V Marketing Solution Pvt Ltd",
+    entityName: "J.V Marketing Solution Private Limited (India)",
   },
   {
     id: "software_web_mobile",

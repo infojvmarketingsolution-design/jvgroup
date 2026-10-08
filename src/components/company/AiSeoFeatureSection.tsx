@@ -80,8 +80,8 @@ const AI_PLATFORMS = [
 ];
 
 const TARGET_KEYWORDS = [
+  "J.V Marketing Solution Private Limited (India)",
   "J.V Marketing Solution Private Limited",
-  "J.V Marketing Solution Pvt Ltd",
   "JV Marketing Pvt Ltd",
   "Best AI SEO Agency",
   "Generative Engine Optimization (GEO)",

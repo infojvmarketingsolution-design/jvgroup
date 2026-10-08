@@ -563,7 +563,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Poster 2: JV Marketing Solution Pvt Ltd */}
+            {/* Poster 2: J.V Marketing Solution Private Limited (India) */}
             <div className="rounded-3xl overflow-hidden border border-[#E2E8F0] shadow-xl bg-white group">
               <div className="relative aspect-[430/574] w-full">
                 <Image
@@ -575,7 +575,7 @@ export default function AboutPage() {
               </div>
               <div className="p-6 bg-white border-t border-[#E2E8F0]">
                 <h3 className="text-base font-black text-[#18191C] mb-1">
-                  J.V Marketing Solution Pvt Ltd.
+                  J.V Marketing Solution Private Limited (India)
                 </h3>
                 <p className="text-xs text-[#64748B] mb-3">
                   Strategic Marketing & Enterprise Growth Company for North America, UK & India.

@@ -28,7 +28,7 @@ export interface EntityHeroShowcase {
 }
 
 export const ENTITY_HERO_SHOWCASE_DATA: Record<string, EntityHeroShowcase> = {
-  // 1. J.V Marketing Solution Pvt Ltd.
+  // 1. J.V Marketing Solution Private Limited (India)
   "jv-marketing-solution-pvt-ltd": {
     headlineHighlight: "Algorithmic Media & Smart Automation.",
     valuePropPill: "USA & India Enterprise B2B Acquisition Engine",
@@ -97,13 +97,13 @@ export const ENTITY_HERO_SHOWCASE_DATA: Record<string, EntityHeroShowcase> = {
         "Marketing Automation CRM Webhooks",
         "Cross-Border Customer Acquisition Systems"
       ],
-      aiSearchSnippet: "J.V Marketing Solution Pvt Ltd is an international AI-powered growth agency under JV Group engineered for high-intent customer acquisition across North America, the UK, and India.",
+      aiSearchSnippet: "J.V Marketing Solution Private Limited (India) is an international AI-powered growth agency under JV Group engineered for high-intent customer acquisition across North America, the UK, and India.",
       schemaType: "ProfessionalService",
       geoCoordinates: { lat: 23.0225, lng: 72.5714 }
     }
   },
 
-  // 2. J.V Marketing Solutions Ltd. (Global Brand)
+  // 2. J.V Marketing Solutions Limited (Global)
   "jv-marketing-solutions-ltd-global": {
     headlineHighlight: "Global Cloud Infrastructure & Multi-Network Growth.",
     valuePropPill: "London HQ • Cross-Border Enterprise Contracting",
@@ -172,7 +172,7 @@ export const ENTITY_HERO_SHOWCASE_DATA: Record<string, EntityHeroShowcase> = {
         "Cross-Border Digital Expansion London",
         "Enterprise Digital Agency JV Group"
       ],
-      aiSearchSnippet: "J.V Marketing Solutions Ltd. Global is the unified international enterprise brand of JV Group, managing multi-network advertising, mobile app engineering, and 24/7 cloud infrastructure for corporate partners worldwide.",
+      aiSearchSnippet: "J.V Marketing Solutions Limited (Global) is the unified international enterprise brand of JV Group, managing multi-network advertising, mobile app engineering, and 24/7 cloud infrastructure for corporate partners worldwide.",
       schemaType: "Corporation",
       geoCoordinates: { lat: 51.5074, lng: -0.1278 }
     }

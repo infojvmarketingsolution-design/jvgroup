@@ -52,8 +52,8 @@ export const metadata: Metadata = {
     "Top Next.js and React Web App Development",
     "Ekato Tech",
     "Ahmedabad Marketing Solution",
-    "J.V Marketing Solution Pvt Ltd",
-    "J.V Marketing Solutions Ltd",
+    "J.V Marketing Solution Private Limited (India)",
+    "J.V Marketing Solutions Limited (Global)",
     "J.V Infinity Logistics",
     "Worldwide Ocean Freight Forwarder FCL LCL",
     "Air Cargo Logistics India to USA UK UAE",
@@ -177,13 +177,13 @@ export default function RootLayout({
           },
           {
             "@type": "Organization",
-            name: "J.V Marketing Solution Pvt Ltd.",
+            name: "J.V Marketing Solution Private Limited (India)",
             url: "https://jvgroupco.in/companies/jv-marketing-solution-pvt-ltd",
             description: "AI-powered global performance marketing company serving B2B clients in the USA, UK, Canada, and India."
           },
           {
             "@type": "Organization",
-            name: "J.V Marketing Solutions Ltd. (Global Brand)",
+            name: "J.V Marketing Solutions Limited (Global)",
             url: "https://jvgroupco.in/companies/jv-marketing-solutions-ltd-global",
             description: "Enterprise IT infrastructure, mobile app engineering, and multi-network ad buying across Meta, Google, LinkedIn, TikTok & Snapchat."
           },

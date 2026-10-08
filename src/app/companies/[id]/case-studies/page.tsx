@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "ChatGPT AI Citations Agency Results",
       "Perplexity AI SEO Proof",
       "J.V Marketing Solution Private Limited Case Studies",
-      "J.V Marketing Solution Pvt Ltd",
+      "J.V Marketing Solution Private Limited (India)",
       "JV Marketing Pvt Ltd Results",
       "B2B Enterprise Lead Generation Case Study",
       "Server Side Tracking Meta CAPI",
@@ -179,7 +179,7 @@ export default async function DynamicCaseStudiesPage({ params }: Props) {
         "@id": `https://jvgroupco.in/companies/${entity.id}#organization`,
         "name": entity.name,
         "legalName": entity.name,
-        "alternateName": ["JV Marketing Pvt Ltd", "J.V Marketing Solution Pvt Ltd"],
+        "alternateName": ["JV Marketing Pvt Ltd", "J.V Marketing Solution Private Limited (India)", "J.V Marketing Solution Private Limited"],
         "url": `https://jvgroupco.in/companies/${entity.id}`,
         "founder": {
           "@type": "Person",
