@@ -156,8 +156,8 @@ export default function AmsFooter() {
                   <span className="block text-[10px] uppercase font-bold text-[#94A3B8]">
                     Corporate Directorate:
                   </span>
-                  <a href="mailto:contact@jvgroupco.in" className="font-bold text-xs text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors">
-                    contact@jvgroupco.in
+                  <a href="mailto:info@jvgroupco.in" className="font-bold text-xs text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors">
+                    info@jvgroupco.in
                   </a>
                 </div>
               </div>
@@ -165,7 +165,7 @@ export default function AmsFooter() {
               <div className="flex items-start gap-2.5 text-[#64748B]">
                 <MapPin size={14} className="text-[var(--color-jv-orange)] shrink-0 mt-0.5" />
                 <span className="leading-relaxed">
-                  Corporate Hub, S.G. Highway, Ahmedabad, Gujarat, India
+                  B/201, Vitthal A Square, Motera Stadium Road, Motera, Ahmedabad 380005
                 </span>
               </div>
 

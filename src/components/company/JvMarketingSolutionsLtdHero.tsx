@@ -182,12 +182,14 @@ export default function JvMarketingSolutionsLtdHero({
         "legalName": "J.V Marketing Solutions Limited (Global)",
         "url": `https://jvgroupco.in/companies/${entity.id}`,
         "telephone": entity.phone,
-        "email": "contact@jvgroupco.in",
+        "email": "info@jvgroupco.in",
         "logo": `https://jvgroupco.in${entity.logo || "/logos/jv-marketing-solutions-ltd-global.jpg"}`,
         "description": "J.V Marketing Solutions Limited (Global) is the premier international enterprise contracting vehicle of JV Group, uniting cloud IT infrastructure with 99.99% uptime SLA, custom mobile and web engineering, and multi-network ad buying across Meta, Google, LinkedIn, TikTok, and Snapchat.",
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "2 Earlham Street",
           "addressLocality": "London",
+          "postalCode": "WC2H 9RY",
           "addressCountry": "GB"
         },
         "geo": {

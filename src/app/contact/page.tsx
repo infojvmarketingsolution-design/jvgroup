@@ -59,7 +59,7 @@ export default function ContactPage() {
     },
     {
       q: "Where is the JV Group corporate headquarters located?",
-      a: "Our central corporate headquarters and executive labs are located along the prime commercial S.G. Highway corridor connecting Ahmedabad, Gandhinagar, and GIFT City in Gujarat, India."
+      a: "Our central corporate headquarters is located at B/201, Vitthal A Square, Motera Stadium Road, Motera, Ahmedabad 380005, Gujarat, India, with our International Business Desk located at 2 Earlham Street, London, WC2H 9RY, United Kingdom."
     },
     {
       q: "What is your turnaround time for enterprise RFPs and proposals?",
@@ -121,8 +121,8 @@ export default function ContactPage() {
               Initiate executive discussions, route requests for proposals (RFPs) to any of our 9 specialized operating entities, or consult with our global trade and technology desks across India, the UK, the USA, and Canada.
             </p>
 
-            {/* 3 Fast Action Contact Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {/* Fast Action Contact Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               
               <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-orange-300 transition-all">
                 <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200/70 flex items-center justify-center text-[var(--color-jv-orange)] mb-3 shadow-2xs">
@@ -164,12 +164,28 @@ export default function ContactPage() {
                   Corporate Email
                 </span>
                 <a
-                  href="mailto:contact@jvgroupco.in"
+                  href="mailto:info@jvgroupco.in"
                   className="text-base font-black text-slate-900 hover:text-[var(--color-jv-orange)] transition-colors block truncate"
                 >
-                  contact@jvgroupco.in
+                  info@jvgroupco.in
                 </a>
                 <span className="text-[11px] text-slate-500 mt-1 block">Direct Executive Directorate Link</span>
+              </div>
+
+              <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-orange-300 transition-all">
+                <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200/70 flex items-center justify-center text-[var(--color-jv-orange)] mb-3 shadow-2xs">
+                  <Mail size={18} />
+                </div>
+                <span className="text-[10px] font-bold uppercase text-slate-400 tracking-wider block mb-0.5">
+                  Support Email
+                </span>
+                <a
+                  href="mailto:support@jvgroupco.in"
+                  className="text-base font-black text-slate-900 hover:text-[var(--color-jv-orange)] transition-colors block truncate"
+                >
+                  support@jvgroupco.in
+                </a>
+                <span className="text-[11px] text-slate-500 mt-1 block">24/7 Global Ecosystem Support</span>
               </div>
 
             </div>
@@ -204,7 +220,7 @@ export default function ContactPage() {
                     <div>
                       <h4 className="text-sm font-bold text-slate-900">Central Group Headquarters</h4>
                       <p className="text-xs text-slate-600 leading-relaxed mt-0.5">
-                        JV Group Corporate Hub, S.G. Highway, Ahmedabad &amp; Gandhinagar corridor, Gujarat, India.
+                        B/201, Vitthal A Square, Motera Stadium Road, Motera, Ahmedabad 380005
                       </p>
                     </div>
                   </div>
@@ -216,7 +232,10 @@ export default function ContactPage() {
                     <div>
                       <h4 className="text-sm font-bold text-slate-900">International Business Desk</h4>
                       <p className="text-xs text-slate-600 leading-relaxed mt-0.5">
-                        United Kingdom Desk (+44 7344556070) coordinating North American &amp; European enterprise client deliverables.
+                        2 Earlham Street, London, WC2H 9RY, United Kingdom
+                      </p>
+                      <p className="text-[11px] text-[var(--color-jv-orange)] font-semibold mt-0.5">
+                        Hotline: +44 7344556070
                       </p>
                     </div>
                   </div>

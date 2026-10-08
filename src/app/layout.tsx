@@ -146,16 +146,17 @@ export default function RootLayout({
         },
         address: {
           "@type": "PostalAddress",
-          streetAddress: "Corporate Hub, S.G. Highway corridor",
+          streetAddress: "B/201, Vitthal A Square, Motera Stadium Road, Motera",
           addressLocality: "Ahmedabad",
           addressRegion: "Gujarat",
-          postalCode: "380054",
+          postalCode: "380005",
           addressCountry: "IN"
         },
         contactPoint: [
           {
             "@type": "ContactPoint",
             telephone: "+91-9909700606",
+            email: "info@jvgroupco.in",
             contactType: "customer service",
             areaServed: ["IN"],
             availableLanguage: ["en", "gu", "hi"]
@@ -163,6 +164,7 @@ export default function RootLayout({
           {
             "@type": "ContactPoint",
             telephone: "+44-7344556070",
+            email: "support@jvgroupco.in",
             contactType: "international desk",
             areaServed: ["US", "GB", "CA", "EU"],
             availableLanguage: ["en"]

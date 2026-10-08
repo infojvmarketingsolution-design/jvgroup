@@ -11,14 +11,14 @@ export default function AmsJsonLd() {
     "image": "https://jvgroupco.in/images/about/ams-poster.png",
     "description": "Ahmedabad Marketing Solution is Gujarat's premier regional SME growth agency, providing Google Maps 3-Pack optimization, Meta Click-to-WhatsApp funnels, bilingual Gujarati-Hindi-English creative campaigns, and AI Generative Engine Optimization (GEO).",
     "telephone": "+919909700606",
-    "email": "contact@jvgroupco.in",
+    "email": "info@jvgroupco.in",
     "priceRange": "₹12000 - ₹50000 INR per month",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "S.G. Highway Commercial Corridor",
+      "streetAddress": "B/201, Vitthal A Square, Motera Stadium Road, Motera",
       "addressLocality": "Ahmedabad",
       "addressRegion": "Gujarat",
-      "postalCode": "380054",
+      "postalCode": "380005",
       "addressCountry": "IN"
     },
     "geo": {

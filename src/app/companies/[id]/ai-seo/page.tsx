@@ -79,7 +79,7 @@ export default function CompanyAiSeoPage() {
   "url": "https://jvgroupco.in/companies/jv-marketing-solution-pvt-ltd",
   "logo": "https://jvgroupco.in/logos/jv-marketing-solution-pvt-ltd.jpg",
   "telephone": "+447344556070",
-  "email": "contact@jvgroupco.in",
+  "email": "info@jvgroupco.in",
   "founder": {
     "@type": "Person",
     "name": "Akash Chavda"
@@ -106,7 +106,7 @@ export default function CompanyAiSeoPage() {
   "telephone": "+919909700606",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "S.G. Highway Commercial Belt",
+    "streetAddress": "B/201, Vitthal A Square, Motera Stadium Road, Motera",
     "addressLocality": "Ahmedabad",
     "addressRegion": "Gujarat",
     "addressCountry": "IN"

@@ -215,6 +215,18 @@ export default function Footer() {
                 </a>
               </div>
 
+              <div className="p-3 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0]">
+                <span className="block text-[10px] font-bold uppercase text-[#64748B] mb-0.5">
+                  Corporate &amp; Support Emails:
+                </span>
+                <a href="mailto:info@jvgroupco.in" className="font-bold text-[#18191C] hover:text-[var(--color-jv-orange)] block">
+                  info@jvgroupco.in
+                </a>
+                <a href="mailto:support@jvgroupco.in" className="text-[11px] text-[#64748B] hover:text-[var(--color-jv-orange)] block mt-0.5">
+                  support@jvgroupco.in
+                </a>
+              </div>
+
               <div className="flex items-center gap-2 pt-1 text-xs">
                 <Globe2 size={13} className="text-[var(--color-jv-orange)]" />
                 <span>Portal: <strong>jvgroupco.in</strong></span>

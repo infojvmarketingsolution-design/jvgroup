@@ -155,13 +155,13 @@ export default function JvMarketingSolutionWebsite({ entity }: Props) {
           "jobTitle": "Group Founder & Managing Director"
         },
         "telephone": "+44 7344556070",
-        "email": "contact@jvgroupco.in",
+        "email": "info@jvgroupco.in",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "JV Corporate Hub, S.G. Highway Commercial Corridor",
+          "streetAddress": "B/201, Vitthal A Square, Motera Stadium Road, Motera",
           "addressLocality": "Ahmedabad",
           "addressRegion": "Gujarat",
-          "postalCode": "382421",
+          "postalCode": "380005",
           "addressCountry": "IN"
         },
         "geo": {

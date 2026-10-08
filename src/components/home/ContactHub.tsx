@@ -81,9 +81,21 @@ export default function ContactHub() {
                     <MapPin size={18} />
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-[#18191C]">Central Headquarters</h4>
+                    <h4 className="text-sm font-bold text-[#18191C]">Central Group Headquarters</h4>
                     <p className="text-xs text-[#64748B] leading-relaxed mt-0.5">
-                      JV Group Corporate Hub, S.G. Highway, Ahmedabad & Gandhinagar, Gujarat, India
+                      B/201, Vitthal A Square, Motera Stadium Road, Motera, Ahmedabad 380005
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#FFF4ED] border border-[var(--color-jv-orange)]/30 flex items-center justify-center text-[var(--color-jv-orange)] shrink-0">
+                    <Globe2 size={18} />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-bold text-[#18191C]">International Business Desk</h4>
+                    <p className="text-xs text-[#64748B] leading-relaxed mt-0.5">
+                      2 Earlham Street, London, WC2H 9RY, United Kingdom
                     </p>
                   </div>
                 </div>
@@ -93,9 +105,15 @@ export default function ContactHub() {
                     <Mail size={18} />
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-[#18191C]">Direct Executive Comm Link</h4>
-                    <p className="text-xs text-[#64748B] mt-0.5">
-                      contact@jvgroupco.in
+                    <h4 className="text-sm font-bold text-[#18191C]">Corporate &amp; Support Emails</h4>
+                    <p className="text-xs text-[#64748B] mt-0.5 flex flex-wrap gap-2">
+                      <a href="mailto:info@jvgroupco.in" className="hover:text-[var(--color-jv-orange)] font-semibold text-[#18191C]">
+                        info@jvgroupco.in
+                      </a>
+                      <span>•</span>
+                      <a href="mailto:support@jvgroupco.in" className="hover:text-[var(--color-jv-orange)] font-semibold text-[#18191C]">
+                        support@jvgroupco.in
+                      </a>
                     </p>
                   </div>
                 </div>

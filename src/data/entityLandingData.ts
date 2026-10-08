@@ -210,9 +210,9 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
     directDesk: {
       phone: "+91 99097 00606",
       phoneLabel: "Domestic India Desk",
-      email: "contact@jvgroupco.in",
+      email: "info@jvgroupco.in",
       workingHours: "Monday – Saturday: 9:30 AM – 7:00 PM IST",
-      officeLocation: "Ahmedabad & Gandhinagar Corridor, Gujarat, India",
+      officeLocation: "B/201, Vitthal A Square, Motera Stadium Road, Motera, Ahmedabad 380005",
       whatsappNumber: "919909700606"
     }
   },
@@ -368,7 +368,7 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
     directDesk: {
       phone: "+91 99097 00606",
       phoneLabel: "India Desk: +91 99097 00606 | Global: +44 7344556070",
-      email: "contact@jvgroupco.in",
+      email: "info@jvgroupco.in",
       workingHours: "24/7 Global B2B Operations (EST / GMT / IST Overlap)",
       officeLocation: "International B2B Desk — UK, USA & Corporate Hub India",
       whatsappNumber: "919909700606"
@@ -512,15 +512,15 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
       },
       {
         question: "What is the primary contact method for international enterprise accounts?",
-        answer: "International clients have access to our direct London hotline (+44 7344556070), direct executive email (contact@jvgroupco.in), and private dedicated Slack/Teams communication channels."
+        answer: "International clients have access to our direct London hotline (+44 7344556070), direct executive email (info@jvgroupco.in), and private dedicated Slack/Teams communication channels."
       }
     ],
     directDesk: {
       phone: "+44 7344556070",
       phoneLabel: "Global Office: +44 7344556070",
-      email: "contact@jvgroupco.in",
+      email: "info@jvgroupco.in",
       workingHours: "24/7 International Desk (US, UK, Canada & Global Overlap)",
-      officeLocation: "International Corporate Desk — United Kingdom & North America",
+      officeLocation: "2 Earlham Street, London, WC2H 9RY, United Kingdom",
       whatsappNumber: "447344556070"
     }
   },
@@ -670,7 +670,7 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
     directDesk: {
       phone: "+91 99097 00606",
       phoneLabel: "Tech Lab Desk: +91 99097 00606 | Global: +44 7344556070",
-      email: "contact@jvgroupco.in",
+      email: "info@jvgroupco.in",
       workingHours: "Monday – Saturday: 9:30 AM – 7:30 PM IST (24/7 NOC Active)",
       officeLocation: "Corporate Tech Lab, Ahmedabad & Gandhinagar Corridor, Gujarat, India",
       whatsappNumber: "919909700606"
@@ -820,7 +820,7 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
     directDesk: {
       phone: "+91 99097 00606",
       phoneLabel: "Freight & Logistics Desk: +91 99097 00606 | Global: +44 7344556070",
-      email: "contact@jvgroupco.in",
+      email: "info@jvgroupco.in",
       workingHours: "Monday – Saturday: 9:00 AM – 7:30 PM IST (24/7 Cargo Operations)",
       officeLocation: "Logistics Hub — Ahmedabad & Major Port Liaisons (Mundra & Nhava Sheva)",
       whatsappNumber: "919909700606"
@@ -970,7 +970,7 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
     directDesk: {
       phone: "+91 99097 00606",
       phoneLabel: "Property & Land Desk: +91 99097 00606",
-      email: "contact@jvgroupco.in",
+      email: "info@jvgroupco.in",
       workingHours: "Monday – Saturday: 10:00 AM – 7:30 PM IST",
       officeLocation: "S.G. Highway & Sindhu Bhavan Corridor, Ahmedabad, Gujarat, India",
       whatsappNumber: "919909700606"
@@ -1120,7 +1120,7 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
     directDesk: {
       phone: "+91 99097 00606",
       phoneLabel: "IT Operations: +91 99097 00606 | Global: +44 7344556070",
-      email: "contact@jvgroupco.in",
+      email: "info@jvgroupco.in",
       workingHours: "24/7/365 NOC Operations (Always Active)",
       officeLocation: "Enterprise NOC & Server Lab, Ahmedabad & Gandhinagar, Gujarat, India",
       whatsappNumber: "919909700606"
@@ -1270,7 +1270,7 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
     directDesk: {
       phone: "+91 99097 00606",
       phoneLabel: "Visa Counseling Desk: +91 99097 00606",
-      email: "contact@jvgroupco.in",
+      email: "info@jvgroupco.in",
       workingHours: "Monday – Saturday: 10:00 AM – 7:00 PM IST",
       officeLocation: "Corporate Overseas Center, Ahmedabad & Gandhinagar Corridor, Gujarat, India",
       whatsappNumber: "919909700606"
@@ -1420,7 +1420,7 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
     directDesk: {
       phone: "+91 99097 00606",
       phoneLabel: "Platform Desk: +91 99097 00606",
-      email: "contact@jvgroupco.in",
+      email: "info@jvgroupco.in",
       workingHours: "Monday – Saturday: 9:30 AM – 7:00 PM IST",
       officeLocation: "Campus Dekho Headquarters — Ahmedabad & Gandhinagar, Gujarat, India",
       whatsappNumber: "919909700606"
@@ -1590,7 +1590,7 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
     directDesk: {
       phone: "+91 99097 00606",
       phoneLabel: "WhatsApp Platform Desk: +91 99097 00606 | Global: +44 7344556070",
-      email: "contact@jvgroupco.in",
+      email: "info@jvgroupco.in",
       workingHours: "Monday – Saturday: 9:30 AM – 7:30 PM IST (24/7 Platform Uptime)",
       officeLocation: "Corporate Tech Lab, Ahmedabad & Gandhinagar Corridor, Gujarat, India",
       whatsappNumber: "919909700606"
@@ -1760,7 +1760,7 @@ export const ENTITY_LANDING_DATA: Record<string, EntityLandingData> = {
     directDesk: {
       phone: "+91 99097 00606",
       phoneLabel: "Helpdesk Platform Desk: +91 99097 00606 | Global: +44 7344556070",
-      email: "contact@jvgroupco.in",
+      email: "info@jvgroupco.in",
       workingHours: "Monday – Saturday: 9:30 AM – 7:30 PM IST (24/7 Operations Desk)",
       officeLocation: "Corporate Tech Lab, Ahmedabad & Gandhinagar Corridor, Gujarat, India",
       whatsappNumber: "919909700606"

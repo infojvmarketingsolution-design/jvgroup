@@ -48,9 +48,10 @@ export const JV_GROUP_META = {
   officialWebsite: "https://jvgroupco.in",
   indiaPhone: "+91 99097 00606",
   globalPhone: "+44 7344556070",
-  email: "contact@jvgroupco.in",
-  address: "JV Group Corporate Hub, Ahmedabad & Gandhinagar, Gujarat, India",
-  globalOffice: "International B2B Operations — UK, USA & Canada",
+  email: "info@jvgroupco.in",
+  supportEmail: "support@jvgroupco.in",
+  address: "B/201, Vitthal A Square, Motera Stadium Road, Motera, Ahmedabad 380005",
+  globalOffice: "2 Earlham Street, London, WC2H 9RY, United Kingdom",
   management: "Developed & Managed by J.V Group"
 };
 

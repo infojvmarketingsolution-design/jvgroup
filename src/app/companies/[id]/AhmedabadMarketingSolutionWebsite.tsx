@@ -2692,11 +2692,11 @@ export default function AhmedabadMarketingSolutionWebsite({ entity }: Props) {
                     <span className="block text-[10px] uppercase font-black text-[#64748B] mb-0.5">
                       Corporate Directorate Email:
                     </span>
-                    <a href="mailto:contact@jvgroupco.in" className="font-heading font-black text-sm sm:text-base text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors">
-                      contact@jvgroupco.in
+                    <a href="mailto:info@jvgroupco.in" className="font-heading font-black text-sm sm:text-base text-[#0F172A] hover:text-[var(--color-jv-orange)] transition-colors">
+                      info@jvgroupco.in
                     </a>
                     <span className="block text-[11px] text-[#64748B] font-medium mt-0.5">
-                      Official RFP & Institutional Proposals
+                      Official RFP &amp; Institutional Proposals
                     </span>
                   </div>
                 </div>
@@ -2729,13 +2729,13 @@ export default function AhmedabadMarketingSolutionWebsite({ entity }: Props) {
                   </div>
                   <div>
                     <span className="block text-[10px] uppercase font-black text-[#64748B] mb-0.5">
-                      Ahmedabad Corporate Hub:
+                      Central Group Headquarters:
                     </span>
                     <span className="text-xs text-[#0F172A] font-bold block">
-                      Corporate Hub, S.G. Highway Corridor
+                      B/201, Vitthal A Square, Motera Stadium Road
                     </span>
                     <span className="text-[11px] text-[#64748B] font-medium">
-                      Ahmedabad & Gandhinagar, Gujarat, India • Pin 380054
+                      Motera, Ahmedabad 380005, Gujarat, India
                     </span>
                   </div>
                 </div>

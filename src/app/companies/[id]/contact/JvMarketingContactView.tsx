@@ -1051,10 +1051,10 @@ export default function JvMarketingContactView({ entity }: Props) {
                       Corporate Headquarters Location
                     </span>
                     <p className="text-xs font-semibold text-[#18191C] leading-relaxed">
-                      JV Group Corporate Hub, S.G. Highway Corridor, Bodakdev & Thaltej, Ahmedabad & Gandhinagar, Gujarat 380054, India.
+                      B/201, Vitthal A Square, Motera Stadium Road, Motera, Ahmedabad 380005, Gujarat, India.
                     </p>
                     <span className="text-[11px] text-[var(--color-jv-orange)] font-semibold block pt-1">
-                      Direct Strategic Proximity to GIFT City & Tech Clusters
+                      Direct Strategic Proximity to GIFT City &amp; Tech Clusters
                     </span>
                   </div>
 
@@ -1063,7 +1063,7 @@ export default function JvMarketingContactView({ entity }: Props) {
                       International B2B Desk
                     </span>
                     <p className="text-xs font-semibold text-[#18191C] leading-relaxed">
-                      London, United Kingdom (+44 7344556070)
+                      2 Earlham Street, London, WC2H 9RY, United Kingdom (+44 7344556070)
                     </p>
                     <span className="text-[11px] text-[#64748B] block">
                       Client overlap across New York (EST), Chicago (CST), and California (PST).
