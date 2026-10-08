@@ -36,11 +36,22 @@ const content = fs.readFileSync(blogPostsPath, "utf-8");
 // 1. Check if today's post is already published
 if (content.includes(todayDateStr)) {
   console.log(`[Daily AI Blog Generator] ✓ Post for ${publishDateFormatted} (${todayDateStr}) is ALREADY GENERATED, LIVE and verified in blogPosts.ts.`);
-  console.log(`[Daily AI Blog Generator] Status: Live on schedule for 6:00 AM IST publication.`);
+  console.log(`[Daily AI Blog Generator] Status: Live on schedule.`);
   process.exit(0);
 }
 
-// 2. Blueprint catalog for rotating daily posts
+// 2. Check if current India time has reached 06:00 AM IST
+const currentHour = targetDate.getHours();
+const currentMinute = targetDate.getMinutes();
+const isForce = process.argv.includes("--force");
+
+if (currentHour < 6 && !isForce) {
+  console.log(`[Daily AI Blog Generator] Current time in India is ${currentHour}:${pad(currentMinute)} AM.`);
+  console.log(`[Daily AI Blog Generator] Publication scheduled for exactly 06:00 AM IST. Holding launch until 6:00 AM.`);
+  process.exit(0);
+}
+
+// 3. Blueprint catalog for rotating daily posts
 const BLUEPRINTS = [
   {
     slugBase: "meta-ad-costs-rising-click-to-whatsapp-gujarat-smes",
@@ -218,6 +229,15 @@ const newPostCode = `  {
   },
 `;
 
+let postToInsert = newPostCode;
+const scheduledPath = path.resolve(__dirname, "./scheduledOctober9Post.ts");
+if (fs.existsSync(scheduledPath)) {
+  const { OCTOBER_9_POST_CODE } = await import("./scheduledOctober9Post.ts");
+  if (OCTOBER_9_POST_CODE) {
+    postToInsert = OCTOBER_9_POST_CODE;
+  }
+}
+
 const needle = "export const INITIAL_BLOG_POSTS: BlogPost[] = [\n";
 const insertionIndex = content.indexOf(needle);
 
@@ -226,10 +246,13 @@ if (insertionIndex === -1) {
   process.exit(1);
 }
 
+// Remove previous isFeatured: true flags so only the new morning post is featured
+let cleanedContent = content.replace(/isFeatured:\s*true/g, "isFeatured: false");
+
 const updatedContent =
-  content.slice(0, insertionIndex + needle.length) +
-  newPostCode +
-  content.slice(insertionIndex + needle.length);
+  cleanedContent.slice(0, insertionIndex + needle.length) +
+  postToInsert +
+  cleanedContent.slice(insertionIndex + needle.length);
 
 fs.writeFileSync(blogPostsPath, updatedContent, "utf-8");
 console.log(`[Daily AI Blog Generator] Successfully generated and published new morning blog post for ${publishDateFormatted} at 06:00 AM IST!`);

@@ -94,9 +94,9 @@ export default function BlogListingPage() {
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-3 text-xs">
-              <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 font-bold shadow-xs">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span>Today&apos;s Edition Live • Published at 6:00 AM IST</span>
+              <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-slate-800 font-bold shadow-xs">
+                <span className="w-2 h-2 rounded-full bg-[var(--color-jv-orange)] animate-pulse" />
+                <span>Daily Publications • Released Every Morning at 6:00 AM IST</span>
               </div>
               <span className="text-slate-300 hidden sm:inline">•</span>
               <span className="text-slate-500 font-medium">Rank #1 on Google Search &amp; Verified Across ChatGPT, Perplexity &amp; Gemini</span>

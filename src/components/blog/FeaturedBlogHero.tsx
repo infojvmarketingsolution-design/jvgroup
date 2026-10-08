@@ -70,7 +70,7 @@ export default function FeaturedBlogHero({ post }: Props) {
 
             <div className="flex items-center gap-1.5 text-emerald-400 font-semibold">
               <Calendar size={13} className="text-emerald-400" />
-              <span>Published Today at {post.publishTimeFormatted}</span>
+              <span>Published: {post.publishDateFormatted} at {post.publishTimeFormatted}</span>
             </div>
 
             <span className="text-slate-600 hidden sm:inline">•</span>
