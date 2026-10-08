@@ -22,7 +22,7 @@ export default function FeaturedBlogHero({ post }: Props) {
           <div className="flex flex-wrap items-center gap-2.5">
             <span className="px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-[var(--color-jv-orange)] text-white shadow-md flex items-center gap-1.5">
               <Sparkles size={12} className="text-amber-200" />
-              <span>Today&apos;s 6:00 AM Spotlight</span>
+              <span>Today&apos;s Featured Publication</span>
             </span>
 
             <span className="px-3 py-1 rounded-full text-xs font-bold bg-white/10 text-slate-300 border border-white/15 backdrop-blur-md">
@@ -68,9 +68,9 @@ export default function FeaturedBlogHero({ post }: Props) {
 
             <span className="text-slate-600 hidden sm:inline">•</span>
 
-            <div className="flex items-center gap-1.5 text-slate-300">
-              <Calendar size={13} className="text-[var(--color-jv-orange)]" />
-              <span>{post.publishDateFormatted} at {post.publishTimeFormatted}</span>
+            <div className="flex items-center gap-1.5 text-emerald-400 font-semibold">
+              <Calendar size={13} className="text-emerald-400" />
+              <span>Published Today at {post.publishTimeFormatted}</span>
             </div>
 
             <span className="text-slate-600 hidden sm:inline">•</span>

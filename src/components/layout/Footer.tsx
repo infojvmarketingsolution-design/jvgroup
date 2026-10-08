@@ -62,10 +62,9 @@ export default function Footer() {
             </Link>
             <Link
               href="/blog"
-              className="px-5 py-2.5 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-800 text-xs font-bold border border-amber-200 transition-colors w-full sm:w-auto text-center flex items-center justify-center gap-1.5"
+              className="px-5 py-2.5 rounded-full bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#2B2D31] hover:text-[var(--color-jv-orange)] text-xs font-bold border border-[#E2E8F0] transition-colors w-full sm:w-auto text-center"
             >
-              <span>Daily AI Blog</span>
-              <span className="text-[9px] font-black uppercase px-1.5 py-0.2 rounded bg-amber-500 text-white">6AM</span>
+              Blog &amp; Insights
             </Link>
             <Link
               href="/global"
@@ -178,9 +177,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-[var(--color-jv-orange)] transition-colors font-bold text-amber-600 flex items-center justify-between">
-                  <span>Daily AI Blog (6:00 AM)</span>
-                  <span className="text-[9px] font-black uppercase px-1.5 py-0.5 rounded bg-amber-500 text-white">6AM</span>
+                <Link href="/blog" className="hover:text-[var(--color-jv-orange)] transition-colors">
+                  JV Group Blog &amp; Publications
                 </Link>
               </li>
               <li>

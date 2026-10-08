@@ -51,6 +51,7 @@ import AiVisibilityAuditTool from "@/components/seo/AiVisibilityAuditTool";
 import ExploreLocalGrowthServices from "./components/ExploreLocalGrowthServices";
 import AmsHeader from "./components/AmsHeader";
 import AmsFooter from "./components/AmsFooter";
+import CompanyBlogSection from "@/components/company/CompanyBlogSection";
 
 interface Props {
   entity: BusinessEntity;
@@ -3125,7 +3126,10 @@ export default function AhmedabadMarketingSolutionWebsite({ entity }: Props) {
         </div>
       </section>
 
-      {/* 13. Dedicated Standalone Website Footer for Ahmedabad Marketing Solution */}
+      {/* 13. Relevant Company Publications & Blog Insights */}
+      <CompanyBlogSection entity={entity} />
+
+      {/* 14. Dedicated Standalone Website Footer for Ahmedabad Marketing Solution */}
       <AmsFooter />
 
     </div>

@@ -55,6 +55,7 @@ import EngagementProcessDecorative from "@/components/company/EngagementProcessD
 import FaqSectionDecorative from "@/components/company/FaqSectionDecorative";
 import AiSeoFeatureSection from "@/components/company/AiSeoFeatureSection";
 import VerifiedMetricsStrip from "@/components/company/VerifiedMetricsStrip";
+import CompanyBlogSection from "@/components/company/CompanyBlogSection";
 
 interface Props {
   entity: BusinessEntity;
@@ -569,7 +570,10 @@ export default function JvMarketingSolutionWebsite({ entity }: Props) {
         </div>
       </section>
 
-      {/* 13. Dedicated Company Footer */}
+      {/* 13. Relevant Company Publications & Blog Insights */}
+      <CompanyBlogSection entity={entity} />
+
+      {/* 14. Dedicated Company Footer */}
       <CompanyFooter entity={entity} />
     </div>
   );

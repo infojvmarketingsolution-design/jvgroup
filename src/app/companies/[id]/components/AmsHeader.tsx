@@ -43,6 +43,7 @@ export default function AmsHeader() {
     { label: "ROI Calculator", href: "/companies/ahmedabad-marketing-solution/roi-calculator" },
     { label: "Packages", href: "/companies/ahmedabad-marketing-solution/packages" },
     { label: "Case Studies", href: "/companies/ahmedabad-marketing-solution/case-studies" },
+    { label: "Blog", href: "/blog?company=ahmedabad-marketing-solution" },
     { label: "Contact", href: "/companies/ahmedabad-marketing-solution/contact" }
   ];
 

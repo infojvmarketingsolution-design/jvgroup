@@ -89,6 +89,11 @@ export default function AmsFooter() {
                   SME Retainer Packages
                 </Link>
               </li>
+              <li>
+                <Link href="/blog?company=ahmedabad-marketing-solution" className="hover:text-[var(--color-jv-orange)] transition-colors font-bold text-[var(--color-jv-orange)]">
+                  Company Blog &amp; Insights
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -56,6 +56,7 @@ import FaqSectionDecorative from "@/components/company/FaqSectionDecorative";
 import VerifiedMetricsStrip from "@/components/company/VerifiedMetricsStrip";
 import InteractiveCapabilityMatrix from "@/components/company/InteractiveCapabilityMatrix";
 import CoreServicesShowcase from "@/components/company/CoreServicesShowcase";
+import CompanyBlogSection from "@/components/company/CompanyBlogSection";
 import { ENTITY_HERO_SHOWCASE_DATA } from "@/data/entityHeroShowcaseData";
 
 interface Props {
@@ -538,7 +539,10 @@ export default function DedicatedCompanyWebsite({ entity }: Props) {
         </div>
       </section>
 
-      {/* 13. Dedicated Company Footer */}
+      {/* 13. Relevant Company Publications & Blog Insights */}
+      <CompanyBlogSection entity={entity} />
+
+      {/* 14. Dedicated Company Footer */}
       <CompanyFooter entity={entity} />
     </div>
   );

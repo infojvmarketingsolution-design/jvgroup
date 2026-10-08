@@ -333,12 +333,9 @@ export default function Navbar() {
 
           <Link
             href="/blog"
-            className="px-2.5 xl:px-3 py-1.5 rounded-lg text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all flex items-center gap-1 whitespace-nowrap"
+            className="px-2.5 xl:px-3 py-1.5 rounded-lg text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all whitespace-nowrap"
           >
-            <span>Daily Blog</span>
-            <span className="text-[8px] font-black uppercase px-1 py-0.2 rounded bg-amber-500 text-white">
-              6AM
-            </span>
+            Blog
           </Link>
 
           <Link
@@ -507,12 +504,9 @@ export default function Navbar() {
             <Link
               href="/blog"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-base font-bold text-[#18191C] hover:text-[var(--color-jv-orange)] flex items-center justify-between py-1"
+              className="text-base font-bold text-[#18191C] hover:text-[var(--color-jv-orange)] py-1"
             >
-              <span>Daily AI Blog (6:00 AM)</span>
-              <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-amber-500 text-white">
-                Daily 6AM
-              </span>
+              Blog
             </Link>
             <Link
               href="/global"

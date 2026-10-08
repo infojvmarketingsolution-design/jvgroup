@@ -48,6 +48,7 @@ export default function CompanyHeader({ entity }: Props) {
     { label: "Services", href: `/companies/${entity.id}/services` },
     { label: "Packages", href: `/companies/${entity.id}/packages` },
     { label: "Case Studies", href: `/companies/${entity.id}/case-studies` },
+    { label: "Blog", href: `/blog?company=${entity.id}` },
     ...(companyData?.customNavLinks || []),
     { label: "Contact", href: `/companies/${entity.id}/contact` }
   ];

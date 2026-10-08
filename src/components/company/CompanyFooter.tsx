@@ -134,6 +134,11 @@ export default function CompanyFooter({ entity }: Props) {
                 </li>
               ))}
               <li>
+                <Link href={`/blog?company=${entity.id}`} className="hover:text-[var(--color-jv-orange)] transition-colors font-semibold text-[var(--color-jv-orange)]">
+                  Company Blog &amp; Publications
+                </Link>
+              </li>
+              <li>
                 <Link href={`/companies/${entity.id}/contact`} className="hover:text-[var(--color-jv-orange)] transition-colors">
                   Contact Desk
                 </Link>

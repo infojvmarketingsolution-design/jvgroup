@@ -1,13 +1,12 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
-import { Search, Sparkles, Filter, Building2, BookOpen, Mail, CheckCircle2, ArrowRight } from "lucide-react";
+import { Search, Sparkles, Filter, Building2, BookOpen, Mail, CheckCircle2, ArrowRight, Check } from "lucide-react";
 import { INITIAL_BLOG_POSTS } from "@/data/blogPosts";
 import { BUSINESS_ENTITIES } from "@/data/businesses";
 import BlogCard from "@/components/blog/BlogCard";
 import FeaturedBlogHero from "@/components/blog/FeaturedBlogHero";
-import DailyGenerationBanner from "@/components/blog/DailyGenerationBanner";
 
 export default function BlogListingPage() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -65,28 +64,44 @@ export default function BlogListingPage() {
     }, 4500);
   };
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const companyParam = params.get("company");
+      if (companyParam) {
+        setSelectedEntity(companyParam);
+      }
+    }
+  }, []);
+
   return (
     <div className="w-full min-h-screen bg-slate-50/60 text-slate-900 font-sans selection:bg-[var(--color-jv-orange)] selection:text-white">
       {/* 1. Hero Header */}
       <section className="pt-28 pb-12 sm:pt-36 sm:pb-16 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl space-y-4">
+          <div className="max-w-4xl space-y-4">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-[var(--color-jv-orange)] text-xs font-black uppercase tracking-wider">
               <Sparkles size={13} />
-              <span>JV Group Daily AI &amp; SEO Publication</span>
+              <span>JV Group Editorial &amp; Thought Leadership</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-heading font-black text-slate-950 tracking-tight leading-tight">
-              Enterprise SEO, Generative AI &amp; Business Intelligence
+              Strategic Insights, Market Trends &amp; Industry Analysis
             </h1>
 
             <p className="text-sm sm:text-lg text-slate-600 leading-relaxed">
-              Researched daily by AI, audited by JV Group leadership. Covering daily industry issues, Google AI Overviews ranking factors, local Gujarat developments, and worldwide commercial effects. <strong>Published every morning at 6:00 AM IST.</strong>
+              Authoritative industry research, generative search algorithms (GEO), industrial expansion, and commercial strategies across Gujarat, India, and worldwide markets.
             </p>
-          </div>
 
-          {/* Automated System Status & Countdown Strip */}
-          <DailyGenerationBanner />
+            <div className="pt-2 flex flex-wrap items-center gap-3 text-xs">
+              <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 font-bold shadow-xs">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span>Today&apos;s Edition Live • Published at 6:00 AM IST</span>
+              </div>
+              <span className="text-slate-300 hidden sm:inline">•</span>
+              <span className="text-slate-500 font-medium">Rank #1 on Google Search &amp; Verified Across ChatGPT, Perplexity &amp; Gemini</span>
+            </div>
+          </div>
         </div>
       </section>
 
