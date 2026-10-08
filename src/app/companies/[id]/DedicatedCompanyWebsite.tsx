@@ -229,10 +229,10 @@ export default function DedicatedCompanyWebsite({ entity }: Props) {
                 </p>
 
                 {/* Action Buttons Hub */}
-                <div className="flex flex-wrap items-center gap-3 pt-2">
+                <div className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 pt-2">
                   <Link
                     href={`/companies/${entity.id}/contact`}
-                    className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-[var(--color-jv-orange)]/30 hover:shadow-xl hover:-translate-y-0.5 transition-all"
+                    className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-[var(--color-jv-orange)]/30 hover:shadow-xl hover:-translate-y-0.5 transition-all text-center"
                   >
                     <span>Request Proposal / Consultation</span>
                     <ArrowRight size={15} />
@@ -240,7 +240,7 @@ export default function DedicatedCompanyWebsite({ entity }: Props) {
 
                   <a
                     href={`tel:${entity.phone}`}
-                    className="px-4 sm:px-5 py-3.5 rounded-xl bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#18191C] hover:text-[var(--color-jv-orange)] font-bold text-xs uppercase tracking-wider border border-[#CBD5E1] flex items-center gap-2 transition-all"
+                    className="w-full sm:w-auto px-4 sm:px-5 py-3.5 rounded-xl bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#18191C] hover:text-[var(--color-jv-orange)] font-bold text-xs uppercase tracking-wider border border-[#CBD5E1] flex items-center justify-center gap-2 transition-all text-center"
                   >
                     <Phone size={14} className="text-[var(--color-jv-orange)]" />
                     <span>Call Desk: {entity.phone}</span>
@@ -250,7 +250,7 @@ export default function DedicatedCompanyWebsite({ entity }: Props) {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="px-4 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs flex items-center gap-1.5 shadow-xs transition-all"
+                    className="w-full sm:w-auto px-4 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-xs transition-all text-center"
                   >
                     <MessageSquare size={14} />
                     <span>WhatsApp</span>
@@ -261,7 +261,7 @@ export default function DedicatedCompanyWebsite({ entity }: Props) {
                       href={entity.websiteUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-3.5 rounded-xl bg-white hover:bg-[#F8FAFC] text-[#2B2D31] font-bold text-xs uppercase tracking-wider border border-[#CBD5E1] flex items-center gap-1.5 transition-all"
+                      className="w-full sm:w-auto px-4 py-3.5 rounded-xl bg-white hover:bg-[#F8FAFC] text-[#2B2D31] font-bold text-xs uppercase tracking-wider border border-[#CBD5E1] flex items-center justify-center gap-1.5 transition-all text-center"
                     >
                       <span>Visit Live Portal</span>
                       <ExternalLink size={13} className="text-[var(--color-jv-orange)]" />

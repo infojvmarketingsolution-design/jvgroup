@@ -53,30 +53,30 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center gap-2.5 sm:gap-4">
             <Link
               href="/ecosystem"
-              className="px-5 py-2.5 rounded-full bg-[#F8FAFC] hover:bg-[#F1F5F9] text-[#2B2D31] text-xs font-bold border border-[#E2E8F0] transition-colors"
+              className="px-5 py-2.5 rounded-full bg-[#F8FAFC] hover:bg-[#F1F5F9] text-[#2B2D31] text-xs font-bold border border-[#E2E8F0] transition-colors w-full sm:w-auto text-center"
             >
               Ecosystem Strategy
             </Link>
             <Link
               href="/global"
-              className="px-5 py-2.5 rounded-full bg-[#FFF4ED] text-[var(--color-jv-orange)] hover:bg-[var(--color-jv-orange)] hover:text-white border border-[var(--color-jv-orange)]/30 text-xs font-bold transition-all"
+              className="px-5 py-2.5 rounded-full bg-[#FFF4ED] text-[var(--color-jv-orange)] hover:bg-[var(--color-jv-orange)] hover:text-white border border-[var(--color-jv-orange)]/30 text-xs font-bold transition-all w-full sm:w-auto text-center"
             >
               Global B2B (USA, UK, Canada)
             </Link>
             <Link
               href="/#contact"
-              className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white text-xs font-bold transition-all shadow-md hover:-translate-y-0.5"
+              className="px-5 py-2.5 rounded-full bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white text-xs font-bold transition-all shadow-md hover:-translate-y-0.5 w-full sm:w-auto text-center"
             >
               Partner With Us
             </Link>
           </div>
         </div>
 
-        {/* Directory Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
+        {/* Directory Grid (Responsive Across Mobile, Tablet, Laptop, Desktop) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-10 mb-16">
           
           {/* Column 1: Marketing & Media */}
           <div>

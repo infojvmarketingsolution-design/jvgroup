@@ -307,7 +307,8 @@ export default function JvMarketingContactView({ entity }: Props) {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Breadcrumb Navigation */}
-          <div className="flex items-center gap-2 text-xs text-[#64748B] mb-6 font-medium">
+          {/* Breadcrumbs */}
+          <div className="flex flex-wrap items-center gap-2 text-xs text-[#64748B] mb-6 font-medium">
             <Link href="/" className="hover:text-[var(--color-jv-orange)] transition-colors">
               JV Group Corporate
             </Link>
@@ -321,9 +322,9 @@ export default function JvMarketingContactView({ entity }: Props) {
 
           <div className="max-w-4xl">
             {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF4ED] border border-[var(--color-jv-orange)]/30 text-[var(--color-jv-orange)] text-xs font-black uppercase tracking-wider mb-5 shadow-xs">
-              <Sparkles size={14} className="animate-spin-slow" />
-              <span>Direct Operating Directorate • J.V Marketing Solution Private Limited (India)</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF4ED] border border-[var(--color-jv-orange)]/30 text-[var(--color-jv-orange)] text-[10px] sm:text-xs font-black uppercase tracking-wider mb-5 shadow-xs max-w-full">
+              <Sparkles size={14} className="animate-spin-slow shrink-0" />
+              <span className="truncate sm:whitespace-normal">Direct Operating Directorate • J.V Marketing Solution Private Limited (India)</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-heading font-black text-[#18191C] tracking-tight leading-[1.12] mb-6">

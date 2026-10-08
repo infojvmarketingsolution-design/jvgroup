@@ -597,7 +597,7 @@ export default function AboutPage() {
 
       {/* Bottom Global Contact CTA */}
       <section className="py-20 bg-gradient-to-br from-[#18191C] via-[#2B2D31] to-[#18191C] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="text-xs font-black uppercase tracking-[0.2em] text-[var(--color-jv-orange)] block mb-3">
             Unified Enterprise Cooperation
           </span>
@@ -608,10 +608,10 @@ export default function AboutPage() {
             Whether expanding your brand into North American markets, deploying custom enterprise software, shipping cargo overseas, or securing international visas — JV Group delivers multi-industry excellence under one trusted umbrella.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 sm:gap-4">
             <a
               href="tel:+447344556070"
-              className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-[var(--color-jv-orange)]/30 hover:-translate-y-0.5 transition-all"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-[var(--color-jv-orange)]/30 hover:-translate-y-0.5 transition-all text-center"
             >
               <Globe2 size={15} />
               <span>Global B2B Desk: +44 7344556070</span>
@@ -619,7 +619,7 @@ export default function AboutPage() {
 
             <a
               href="tel:+919909700606"
-              className="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-wider border border-white/20 flex items-center gap-2 transition-all"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-wider border border-white/20 flex items-center justify-center gap-2 transition-all text-center"
             >
               <Phone size={15} className="text-[var(--color-jv-orange)]" />
               <span>India Head Office: +91 99097 00606</span>
@@ -627,7 +627,7 @@ export default function AboutPage() {
 
             <Link
               href="/#contact"
-              className="px-6 py-3.5 rounded-xl bg-white hover:bg-[#FFF4ED] text-[#18191C] hover:text-[var(--color-jv-orange)] font-bold text-xs uppercase tracking-wider transition-all"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white hover:bg-[#FFF4ED] text-[#18191C] hover:text-[var(--color-jv-orange)] font-bold text-xs uppercase tracking-wider transition-all text-center"
             >
               <span>Submit Direct Inquiry</span>
             </Link>

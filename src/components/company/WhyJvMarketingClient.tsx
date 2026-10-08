@@ -575,10 +575,10 @@ export default function WhyJvMarketingClient({ entity, schemaJson }: Props) {
               </p>
             </div>
 
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto touch-pan-x pb-4">
               <div className="inline-block min-w-full align-middle">
                 <div className="overflow-hidden rounded-3xl border border-[#E2E8F0] card-shadow-3d">
-                  <table className="min-w-full divide-y divide-[#E2E8F0] text-left">
+                  <table className="min-w-[640px] sm:min-w-full divide-y divide-[#E2E8F0] text-left">
                     <thead className="bg-[#18191C] text-white">
                       <tr>
                         <th scope="col" className="py-4 px-6 text-xs font-black uppercase tracking-wider w-1/4">
@@ -588,7 +588,7 @@ export default function WhyJvMarketingClient({ entity, schemaJson }: Props) {
                           Typical Marketing Agency
                         </th>
                         <th scope="col" className="py-4 px-6 text-xs font-black uppercase tracking-wider text-[var(--color-jv-orange)] w-3/8 bg-[#2B2D31]">
-                          ★ J.V Marketing Solution Private Limited
+                          ★ J.V Marketing Solution Private Limited (India)
                         </th>
                       </tr>
                     </thead>

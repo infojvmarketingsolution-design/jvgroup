@@ -69,7 +69,7 @@ export default function ContactHub() {
           
           {/* Left Info Column on Clean White Card */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            <div className="bg-white border border-[#E2E8F0] rounded-3xl p-7 sm:p-8 card-shadow-3d">
+            <div className="bg-white border border-[#E2E8F0] rounded-3xl p-5 sm:p-7 lg:p-8 card-shadow-3d">
               <h3 className="text-xl font-bold text-[#18191C] mb-6 flex items-center gap-2">
                 <Globe2 size={20} className="text-[var(--color-jv-orange)]" />
                 Corporate Offices & Operations
@@ -95,7 +95,7 @@ export default function ContactHub() {
                   <div>
                     <h4 className="text-sm font-bold text-[#18191C]">Direct Executive Comm Link</h4>
                     <p className="text-xs text-[#64748B] mt-0.5">
-                      contact@jvgroupco.in • jvgroupco.in
+                      contact@jvgroupco.in
                     </p>
                   </div>
                 </div>
@@ -133,7 +133,7 @@ export default function ContactHub() {
             </div>
 
             {/* Quick Links Card */}
-            <div className="bg-white border border-[#E2E8F0] rounded-2xl p-6 card-shadow-3d">
+            <div className="bg-white border border-[#E2E8F0] rounded-2xl p-5 sm:p-6 card-shadow-3d">
               <h4 className="text-xs font-bold uppercase tracking-widest text-[#2B2D31] mb-3">
                 Looking for Flagship Portals?
               </h4>
@@ -155,7 +155,7 @@ export default function ContactHub() {
                   Ticket4service.com →
                 </a>
                 <a
-                  href="https://campusdekho.com"
+                  href="https://campusdekho.in"
                   target="_blank"
                   rel="noreferrer"
                   className="px-3 py-1.5 rounded-lg bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#2B2D31] hover:text-[var(--color-jv-orange)] border border-[#E2E8F0] transition-all font-semibold"
@@ -167,7 +167,7 @@ export default function ContactHub() {
           </div>
 
           {/* Right Form Column on Clean White Card */}
-          <div className="lg:col-span-7 bg-white border border-[#E2E8F0] rounded-3xl p-7 sm:p-10 card-shadow-3d">
+          <div className="lg:col-span-7 bg-white border border-[#E2E8F0] rounded-3xl p-5 sm:p-7 lg:p-10 card-shadow-3d">
             <div className="mb-6">
               <h3 className="text-2xl font-heading font-black text-[#18191C]">
                 Submit an Enterprise Inquiry

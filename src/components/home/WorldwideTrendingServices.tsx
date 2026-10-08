@@ -143,21 +143,21 @@ export default function WorldwideTrendingServices() {
           </div>
 
           {/* Right Column: Detailed Capability & Keywords Spotlight */}
-          <div className="lg:col-span-7 bg-[#F8FAFC] border border-[#E2E8F0] rounded-3xl p-6 sm:p-8 card-shadow-3d">
+          <div className="lg:col-span-7 bg-[#F8FAFC] border border-[#E2E8F0] rounded-3xl p-4 sm:p-6 lg:p-8 card-shadow-3d">
             
-            <div className="flex flex-wrap items-center justify-between gap-3 pb-6 mb-6 border-b border-[#E2E8F0]">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-6 mb-6 border-b border-[#E2E8F0]">
               <div>
                 <span className="text-xs font-black uppercase tracking-widest text-[var(--color-jv-orange)] block mb-1">
                   Primary Delivery Unit
                 </span>
-                <h4 className="font-heading font-black text-xl sm:text-2xl text-[#18191C]">
+                <h4 className="font-heading font-black text-lg sm:text-2xl text-[#18191C] break-words">
                   {activeService.leadSubsidiary}
                 </h4>
               </div>
 
               <Link
                 href={activeService.subsidiaryUrl}
-                className="px-4 py-2 rounded-xl bg-white hover:bg-[var(--color-jv-orange)] hover:text-white text-[#18191C] text-xs font-bold border border-[#CBD5E1] transition-all flex items-center gap-1.5 shadow-xs"
+                className="w-full sm:w-auto text-center justify-center px-4 py-2 rounded-xl bg-white hover:bg-[var(--color-jv-orange)] hover:text-white text-[#18191C] text-xs font-bold border border-[#CBD5E1] transition-all flex items-center gap-1.5 shadow-xs"
               >
                 <span>View Full Details</span>
                 <ArrowRight size={13} />
@@ -233,21 +233,21 @@ export default function WorldwideTrendingServices() {
         </div>
 
         {/* Global Generative Engine Optimization (GEO) Knowledge Vault */}
-        <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-3xl p-6 sm:p-10 card-shadow-3d">
+        <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-3xl p-4 sm:p-8 lg:p-10 card-shadow-3d">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-8 border-b border-[#E2E8F0]">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#E2E8F0] mb-2 text-xs font-bold text-[#64748B]">
                 <BadgeCheck size={14} className="text-[var(--color-jv-orange)]" />
                 <span>Entity Authority & Structured LLM Answers</span>
               </div>
-              <h3 className="text-xl sm:text-2xl font-heading font-black text-[#18191C]">
+              <h3 className="text-xl sm:text-2xl font-heading font-black text-[#18191C] break-words">
                 How AI Engines (ChatGPT, Perplexity & Google AI) See JV Group Worldwide
               </h3>
             </div>
             
             <Link
               href="/ai-seo"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[var(--color-jv-orange)] hover:bg-[#c2410c] text-white text-xs font-bold uppercase tracking-wider shadow-sm transition-all whitespace-nowrap"
+              className="w-full sm:w-auto text-center inline-flex items-center justify-center gap-1.5 px-4 py-2.5 sm:py-2 rounded-xl bg-[var(--color-jv-orange)] hover:bg-[#c2410c] text-white text-xs font-bold uppercase tracking-wider shadow-sm transition-all whitespace-nowrap"
             >
               <span>Explore AI SEO Hub</span>
               <ArrowRight size={13} />

@@ -163,7 +163,7 @@ export default function DynamicSolutionBuilder() {
         </div>
 
         {/* Builder Container */}
-        <div className="bg-white border border-[#E2E8F0] rounded-3xl p-6 sm:p-10 card-shadow-3d grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div className="bg-white border border-[#E2E8F0] rounded-3xl p-4 sm:p-8 lg:p-10 card-shadow-3d grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 items-start">
           
           {/* Left: Interactive Configurator */}
           <div className="lg:col-span-7 space-y-6">
@@ -173,7 +173,7 @@ export default function DynamicSolutionBuilder() {
               <label className="block text-xs font-bold uppercase tracking-wider text-[#2B2D31] mb-2">
                 1. Select Target Operating Market:
               </label>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <button
                   type="button"
                   onClick={() => setSelectedMarket("global")}
@@ -183,7 +183,7 @@ export default function DynamicSolutionBuilder() {
                       : "bg-[#F8FAFC] border-[#E2E8F0] hover:border-[#CBD5E1]"
                   }`}
                 >
-                  <span className="block text-xs font-black text-[#18191C] flex items-center gap-1.5">
+                  <span className="text-xs font-black text-[#18191C] flex items-center gap-1.5">
                     <span>🇺🇸 🇬🇧 🇨🇦 Global B2B</span>
                   </span>
                   <span className="text-[11px] text-[#64748B] mt-0.5 block">
@@ -200,7 +200,7 @@ export default function DynamicSolutionBuilder() {
                       : "bg-[#F8FAFC] border-[#E2E8F0] hover:border-[#CBD5E1]"
                   }`}
                 >
-                  <span className="block text-xs font-black text-[#18191C] flex items-center gap-1.5">
+                  <span className="text-xs font-black text-[#18191C] flex items-center gap-1.5">
                     <span>🇮🇳 India Domestic Market</span>
                   </span>
                   <span className="text-[11px] text-[#64748B] mt-0.5 block">
@@ -276,7 +276,7 @@ export default function DynamicSolutionBuilder() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-2 text-xs">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                 <div className="p-3 bg-white rounded-xl border border-[#E2E8F0]">
                   <span className="block text-[10px] uppercase font-bold text-[#64748B]">
                     Market Scope
@@ -342,12 +342,12 @@ export default function DynamicSolutionBuilder() {
               </form>
             )}
 
-            <div className="pt-3 border-t border-[#E2E8F0] mt-4 flex items-center justify-between text-[11px] text-[#64748B]">
+            <div className="pt-3 border-t border-[#E2E8F0] mt-4 flex flex-wrap items-center justify-between gap-2 text-[11px] text-[#64748B]">
               <span className="flex items-center gap-1">
                 <ShieldCheck size={13} className="text-[var(--color-jv-orange)]" />
                 <span>Consolidated SLA</span>
               </span>
-              <span>Official: jvgroupco.in</span>
+              <span>Global B2B: India • UK • USA • Canada</span>
             </div>
 
           </div>

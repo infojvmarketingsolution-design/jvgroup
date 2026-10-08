@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -22,6 +22,18 @@ import {
 export default function AmsHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+
+  // Prevent background scroll when mobile navigation is active
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
 
   const navLinks = [
     { label: "Home", href: "/companies/ahmedabad-marketing-solution" },
@@ -53,7 +65,8 @@ export default function AmsHeader() {
               className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 hover:bg-[var(--color-jv-orange)] text-white font-bold text-xs transition-all border border-white/15 hover:border-[var(--color-jv-orange)] shadow-xs shrink-0 whitespace-nowrap"
             >
               <ArrowLeft size={12} />
-              <span>Back to JV Group Portal</span>
+              <span className="hidden sm:inline">Back to JV Group Portal</span>
+              <span className="sm:hidden">Portal</span>
             </Link>
 
             <span className="text-[#475569] hidden sm:inline">|</span>
@@ -93,7 +106,7 @@ export default function AmsHeader() {
               href="/companies/ahmedabad-marketing-solution" 
               className="flex items-center shrink-0 group focus:outline-hidden py-1"
             >
-              <div className="relative w-44 sm:w-48 lg:w-52 h-14 sm:h-16 flex items-center justify-start transition-transform group-hover:scale-[1.02]">
+              <div className="relative w-36 sm:w-48 lg:w-52 h-12 sm:h-16 flex items-center justify-start transition-transform group-hover:scale-[1.02]">
                 <Image
                   src="/logos/ahmedabad-marketing-solution.jpg"
                   alt="Ahmedabad Marketing Solution - JV Group"

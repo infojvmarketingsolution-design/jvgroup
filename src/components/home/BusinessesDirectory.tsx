@@ -78,24 +78,24 @@ export default function BusinessesDirectory() {
           </div>
 
           {/* Quick Stats Pill */}
-          <div className="bg-white border border-[#E2E8F0] rounded-2xl p-5 flex items-center gap-6 shrink-0 card-shadow-3d">
+          <div className="bg-white border border-[#E2E8F0] rounded-2xl p-3.5 sm:p-5 flex items-center justify-between sm:justify-start gap-3 sm:gap-6 shrink-0 card-shadow-3d">
             <div>
-              <span className="text-3xl font-black text-[var(--color-jv-orange)]">{BUSINESS_ENTITIES.length}+</span>
-              <p className="text-xs text-[#64748B] font-bold uppercase tracking-wider">
+              <span className="text-2xl sm:text-3xl font-black text-[var(--color-jv-orange)]">{BUSINESS_ENTITIES.length}+</span>
+              <p className="text-[10px] sm:text-xs text-[#64748B] font-bold uppercase tracking-wider">
                 Entities
               </p>
             </div>
-            <div className="w-px h-10 bg-[#E2E8F0]" />
+            <div className="w-px h-8 sm:h-10 bg-[#E2E8F0]" />
             <div>
-              <span className="text-3xl font-black text-[#18191C]">6</span>
-              <p className="text-xs text-[#64748B] font-bold uppercase tracking-wider">
+              <span className="text-2xl sm:text-3xl font-black text-[#18191C]">6</span>
+              <p className="text-[10px] sm:text-xs text-[#64748B] font-bold uppercase tracking-wider">
                 Sectors
               </p>
             </div>
-            <div className="w-px h-10 bg-[#E2E8F0]" />
+            <div className="w-px h-8 sm:h-10 bg-[#E2E8F0]" />
             <div>
-              <span className="text-3xl font-black text-[var(--color-jv-orange)]">3</span>
-              <p className="text-xs text-[#64748B] font-bold uppercase tracking-wider">
+              <span className="text-2xl sm:text-3xl font-black text-[var(--color-jv-orange)]">3</span>
+              <p className="text-[10px] sm:text-xs text-[#64748B] font-bold uppercase tracking-wider">
                 Global Desks
               </p>
             </div>
@@ -106,7 +106,7 @@ export default function BusinessesDirectory() {
         <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 mb-10">
           
           {/* Category Tabs */}
-          <div className="flex items-center gap-2 overflow-x-auto pb-2 lg:pb-0 scrollbar-none">
+          <div className="flex items-center gap-2 overflow-x-auto pb-2 lg:pb-0 scrollbar-none touch-pan-x">
             <button
               onClick={() => setSelectedCategory("all")}
               className={`px-4 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
@@ -144,7 +144,7 @@ export default function BusinessesDirectory() {
           </div>
 
           {/* Search Input */}
-          <div className="relative min-w-[280px]">
+          <div className="relative w-full lg:w-72 shrink-0">
             <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#94A3B8]" />
             <input
               type="text"
@@ -288,10 +288,10 @@ export default function BusinessesDirectory() {
                 </div>
 
                 {/* 3. Card Footer Actions (Dual Action: Call + View Full Profile) */}
-                <div className="pt-4 border-t border-[#E2E8F0] flex items-center justify-between gap-3 mt-2">
+                <div className="pt-4 border-t border-[#E2E8F0] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 mt-2">
                   <a
                     href={`tel:${business.phone}`}
-                    className="text-xs font-bold text-[#64748B] hover:text-[var(--color-jv-orange)] flex items-center gap-1.5 transition-colors"
+                    className="text-xs font-bold text-[#64748B] hover:text-[var(--color-jv-orange)] flex items-center justify-center sm:justify-start gap-1.5 transition-colors py-1 sm:py-0"
                   >
                     <Phone size={13} className="text-[var(--color-jv-orange)]" />
                     <span>{business.phone}</span>
@@ -299,7 +299,7 @@ export default function BusinessesDirectory() {
 
                   <Link
                     href={`/companies/${business.id}`}
-                    className="px-4 py-2 rounded-xl bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white text-xs font-extrabold flex items-center gap-1.5 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all"
+                    className="w-full sm:w-auto px-4 py-2.5 sm:py-2 rounded-xl bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white text-xs font-extrabold flex items-center justify-center gap-1.5 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all text-center"
                   >
                     <span>Visit Company Website</span>
                     <ArrowRight size={13} />

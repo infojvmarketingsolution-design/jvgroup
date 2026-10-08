@@ -28,9 +28,9 @@ export default function SectorSynergy() {
       title: "Digital Marketing & Media Powerhouse",
       icon: Megaphone,
       companies: [
-        "Ahmedabad Marketing Service",
-        "J.V Marketing Service Private Limited",
-        "J.V Marketing Services Limited"
+        "Ahmedabad Marketing Solution",
+        "J.V Marketing Solution Private Limited (India)",
+        "J.V Marketing Solutions Limited (Global)"
       ],
       role: "Demand Generation & Commercial Dominance",
       description:
@@ -232,13 +232,13 @@ export default function SectorSynergy() {
               </div>
 
               {/* Bottom Actions */}
-              <div className="flex items-center justify-between pt-6 border-t border-[#E2E8F0]">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pt-6 border-t border-[#E2E8F0]">
                 <span className="text-xs text-[#64748B]">
                   Ready to collaborate with this vertical?
                 </span>
                 <Link
                   href="#contact"
-                  className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white text-xs font-bold transition-all flex items-center gap-2 shadow-sm"
+                  className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-sm text-center"
                 >
                   <span>Connect With Leadership</span>
                   <ArrowRight size={14} />

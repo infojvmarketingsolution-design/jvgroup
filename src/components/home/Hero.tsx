@@ -244,7 +244,7 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 mb-6">
               <Link
                 href="/global"
-                className="px-5 sm:px-6 py-3 rounded-xl bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_8px_20px_rgba(243,99,35,0.3)] hover:shadow-[0_12px_28px_rgba(243,99,35,0.45)] hover:-translate-y-0.5 transition-all whitespace-nowrap cursor-pointer"
+                className="w-full sm:w-auto px-5 sm:px-6 py-3 rounded-xl bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_8px_20px_rgba(243,99,35,0.3)] hover:shadow-[0_12px_28px_rgba(243,99,35,0.45)] hover:-translate-y-0.5 transition-all whitespace-nowrap cursor-pointer"
               >
                 <span>Global B2B (USA/UK/CA)</span>
                 <ArrowRight size={14} />
@@ -252,7 +252,7 @@ export default function Hero() {
 
               <Link
                 href="/services"
-                className="px-4 sm:px-5 py-3 rounded-xl bg-white hover:bg-[#F8FAFC] text-[#2B2D31] font-bold text-xs uppercase tracking-wider border border-[#E2E8F0] hover:border-[var(--color-jv-orange)]/50 transition-all flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer shadow-2xs"
+                className="w-full sm:w-auto px-4 sm:px-5 py-3 rounded-xl bg-white hover:bg-[#F8FAFC] text-[#2B2D31] font-bold text-xs uppercase tracking-wider border border-[#E2E8F0] hover:border-[var(--color-jv-orange)]/50 transition-all flex items-center justify-center gap-2 whitespace-nowrap cursor-pointer shadow-2xs"
               >
                 <span>Services Catalog</span>
                 <Layers size={14} className="text-[var(--color-jv-orange)]" />
@@ -260,7 +260,7 @@ export default function Hero() {
 
               <Link
                 href="/ecosystem"
-                className="px-4 sm:px-5 py-3 rounded-xl bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#2B2D31] hover:text-[var(--color-jv-orange)] font-bold text-xs uppercase tracking-wider border border-[#E2E8F0] hover:border-[var(--color-jv-orange)]/40 transition-all flex items-center justify-center gap-1.5 whitespace-nowrap cursor-pointer"
+                className="w-full sm:w-auto px-4 sm:px-5 py-3 rounded-xl bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#2B2D31] hover:text-[var(--color-jv-orange)] font-bold text-xs uppercase tracking-wider border border-[#E2E8F0] hover:border-[var(--color-jv-orange)]/40 transition-all flex items-center justify-center gap-1.5 whitespace-nowrap cursor-pointer"
               >
                 <span>Ecosystem Strategy</span>
                 <ArrowUpRight size={13} />
@@ -437,7 +437,7 @@ export default function Hero() {
                 </div>
 
                 {/* 2 Primary Sector Toggles with Instant Active State */}
-                <div className="grid grid-cols-2 gap-2 mb-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3">
                   <button
                     type="button"
                     onClick={(e) => {
@@ -492,7 +492,7 @@ export default function Hero() {
                         USA • UK • Canada • India
                       </span>
                     </div>
-                    <div className="grid grid-cols-2 gap-1.5 text-[11px] text-[#2B2D31]">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-[11px] text-[#2B2D31]">
                       <Link href="/companies/ekato-tech" className="flex items-center gap-1.5 p-1.5 rounded-lg bg-white border border-[#E2E8F0] hover:border-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all group">
                         <Cpu size={12} className="text-[var(--color-jv-orange)] shrink-0" />
                         <span className="truncate font-semibold group-hover:text-[var(--color-jv-orange)]">Ekato Tech (ERP/SaaS)</span>
@@ -521,7 +521,7 @@ export default function Hero() {
                         UK • USA • Canada • Australia • Europe
                       </span>
                     </div>
-                    <div className="grid grid-cols-2 gap-1.5 text-[11px] text-[#2B2D31]">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-[11px] text-[#2B2D31]">
                       <Link href="/companies/jv-overseas" className="flex items-center gap-1.5 p-1.5 rounded-lg bg-white border border-[#E2E8F0] hover:border-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all group">
                         <GraduationCap size={12} className="text-[var(--color-jv-orange)] shrink-0" />
                         <span className="truncate font-semibold group-hover:text-[var(--color-jv-orange)]">J.V OVERSEAS (Visas)</span>

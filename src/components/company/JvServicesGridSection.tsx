@@ -161,7 +161,7 @@ export default function JvServicesGridSection({
         </div>
 
         {/* 5-Column High-Impact Overview Grid (Matching User Diagram) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 sm:gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-5 lg:gap-6 mb-12">
           {JV_MARKETING_SERVICES_CLUSTERS.map((cluster) => {
             const isActive = activeClusterId === cluster.id;
             return (
@@ -282,17 +282,17 @@ export default function JvServicesGridSection({
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full lg:w-auto">
               <Link
                 href={`/companies/${entityId}/services`}
-                className="px-5 py-3 rounded-xl bg-[#FFF4ED] hover:bg-[#FFE8DA] text-[var(--color-jv-orange)] font-extrabold text-xs uppercase tracking-wider flex items-center gap-2 border border-[var(--color-jv-orange)]/30 transition-all shadow-xs"
+                className="w-full sm:w-auto px-5 py-3 rounded-xl bg-[#FFF4ED] hover:bg-[#FFE8DA] text-[var(--color-jv-orange)] font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 border border-[var(--color-jv-orange)]/30 transition-all shadow-xs text-center"
               >
                 <span>View Full Services Page</span>
                 <ExternalLink size={14} />
               </Link>
               <Link
                 href={`/companies/${entityId}/contact`}
-                className="px-5 py-3 rounded-xl bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white font-extrabold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-[var(--color-jv-orange)]/25 hover:shadow-xl transition-all"
+                className="w-full sm:w-auto px-5 py-3 rounded-xl bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-[var(--color-jv-orange)]/25 hover:shadow-xl transition-all text-center"
               >
                 <span>Request Custom Scope</span>
                 <ArrowRight size={14} />

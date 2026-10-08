@@ -21,11 +21,24 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileEntitiesOpen, setMobileEntitiesOpen] = useState(false);
   const [businessDropdownOpen, setBusinessDropdownOpen] = useState(false);
   const [phoneDropdownOpen, setPhoneDropdownOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const dropdownRef = useRef<HTMLDivElement>(null);
   const phoneRef = useRef<HTMLDivElement>(null);
+
+  // Prevent background scroll when mobile navigation is active
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
 
   useEffect(() => {
     let prev = false;
@@ -182,7 +195,7 @@ export default function Navbar() {
             {businessDropdownOpen && (
               <div
                 onMouseLeave={() => setBusinessDropdownOpen(false)}
-                className="absolute top-full left-0 xl:left-1/2 xl:-translate-x-1/2 w-[720px] xl:w-[820px] mt-2 bg-white border border-[#E2E8F0] rounded-2xl shadow-[0_25px_60px_rgba(43,45,49,0.18)] p-5 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
+                className="absolute top-full left-0 xl:left-1/2 xl:-translate-x-1/2 w-[720px] xl:w-[820px] max-w-[calc(100vw-32px)] mt-2 bg-white border border-[#E2E8F0] rounded-2xl shadow-[0_25px_60px_rgba(43,45,49,0.18)] p-4 sm:p-5 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
               >
                 {/* Header & Search */}
                 <div className="flex items-center justify-between pb-3.5 mb-3.5 border-b border-[#E2E8F0]">
@@ -368,44 +381,83 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer (100% Full Viewport Responsive on all Phones & Tablets) */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-[60px] bg-white z-40 p-6 flex flex-col justify-between overflow-y-auto border-t border-[#E2E8F0]">
-          <div className="flex flex-col gap-3.5">
+        <div className="lg:hidden fixed inset-x-0 bottom-0 top-[54px] sm:top-[60px] bg-white z-40 p-5 sm:p-6 flex flex-col justify-between overflow-y-auto border-t border-[#E2E8F0]">
+          <div className="flex flex-col gap-3">
             <Link
               href="/"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-base font-bold text-[#18191C] hover:text-[var(--color-jv-orange)]"
+              className="text-base font-bold text-[#18191C] hover:text-[var(--color-jv-orange)] py-1"
             >
               Home
             </Link>
             <Link
               href="/about"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-base font-bold text-[#18191C] hover:text-[var(--color-jv-orange)]"
+              className="text-base font-bold text-[#18191C] hover:text-[var(--color-jv-orange)] py-1"
             >
-              About Us (Legacy & Leadership)
+              About Us (Legacy &amp; Leadership)
             </Link>
+
+            {/* Mobile Operating Entities Accordion */}
+            <div className="border-y border-[#F1F5F9] py-2">
+              <button
+                type="button"
+                onClick={() => setMobileEntitiesOpen(!mobileEntitiesOpen)}
+                className="w-full flex items-center justify-between text-base font-bold text-[#18191C] hover:text-[var(--color-jv-orange)] py-1"
+              >
+                <span className="flex items-center gap-2">
+                  <span>Operating Entities</span>
+                  <span className="px-1.5 py-0.5 text-[9px] font-black rounded-full bg-[var(--color-jv-orange)] text-white">
+                    9+
+                  </span>
+                </span>
+                <ChevronDown
+                  size={16}
+                  className={`transition-transform duration-200 text-[#64748B] ${
+                    mobileEntitiesOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {mobileEntitiesOpen && (
+                <div className="mt-2 pl-2 space-y-1.5 border-l-2 border-[var(--color-jv-orange)]/30">
+                  {BUSINESS_ENTITIES.map((ent) => (
+                    <Link
+                      key={ent.id}
+                      href={`/companies/${ent.id}`}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-1.5 px-2 rounded-lg text-xs font-semibold text-[#475569] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-colors"
+                    >
+                      <div className="font-bold text-[#18191C]">{ent.shortName}</div>
+                      <div className="text-[10px] text-[#94A3B8]">{ent.domain}</div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link
               href="/ecosystem"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-base font-bold text-[#18191C] hover:text-[var(--color-jv-orange)]"
+              className="text-base font-bold text-[#18191C] hover:text-[var(--color-jv-orange)] py-1"
             >
-              Ecosystem Strategy & Hierarchy
+              Ecosystem Strategy &amp; Hierarchy
             </Link>
             <Link
               href="/services"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-base font-bold text-[#18191C] hover:text-[var(--color-jv-orange)]"
+              className="text-base font-bold text-[#18191C] hover:text-[var(--color-jv-orange)] py-1"
             >
               All Services Catalog
             </Link>
             <Link
               href="/ai-seo"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-base font-bold text-[#18191C] hover:text-[var(--color-jv-orange)] flex items-center justify-between"
+              className="text-base font-bold text-[#18191C] hover:text-[var(--color-jv-orange)] flex items-center justify-between py-1"
             >
-              <span>AI SEO & GEO Intelligence</span>
+              <span>AI SEO &amp; GEO Intelligence</span>
               <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-[var(--color-jv-orange)] text-white">
                 AI Search
               </span>
@@ -413,7 +465,7 @@ export default function Navbar() {
             <Link
               href="/global"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-base font-bold text-[#18191C] hover:text-[var(--color-jv-orange)] flex items-center justify-between"
+              className="text-base font-bold text-[#18191C] hover:text-[var(--color-jv-orange)] flex items-center justify-between py-1"
             >
               <span>Global B2B Expansion</span>
               <span className="text-[10px] font-black uppercase px-2 py-0.5 rounded bg-[#FFF4ED] text-[var(--color-jv-orange)]">
@@ -423,25 +475,25 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-base font-bold text-[#18191C] hover:text-[var(--color-jv-orange)]"
+              className="text-base font-bold text-[#18191C] hover:text-[var(--color-jv-orange)] py-1"
             >
               Contact Directory
             </Link>
 
-            <div className="pt-4 border-t border-[#E2E8F0] space-y-2">
+            <div className="pt-3 border-t border-[#E2E8F0] space-y-2">
               <span className="text-[10px] uppercase font-bold text-[#64748B] block">
                 Official Hotlines:
               </span>
               <a
                 href="tel:+919909700606"
-                className="flex items-center gap-2 text-sm font-bold text-[#18191C] hover:text-[var(--color-jv-orange)]"
+                className="flex items-center gap-2 text-xs font-bold text-[#18191C] hover:text-[var(--color-jv-orange)]"
               >
                 <Phone size={14} className="text-[var(--color-jv-orange)]" />
                 <span>India: +91 99097 00606</span>
               </a>
               <a
                 href="tel:+447344556070"
-                className="flex items-center gap-2 text-sm font-bold text-[#18191C] hover:text-[var(--color-jv-orange)]"
+                className="flex items-center gap-2 text-xs font-bold text-[#18191C] hover:text-[var(--color-jv-orange)]"
               >
                 <Globe2 size={14} className="text-[var(--color-jv-orange)]" />
                 <span>Global: +44 7344556070</span>
@@ -449,11 +501,11 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="pt-6">
+          <div className="pt-4 mt-4 border-t border-[#E2E8F0]">
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white text-center font-bold text-xs uppercase tracking-wider block shadow-md"
+              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white text-center font-bold text-xs uppercase tracking-wider block shadow-md cursor-pointer"
             >
               Partner With JV Group
             </Link>

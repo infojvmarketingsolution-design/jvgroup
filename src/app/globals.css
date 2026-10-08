@@ -26,19 +26,35 @@
   --foreground: #18191C;
 }
 
-/* Base Setup */
+/* Base Setup & Full-Viewport Responsive Guardrails */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html {
   background-color: #FFFFFF;
   color: #18191C;
+  max-width: 100vw;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   background-color: #FFFFFF;
   color: #18191C;
+  width: 100%;
+  max-width: 100vw;
   overflow-x: hidden;
+  position: relative;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   selection-background-color: #F36323;
   selection-color: #FFFFFF;
+  -webkit-tap-highlight-color: transparent;
+}
+
+img, video, canvas {
+  max-width: 100%;
+  height: auto;
 }
 
 ::selection {

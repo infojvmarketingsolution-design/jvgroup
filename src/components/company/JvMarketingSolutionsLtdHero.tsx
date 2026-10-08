@@ -282,7 +282,7 @@ export default function JvMarketingSolutionsLtdHero({
             {/* Primary Consultation Button */}
             <Link
               href={`/companies/${entity.id}/contact`}
-              className="relative group px-6 sm:px-7 py-3.5 rounded-xl bg-gradient-to-r from-[var(--color-jv-orange)] via-[#ea580c] to-[#c2410c] text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_4px_24px_rgba(243,99,35,0.4)] hover:shadow-[0_6px_32px_rgba(243,99,35,0.6)] hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer overflow-hidden"
+              className="w-full sm:w-auto relative group px-6 sm:px-7 py-3.5 rounded-xl bg-gradient-to-r from-[var(--color-jv-orange)] via-[#ea580c] to-[#c2410c] text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_4px_24px_rgba(243,99,35,0.4)] hover:shadow-[0_6px_32px_rgba(243,99,35,0.6)] hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer overflow-hidden text-center"
             >
               <span className="relative z-10">Request Global Consultation</span>
               <ArrowRight size={15} className="relative z-10 transition-transform duration-300 group-hover:translate-x-1" />
@@ -292,7 +292,7 @@ export default function JvMarketingSolutionsLtdHero({
             {/* Direct London Phone Hotline */}
             <a
               href={`tel:${entity.phone}`}
-              className={`px-5 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider border flex items-center justify-center gap-2 transition-all shadow-xs hover:-translate-y-0.5 cursor-pointer backdrop-blur-md ${
+              className={`w-full sm:w-auto px-5 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider border flex items-center justify-center gap-2 transition-all shadow-xs hover:-translate-y-0.5 cursor-pointer backdrop-blur-md text-center ${
                 isDark 
                   ? "bg-white/[0.05] hover:bg-white/[0.12] border-white/15 text-white hover:border-white/25" 
                   : "bg-white hover:bg-[#FFF4ED] border-[#CBD5E1] text-[#1E293B]"
@@ -309,7 +309,7 @@ export default function JvMarketingSolutionsLtdHero({
               href={whatsappUrl}
               target="_blank"
               rel="noreferrer"
-              className="px-5 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-emerald-500/25 transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
+              className="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-emerald-500/25 transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0 text-center"
               title="Direct WhatsApp Communication"
             >
               <MessageSquare size={15} />
@@ -351,7 +351,7 @@ export default function JvMarketingSolutionsLtdHero({
         >
           
           {/* 1. TOP SEGMENTED CAPABILITY DOCK */}
-          <div className={`p-1.5 rounded-2xl backdrop-blur-2xl border shadow-xl grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-1.5 ${
+          <div className={`p-1.5 rounded-2xl backdrop-blur-2xl border shadow-xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-1.5 ${
             isDark 
               ? "bg-slate-900/60 border-white/10" 
               : "bg-white/95 border-slate-200/90"
