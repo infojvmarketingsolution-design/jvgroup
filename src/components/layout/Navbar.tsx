@@ -83,9 +83,7 @@ export default function Navbar() {
             <strong className="text-[#18191C]">JV Group Ecosystem</strong>
           </span>
           <span className="text-[#CBD5E1]">•</span>
-          <span>Global B2B: USA • UK • Canada • India</span>
-          <span className="text-[#CBD5E1]">•</span>
-          <span className="font-semibold text-[#18191C]">jvgroupco.in</span>
+          <span>Global B2B: India • UK • USA • Canada</span>
         </div>
 
         <div className="flex items-center gap-3 font-semibold shrink-0">
