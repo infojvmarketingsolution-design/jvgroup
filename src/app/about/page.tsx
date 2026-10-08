@@ -99,41 +99,82 @@ export default function AboutPage() {
         <SeasonalAtmosphere season="summer" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[var(--color-jv-orange)]/30 bg-[#FFF4ED] mb-6">
-              <span className="w-2 h-2 rounded-full bg-[var(--color-jv-orange)] animate-pulse" />
-              <span className="text-[var(--color-jv-orange)] text-xs font-bold tracking-[0.2em] uppercase">
-                The Heritage of JV Group
-              </span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-14 items-center">
+            
+            {/* Left Content Column */}
+            <div className="lg:col-span-7 xl:col-span-7">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[var(--color-jv-orange)]/30 bg-[#FFF4ED] mb-6">
+                <span className="w-2 h-2 rounded-full bg-[var(--color-jv-orange)] animate-pulse" />
+                <span className="text-[var(--color-jv-orange)] text-xs font-bold tracking-[0.2em] uppercase">
+                  The Heritage of JV Group
+                </span>
+              </div>
+
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-heading font-black text-[#18191C] tracking-tight leading-[1.1] mb-6">
+                A Name Rooted in <br />
+                <span className="text-shimmer-orange">Legacy and Values.</span>
+              </h1>
+
+              <p className="text-[#4E5058] text-base sm:text-lg font-sans leading-relaxed mb-8">
+                JV Group is a diversified multi-sector global business ecosystem uniting Technology, Marketing, Freight Logistics, IT Infrastructure, Real Estate, and Global Education. We operate with an unwavering commitment to trust, corporate governance, and cross-border enterprise excellence across India, the USA, the UK, and Canada.
+              </p>
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-2xl">
+                <div className="p-3 sm:p-4 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
+                  <span className="block text-2xl sm:text-3xl font-heading font-black text-[#18191C]">9</span>
+                  <span className="text-[10px] font-bold uppercase text-[#64748B] tracking-wider">Operating Entities</span>
+                </div>
+                <div className="p-3 sm:p-4 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
+                  <span className="block text-2xl sm:text-3xl font-heading font-black text-[var(--color-jv-orange)]">200+</span>
+                  <span className="text-[10px] font-bold uppercase text-[#64748B] tracking-wider">Clients &amp; Partners</span>
+                </div>
+                <div className="p-3 sm:p-4 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
+                  <span className="block text-2xl sm:text-3xl font-heading font-black text-[#18191C]">4</span>
+                  <span className="text-[10px] font-bold uppercase text-[#64748B] tracking-wider">Key Nations</span>
+                </div>
+                <div className="p-3 sm:p-4 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
+                  <span className="block text-2xl sm:text-3xl font-heading font-black text-[var(--color-jv-orange)]">1</span>
+                  <span className="text-[10px] font-bold uppercase text-[#64748B] tracking-wider">Trusted Umbrella</span>
+                </div>
+              </div>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-heading font-black text-[#18191C] tracking-tight leading-[1.1] mb-6">
-              A Name Rooted in <br />
-              <span className="text-shimmer-orange">Legacy and Values.</span>
-            </h1>
+            {/* Right Available Space: JV Logo Showcase Card */}
+            <div className="lg:col-span-5 xl:col-span-5 flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-sm sm:max-w-md rounded-3xl bg-white border-2 border-[#E2E8F0] shadow-2xl p-6 sm:p-8 flex flex-col items-center text-center overflow-hidden group hover:border-[var(--color-jv-orange)]/40 transition-all duration-300">
+                {/* Ambient Soft Glow Behind Logo */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-[radial-gradient(circle_at_center,rgba(243,99,35,0.1)_0%,transparent_70%)] pointer-events-none" />
+                
+                {/* Official JV Logo Container */}
+                <div className="relative w-40 h-40 sm:w-52 sm:h-52 rounded-2xl bg-white border border-[#E2E8F0] shadow-lg p-4 flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                  <Image
+                    src="/jv-logo.jpg"
+                    alt="JV Group Logo - Leadership With Trust"
+                    fill
+                    className="object-contain p-2"
+                    priority
+                  />
+                </div>
 
-            <p className="text-[#4E5058] text-base sm:text-lg font-sans leading-relaxed mb-8">
-              JV Group is a diversified multi-sector global business ecosystem uniting Technology, Marketing, Freight Logistics, IT Infrastructure, Real Estate, and Global Education. We operate with an unwavering commitment to trust, corporate governance, and cross-border enterprise excellence across India, the USA, the UK, and Canada.
-            </p>
+                {/* Brand Identity Typography */}
+                <div className="mt-5 relative z-10">
+                  <span className="font-heading font-black text-2xl sm:text-3xl tracking-tight text-[#18191C] block">
+                    JV GROUP
+                  </span>
+                  <span className="text-xs sm:text-sm font-bold tracking-[0.2em] uppercase text-[var(--color-jv-orange)] block mt-1">
+                    Leadership With Trust
+                  </span>
+                </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-2xl">
-              <div className="p-3 sm:p-4 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
-                <span className="block text-2xl sm:text-3xl font-heading font-black text-[#18191C]">9</span>
-                <span className="text-[10px] font-bold uppercase text-[#64748B] tracking-wider">Operating Entities</span>
-              </div>
-              <div className="p-3 sm:p-4 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
-                <span className="block text-2xl sm:text-3xl font-heading font-black text-[var(--color-jv-orange)]">200+</span>
-                <span className="text-[10px] font-bold uppercase text-[#64748B] tracking-wider">Clients & Partners</span>
-              </div>
-              <div className="p-3 sm:p-4 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
-                <span className="block text-2xl sm:text-3xl font-heading font-black text-[#18191C]">4</span>
-                <span className="text-[10px] font-bold uppercase text-[#64748B] tracking-wider">Key Nations</span>
-              </div>
-              <div className="p-3 sm:p-4 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0]">
-                <span className="block text-2xl sm:text-3xl font-heading font-black text-[var(--color-jv-orange)]">1</span>
-                <span className="text-[10px] font-bold uppercase text-[#64748B] tracking-wider">Trusted Umbrella</span>
+                {/* Subtitle Ecosystem Metric Pill */}
+                <div className="mt-4 pt-4 border-t border-[#F1F5F9] w-full flex items-center justify-center gap-2.5 text-[11px] font-bold text-[#64748B] relative z-10">
+                  <span>Unified Business Ecosystem</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-jv-orange)]" />
+                  <span>India • UK • USA • Canada</span>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
