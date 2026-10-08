@@ -120,11 +120,13 @@ export default function ContactPage() {
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-10 font-normal">
               Initiate executive discussions, route requests for proposals (RFPs) to any of our 9 specialized operating entities, or consult with our global trade and technology desks across India, the UK, the USA, and Canada.
             </p>
+          </div>
 
-            {/* Fast Action Contact Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              
-              <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-orange-300 transition-all">
+          {/* Fast Action Contact Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            
+            <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-orange-300 transition-all flex flex-col justify-between">
+              <div>
                 <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200/70 flex items-center justify-center text-[var(--color-jv-orange)] mb-3 shadow-2xs">
                   <Phone size={18} />
                 </div>
@@ -137,10 +139,12 @@ export default function ContactPage() {
                 >
                   +91 99097 00606
                 </a>
-                <span className="text-[11px] text-slate-500 mt-1 block">Mon–Sat: 9:30 AM – 7:30 PM IST</span>
               </div>
+              <span className="text-[11px] text-slate-500 mt-2 block">Mon–Sat: 9:30 AM – 7:30 PM IST</span>
+            </div>
 
-              <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-orange-300 transition-all">
+            <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-orange-300 transition-all flex flex-col justify-between">
+              <div>
                 <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200/70 flex items-center justify-center text-[var(--color-jv-orange)] mb-3 shadow-2xs">
                   <Globe2 size={18} />
                 </div>
@@ -153,10 +157,12 @@ export default function ContactPage() {
                 >
                   +44 7344556070
                 </a>
-                <span className="text-[11px] text-slate-500 mt-1 block">24/7 International Client Coverage</span>
               </div>
+              <span className="text-[11px] text-slate-500 mt-2 block">24/7 International Client Coverage</span>
+            </div>
 
-              <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-orange-300 transition-all">
+            <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-orange-300 transition-all flex flex-col justify-between">
+              <div>
                 <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200/70 flex items-center justify-center text-[var(--color-jv-orange)] mb-3 shadow-2xs">
                   <Mail size={18} />
                 </div>
@@ -165,14 +171,16 @@ export default function ContactPage() {
                 </span>
                 <a
                   href="mailto:info@jvgroupco.in"
-                  className="text-base font-black text-slate-900 hover:text-[var(--color-jv-orange)] transition-colors block truncate"
+                  className="text-sm sm:text-base font-black text-slate-900 hover:text-[var(--color-jv-orange)] transition-colors block break-all sm:break-normal"
                 >
                   info@jvgroupco.in
                 </a>
-                <span className="text-[11px] text-slate-500 mt-1 block">Direct Executive Directorate Link</span>
               </div>
+              <span className="text-[11px] text-slate-500 mt-2 block">Direct Executive Directorate Link</span>
+            </div>
 
-              <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-orange-300 transition-all">
+            <div className="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-2xs hover:border-orange-300 transition-all flex flex-col justify-between">
+              <div>
                 <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-200/70 flex items-center justify-center text-[var(--color-jv-orange)] mb-3 shadow-2xs">
                   <Mail size={18} />
                 </div>
@@ -181,13 +189,12 @@ export default function ContactPage() {
                 </span>
                 <a
                   href="mailto:support@jvgroupco.in"
-                  className="text-base font-black text-slate-900 hover:text-[var(--color-jv-orange)] transition-colors block truncate"
+                  className="text-sm sm:text-base font-black text-slate-900 hover:text-[var(--color-jv-orange)] transition-colors block break-all sm:break-normal"
                 >
                   support@jvgroupco.in
                 </a>
-                <span className="text-[11px] text-slate-500 mt-1 block">24/7 Global Ecosystem Support</span>
               </div>
-
+              <span className="text-[11px] text-slate-500 mt-2 block">24/7 Global Ecosystem Support</span>
             </div>
 
           </div>

@@ -168,7 +168,7 @@ function DynamicContactContent() {
               </span>
               <a
                 href={`mailto:${JV_GROUP_META.email}`}
-                className="text-xs sm:text-sm font-black text-slate-900 hover:text-[var(--color-jv-orange)] transition-colors truncate block"
+                className="text-xs sm:text-sm font-black text-slate-900 hover:text-[var(--color-jv-orange)] transition-colors block break-all sm:break-normal"
               >
                 {JV_GROUP_META.email}
               </a>
