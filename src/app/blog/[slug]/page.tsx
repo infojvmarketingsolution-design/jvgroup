@@ -25,6 +25,9 @@ import NativeAdBanner from "@/components/blog/NativeAdBanner";
 import AdvantagesDisadvantagesMatrix from "@/components/blog/AdvantagesDisadvantagesMatrix";
 import GeographicImpactBox from "@/components/blog/GeographicImpactBox";
 import BlogCard from "@/components/blog/BlogCard";
+import TableOfContents from "@/components/blog/TableOfContents";
+import FormattedArticleText from "@/components/blog/FormattedArticleText";
+import VerifiedConsultationDesk from "@/components/blog/VerifiedConsultationDesk";
 
 export const dynamicParams = true;
 export const revalidate = 60;
@@ -147,7 +150,7 @@ export default async function BlogPostDetailPage({ params }: Props) {
           </div>
 
           {/* Main Title */}
-          <h1 className="blog-title text-2xl sm:text-4xl lg:text-5xl font-heading font-black text-slate-950 leading-tight pt-2">
+          <h1 className="blog-title text-3xl sm:text-4xl lg:text-5xl font-heading font-black text-slate-950 leading-[1.18] tracking-tight pt-2">
             {post.title}
           </h1>
 
@@ -223,6 +226,14 @@ export default async function BlogPostDetailPage({ params }: Props) {
           </p>
         </div>
 
+        {/* Interactive Table of Contents for Google Jump Links */}
+        <TableOfContents
+          sections={post.contentSections}
+          hasAdvantages={Boolean(post.advantages && post.advantages.length > 0)}
+          hasFaqs={Boolean(post.faqs && post.faqs.length > 0)}
+          hasCitations={Boolean(post.geoCitations && post.geoCitations.length > 0)}
+        />
+
         {/* Daily Issues Addressed & AI Updates */}
         <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Daily Issues */}
@@ -277,28 +288,28 @@ export default async function BlogPostDetailPage({ params }: Props) {
         {/* 3. Article Content Sections & Embedded Native Ads */}
         <div className="space-y-10 py-6 text-slate-800 leading-relaxed">
           {post.contentSections.map((section, sIdx) => (
-            <section key={section.id} id={section.id} className="space-y-4">
-              <h2 className="text-xl sm:text-2xl font-heading font-black text-slate-950 pt-2 border-b border-slate-100 pb-2">
+            <section key={section.id} id={section.id} className="space-y-4 scroll-mt-24">
+              <h2 className="text-2xl sm:text-3xl font-heading font-black text-slate-950 pt-4 border-b border-slate-200/80 pb-2.5 tracking-tight">
                 {section.heading}
               </h2>
 
               {section.subheading && (
-                <p className="text-xs sm:text-sm font-bold text-[var(--color-jv-orange)]">
+                <p className="text-xs sm:text-sm font-bold text-[var(--color-jv-orange)] uppercase tracking-wider">
                   {section.subheading}
                 </p>
               )}
 
-              {section.paragraphs.map((para, pIdx) => (
-                <p key={pIdx} className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
-                  {para}
-                </p>
-              ))}
+              <div className="space-y-4 pt-1">
+                {section.paragraphs.map((para, pIdx) => (
+                  <FormattedArticleText key={pIdx} text={para} />
+                ))}
+              </div>
 
               {section.bulletPoints && (
-                <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 my-4 space-y-2">
+                <div className="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 my-5 space-y-2.5">
                   {section.bulletPoints.map((bp, bIdx) => (
-                    <div key={bIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-800">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-jv-orange)] shrink-0 mt-2" />
+                    <div key={bIdx} className="flex items-start gap-3 text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
+                      <span className="w-2 h-2 rounded-full bg-[var(--color-jv-orange)] shrink-0 mt-2" />
                       <span>{bp}</span>
                     </div>
                   ))}
@@ -306,7 +317,7 @@ export default async function BlogPostDetailPage({ params }: Props) {
               )}
 
               {section.statHighlight && (
-                <div className="my-6 p-6 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-950 text-white flex items-center gap-6 shadow-md">
+                <div className="my-6 p-6 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-950 text-white flex items-center gap-6 shadow-md border border-slate-800">
                   <div className="text-3xl sm:text-4xl font-heading font-black text-[var(--color-jv-orange)] shrink-0">
                     {section.statHighlight.value}
                   </div>
@@ -317,13 +328,13 @@ export default async function BlogPostDetailPage({ params }: Props) {
               )}
 
               {section.quote && (
-                <div className="my-6 p-6 rounded-2xl bg-orange-50 border-l-4 border-[var(--color-jv-orange)] space-y-2">
-                  <Quote size={20} className="text-[var(--color-jv-orange)] opacity-50" />
-                  <p className="text-sm sm:text-base font-semibold italic text-slate-900 leading-relaxed">
+                <div className="my-6 p-6 sm:p-7 rounded-2xl bg-orange-50/70 border-l-4 border-[var(--color-jv-orange)] space-y-2 shadow-2xs">
+                  <Quote size={22} className="text-[var(--color-jv-orange)] opacity-60" />
+                  <p className="text-base sm:text-lg font-semibold italic text-slate-900 leading-relaxed">
                     &ldquo;{section.quote.text}&rdquo;
                   </p>
-                  <p className="text-xs font-bold text-slate-600">
-                    — {section.quote.author}, <span className="font-normal">{section.quote.role}</span>
+                  <p className="text-xs sm:text-sm font-bold text-slate-700">
+                    — {section.quote.author}, <span className="font-normal text-slate-500">{section.quote.role}</span>
                   </p>
                 </div>
               )}
@@ -337,11 +348,13 @@ export default async function BlogPostDetailPage({ params }: Props) {
         </div>
 
         {/* 4. Strategic Advantages vs Disadvantages Matrix */}
-        <AdvantagesDisadvantagesMatrix
-          advantages={post.advantages}
-          disadvantages={post.disadvantages}
-          topicTitle={post.title}
-        />
+        <div id="comparative-analysis-matrix" className="scroll-mt-24">
+          <AdvantagesDisadvantagesMatrix
+            advantages={post.advantages}
+            disadvantages={post.disadvantages}
+            topicTitle={post.title}
+          />
+        </div>
 
         {/* Fallback Native Ad if not already shown */}
         {post.nativeAds && post.nativeAds.length > 0 && (
@@ -350,7 +363,7 @@ export default async function BlogPostDetailPage({ params }: Props) {
 
         {/* 5. FAQs Accordion (Targeting Google FAQPage Schema) */}
         {post.faqs.length > 0 && (
-          <section className="my-12 p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-6">
+          <section id="frequently-asked-questions" className="my-12 p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-200 space-y-6 scroll-mt-24">
             <div className="flex items-center gap-2.5">
               <HelpCircle size={20} className="text-[var(--color-jv-orange)]" />
               <h3 className="text-lg sm:text-xl font-heading font-black text-slate-950">
@@ -375,7 +388,7 @@ export default async function BlogPostDetailPage({ params }: Props) {
 
         {/* 6. AI Search Platform Citation Proof Box */}
         {post.geoCitations && post.geoCitations.length > 0 && (
-          <section className="my-10 p-6 rounded-3xl bg-slate-950 text-white border border-slate-800 space-y-4">
+          <section id="ai-citations-grounding" className="my-10 p-6 rounded-3xl bg-slate-950 text-white border border-slate-800 space-y-4 scroll-mt-24">
             <div className="flex items-center justify-between pb-3 border-b border-slate-800">
               <div className="flex items-center gap-2">
                 <Bot size={18} className="text-amber-400" />
@@ -410,6 +423,9 @@ export default async function BlogPostDetailPage({ params }: Props) {
             </div>
           </section>
         )}
+
+        {/* Verified Corporate E-E-A-T Advisory & Consultation Desk */}
+        <VerifiedConsultationDesk post={post} />
 
         {/* 7. Author Bio & Entity CTA Card */}
         <section className="my-12 p-6 sm:p-8 rounded-3xl bg-slate-100 border border-slate-200 flex flex-col sm:flex-row items-center gap-6">
