@@ -19,7 +19,7 @@ import {
   Zap,
   Quote
 } from "lucide-react";
-import { getLiveBlogPosts, getBlogPostBySlug } from "@/lib/blogService";
+import { getLiveBlogPosts, getBlogPostBySlug, getAllBlogPostsForBuild } from "@/lib/blogService";
 import BlogJsonLd from "@/components/blog/BlogJsonLd";
 import NativeAdBanner from "@/components/blog/NativeAdBanner";
 import AdvantagesDisadvantagesMatrix from "@/components/blog/AdvantagesDisadvantagesMatrix";
@@ -37,7 +37,7 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return getLiveBlogPosts().map((post) => ({
+  return getAllBlogPostsForBuild().map((post) => ({
     slug: post.slug
   }));
 }

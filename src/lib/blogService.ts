@@ -64,8 +64,13 @@ export function getLiveBlogPosts(): BlogPost[] {
     iterDate.setDate(iterDate.getDate() + 1);
   }
 
-  // Combine dynamic posts (newest on top) with initial curated foundation posts
-  const allPosts = [...dynamicPosts.reverse(), ...INITIAL_BLOG_POSTS];
+  // Strictly filter initial posts to ensure NO post is published before its exact scheduled time in IST
+  const unlockedInitialPosts = INITIAL_BLOG_POSTS.filter((post) => {
+    return new Date(post.publishedAt).getTime() <= indiaTime.getTime();
+  });
+
+  // Combine dynamic posts (newest on top) with unlocked initial curated foundation posts
+  const allPosts = [...dynamicPosts.reverse(), ...unlockedInitialPosts];
 
   // Set the single newest post as featured
   return allPosts.map((post, idx) => ({
@@ -75,7 +80,14 @@ export function getLiveBlogPosts(): BlogPost[] {
 }
 
 /**
- * Find a blog post by its URL slug.
+ * Returns all known blog posts for static page build generation (prerendering).
+ */
+export function getAllBlogPostsForBuild(): BlogPost[] {
+  return [...INITIAL_BLOG_POSTS];
+}
+
+/**
+ * Find a blog post by its URL slug (strictly respects publication lock).
  */
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
   const posts = getLiveBlogPosts();
