@@ -7,9 +7,10 @@ import { BlogPost } from "@/types/blog";
  * 
  * ZERO MANUAL CODE PUSHES REQUIRED:
  * - Automatically checks the current time in Asia/Kolkata.
- * - Releases 1 new authoritative AI SEO / GEO post every morning at 06:00:00 AM IST.
- * - Before 06:00 AM IST, the upcoming post is held back.
- * - The moment 06:00 AM IST arrives, the new post automatically unlocks, becomes the lead story,
+ * - Releases 1 new authoritative AI SEO / GEO post every morning at 05:30:00 AM IST (00:00:00 UTC).
+ * - 05:30 AM IST corresponds exactly to Midnight 00:00:00 UTC (Global Server Day Reset).
+ * - Before 05:30 AM IST, the upcoming post is held back.
+ * - The moment 05:30 AM IST arrives, the new post automatically unlocks, becomes the lead story,
  *   and all previous posts remain archived chronologically.
  */
 export function getLiveBlogPosts(): BlogPost[] {
@@ -21,6 +22,7 @@ export function getLiveBlogPosts(): BlogPost[] {
   const currentMonth = indiaTime.getMonth();
   const currentDay = indiaTime.getDate();
   const currentHour = indiaTime.getHours();
+  const currentMinute = indiaTime.getMinutes();
 
   const dynamicPosts: BlogPost[] = [];
 
@@ -32,8 +34,9 @@ export function getLiveBlogPosts(): BlogPost[] {
   while (iterDate <= todayAtMidnight) {
     const isToday = iterDate.getTime() === todayAtMidnight.getTime();
 
-    // If it is today, only publish if the current time in India is >= 6:00 AM IST
-    if (!isToday || currentHour >= 6) {
+    // If it is today, only publish if the current time in India is >= 5:30 AM IST (00:00 UTC)
+    const isUnlocked = !isToday || currentHour > 5 || (currentHour === 5 && currentMinute >= 30);
+    if (isUnlocked) {
       const generatedPost = generateDailyBlogPost(iterDate);
       // Avoid duplicate if an exact ID or slug already exists in baseline
       if (!INITIAL_BLOG_POSTS.some((p) => p.slug === generatedPost.slug || p.id === generatedPost.id)) {

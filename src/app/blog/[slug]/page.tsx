@@ -135,7 +135,7 @@ export default async function BlogPostDetailPage({ params }: Props) {
             )}
 
             <span className="px-3 py-1 rounded-full text-xs font-extrabold bg-amber-500/10 text-amber-800 border border-amber-500/25 flex items-center gap-1">
-              <span>⏰ Published 6:00 AM IST</span>
+              <span>⏰ Published 5:30 AM IST</span>
               <span className="text-slate-400">•</span>
               <span>{post.publishDateFormatted}</span>
             </span>

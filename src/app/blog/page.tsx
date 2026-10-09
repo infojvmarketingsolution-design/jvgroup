@@ -117,7 +117,7 @@ export default function BlogListingPage() {
             <div className="pt-2 flex flex-wrap items-center gap-3 text-xs">
               <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-slate-800 font-bold shadow-xs">
                 <span className="w-2 h-2 rounded-full bg-[var(--color-jv-orange)] animate-pulse" />
-                <span>Daily Publications • Released Every Morning at 6:00 AM IST</span>
+                <span>Daily Publications • Released Every Morning at 5:30 AM IST</span>
               </div>
               <span className="text-slate-300 hidden sm:inline">•</span>
               <span className="text-slate-500 font-medium">Rank #1 on Google Search &amp; Verified Across ChatGPT, Perplexity &amp; Gemini</span>
@@ -325,14 +325,14 @@ export default function BlogListingPage() {
           )}
         </section>
 
-        {/* 5. Daily 6:00 AM Newsletter Subscription Card */}
+        {/* 5. Daily 5:30 AM Newsletter Subscription Card */}
         <section className="rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white p-8 sm:p-12 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-[var(--color-jv-orange)]/15 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-2xl mx-auto text-center space-y-4">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-amber-300 border border-white/15 text-xs font-bold">
               <Mail size={12} />
-              <span>Daily 6:00 AM Executive Briefing</span>
+              <span>Daily 5:30 AM Executive Briefing</span>
             </div>
 
             <h3 className="text-2xl sm:text-3xl font-heading font-black text-white">
@@ -340,13 +340,13 @@ export default function BlogListingPage() {
             </h3>
 
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Every morning at 6:00 AM IST, our automated engine synthesizes algorithm shifts, zero-click answer updates, and Gujarat market opportunities directly to your inbox.
+              Every morning at 5:30 AM IST, our automated engine synthesizes algorithm shifts, zero-click answer updates, and Gujarat market opportunities directly to your inbox.
             </p>
 
             {subscribed ? (
               <div className="p-4 rounded-2xl bg-emerald-900/40 border border-emerald-500/40 text-emerald-200 text-xs font-bold flex items-center justify-center gap-2 animate-in fade-in">
                 <CheckCircle2 size={16} className="text-emerald-400" />
-                <span>You are subscribed! Look out for tomorrow&apos;s 6:00 AM briefing.</span>
+                <span>You are subscribed! Look out for tomorrow&apos;s 5:30 AM briefing.</span>
               </div>
             ) : (
               <form onSubmit={handleSubscribe} className="pt-2 flex flex-col sm:flex-row items-center gap-2 max-w-md mx-auto">

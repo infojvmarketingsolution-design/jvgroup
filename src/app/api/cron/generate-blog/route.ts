@@ -7,7 +7,7 @@ export async function GET(req: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      message: "Daily 6:00 AM IST AI SEO & GEO Blog verified & prepared.",
+      message: "Daily 5:30 AM IST (00:00 UTC) AI SEO & GEO Blog verified & prepared.",
       timestamp: new Date().toISOString(),
       post: {
         id: post.id,
@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      message: "Successfully generated daily AI SEO blog for 6:00 AM IST.",
+      message: "Successfully generated daily AI SEO blog for 5:30 AM IST (00:00 UTC).",
       post
     });
   } catch (error: any) {

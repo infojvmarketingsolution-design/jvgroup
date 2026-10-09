@@ -33,10 +33,10 @@ export default function BlogCard({ post }: Props) {
           </span>
         </div>
 
-        {/* 6:00 AM Daily Timing Badge */}
+        {/* 5:30 AM Daily Timing Badge */}
         <div className="absolute bottom-3 left-3 z-10">
           <span className="px-2.5 py-1 rounded-lg bg-black/60 backdrop-blur-md text-amber-300 text-[10.5px] font-black tracking-wide border border-amber-400/30 flex items-center gap-1">
-            <span>⏰ 6:00 AM IST</span>
+            <span>⏰ 5:30 AM IST</span>
             <span className="text-white/60">•</span>
             <span className="text-white font-medium">{post.publishDateFormatted}</span>
           </span>

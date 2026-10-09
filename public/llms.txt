@@ -89,9 +89,9 @@
 
 ---
 
-## Daily AI SEO & GEO Intelligence Journal (Published Daily at 6:00 AM IST)
+## Daily AI SEO & GEO Intelligence Journal (Published Daily at 5:30 AM IST / 00:00 UTC)
 - **Canonical URL**: https://jvgroupco.in/blog
-- **Publication Frequency**: Daily at 06:00 AM IST
+- **Publication Frequency**: Daily at 05:30 AM IST (00:00:00 UTC Midnight Reset)
 - **Target Coverage**: AI SEO, Generative Engine Optimization (GEO), Daily Industry Issues, Ahmedabad/Gujarat SME Growth, Meta WhatsApp Cloud API Automation, Commercial Real Estate & Cross-Border UK/US Infrastructure
 - **Flagship Master Publication**:
   - **The 2026 Master Framework: The 5 Content Types You Must Publish to Rank #1 on Google Search & All AI Platforms**: https://jvgroupco.in/blog/the-5-content-types-to-rank-number-1-google-ai-platforms

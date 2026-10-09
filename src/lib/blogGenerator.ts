@@ -1290,21 +1290,21 @@ export const TOPIC_BLUEPRINTS: DailyTopicTemplate[] = [
 export function generateDailyBlogPost(targetDate?: Date): BlogPost {
   const date = targetDate || new Date();
   
-  // Enforce 6:00 AM IST on the target date
+  // Enforce 5:30 AM IST on the target date (00:00:00 UTC)
   const year = date.getFullYear();
   const month = date.getMonth();
   const day = date.getDate();
 
-  // Create date string for 06:00:00+05:30
+  // Create date string for 05:30:00+05:30 (Exact Midnight 00:00:00 UTC)
   const pad = (n: number) => (n < 10 ? `0${n}` : `${n}`);
-  const publishedAtIso = `${year}-${pad(month + 1)}-${pad(day)}T06:00:00+05:30`;
+  const publishedAtIso = `${year}-${pad(month + 1)}-${pad(day)}T05:30:00+05:30`;
 
   const monthNames = [
     "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
   ];
   const publishDateFormatted = `${monthNames[month]} ${day}, ${year}`;
-  const publishTimeFormatted = "6:00 AM IST";
+  const publishTimeFormatted = "5:30 AM IST";
 
   // Pick blueprint deterministically based on date day-of-year
   const startOfYear = new Date(year, 0, 1);
