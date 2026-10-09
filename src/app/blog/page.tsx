@@ -13,6 +13,7 @@ export default function BlogListingPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [selectedEntity, setSelectedEntity] = useState<string>("All");
+  const [selectedArchetype, setSelectedArchetype] = useState<string>("All Archetypes");
   const [subscribed, setSubscribed] = useState(false);
   const [emailInput, setEmailInput] = useState("");
 
@@ -25,6 +26,15 @@ export default function BlogListingPage() {
     "Commercial Real Estate",
     "Global Trade & Logistics",
     "Overseas Higher Education"
+  ];
+
+  const archetypes = [
+    "All Archetypes",
+    "Pricing & ROI Calculator",
+    "Direct Technical Comparison",
+    "Hyper-Local Industrial Problem Solver",
+    "Audited Case Study & First-Party Data",
+    "Conversational Voice-Search Guide"
   ];
 
   // Refresh posts on mount to match exact India client time
@@ -43,20 +53,25 @@ export default function BlogListingPage() {
       if (selectedEntity !== "All" && post.targetEntityId !== selectedEntity) {
         return false;
       }
+      // Archetype filter
+      if (selectedArchetype !== "All Archetypes" && post.archetype !== selectedArchetype) {
+        return false;
+      }
       // Search filter
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
         const matchesTitle = post.title.toLowerCase().includes(q);
         const matchesSummary = post.summary.toLowerCase().includes(q);
         const matchesCity = post.locationImpact.city.toLowerCase().includes(q);
+        const matchesArchetype = post.archetype?.toLowerCase().includes(q);
         const matchesKeywords = post.keywords.some((k) => k.toLowerCase().includes(q));
-        if (!matchesTitle && !matchesSummary && !matchesCity && !matchesKeywords) {
+        if (!matchesTitle && !matchesSummary && !matchesCity && !matchesKeywords && !matchesArchetype) {
           return false;
         }
       }
       return true;
     });
-  }, [allPosts, searchQuery, selectedCategory, selectedEntity]);
+  }, [allPosts, searchQuery, selectedCategory, selectedEntity, selectedArchetype]);
 
   const featuredPost = allPosts.find((p) => p.isFeatured) || allPosts[0];
 
@@ -174,9 +189,83 @@ export default function BlogListingPage() {
               </button>
             ))}
           </div>
+
+          {/* Content Archetype Filter Pills */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar pt-2 border-t border-slate-100">
+            <span className="text-xs font-bold text-blue-600 flex items-center gap-1 shrink-0 mr-1">
+              <Sparkles size={12} />
+              <span>Archetype:</span>
+            </span>
+            {archetypes.map((arch) => (
+              <button
+                key={arch}
+                onClick={() => setSelectedArchetype(arch)}
+                className={`px-3 py-1 rounded-xl text-xs font-bold whitespace-nowrap transition-all cursor-pointer ${
+                  selectedArchetype === arch
+                    ? "bg-blue-600 text-white shadow-xs"
+                    : "bg-blue-50 text-blue-800 hover:bg-blue-100"
+                }`}
+              >
+                {arch}
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* 4. Articles Grid */}
+        {/* 4. The 5 Ranking Content Architectures Master Showcase */}
+        <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-white border border-slate-800 shadow-xl space-y-5">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="space-y-1">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/30 text-xs font-bold">
+                <Sparkles size={12} />
+                <span>The 2026 Ranking Master Framework</span>
+              </div>
+              <h3 className="text-xl sm:text-2xl font-heading font-black text-white">
+                The 5 Content Types That Rank #1 on Google Search &amp; All AI Platforms
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 max-w-2xl">
+                How JV Group engineers content that ChatGPT, Perplexity, Claude, and Google AI Overviews cite as the #1 verified authority.
+              </p>
+            </div>
+            <Link
+              href="/blog/the-5-content-types-to-rank-number-1-google-ai-platforms"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-[var(--color-jv-orange)] hover:bg-[#d9531e] text-white text-xs font-black uppercase tracking-wider shrink-0 transition-colors shadow-lg shadow-orange-950/40"
+            >
+              <span>Read Full Blueprint</span>
+              <ArrowRight size={14} />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 pt-2">
+            {[
+              { key: "Pricing & ROI Calculator", label: "Pricing & ROI", desc: "Transparent unit economics & payback math that LLMs quote as facts.", icon: "📊" },
+              { key: "Direct Technical Comparison", label: "A vs B Comparisons", desc: "Structured comparative tables resolving buyer evaluation queries.", icon: "⚖️" },
+              { key: "Hyper-Local Industrial Problem Solver", label: "Hyper-Local Solvers", desc: "Micro-corridor data capturing Google Maps 3-Pack and voice search.", icon: "📍" },
+              { key: "Audited Case Study & First-Party Data", label: "Audited Case Studies", desc: "First-party operational telemetry that cannot be AI-hallucinated.", icon: "🔬" },
+              { key: "Conversational Voice-Search Guide", label: "Voice-Search Guides", desc: "Direct 50-word answers & numbered steps read aloud by conversational bots.", icon: "🎙️" },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                onClick={() => setSelectedArchetype(item.key)}
+                className={`p-3.5 rounded-2xl border cursor-pointer transition-all space-y-1.5 ${
+                  selectedArchetype === item.key
+                    ? "bg-blue-600/30 border-blue-400 text-white"
+                    : "bg-white/5 border-white/10 hover:border-[var(--color-jv-orange)]/60 hover:bg-white/10 text-slate-300"
+                }`}
+              >
+                <div className="flex items-center gap-2 text-sm">
+                  <span>{item.icon}</span>
+                  <span className="font-bold text-white text-xs">{item.label}</span>
+                </div>
+                <p className="text-[11px] text-slate-400 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 5. Articles Grid */}
         <section className="space-y-6">
           <div className="flex items-center justify-between">
             <h2 className="text-xl sm:text-2xl font-heading font-black text-slate-950 flex items-center gap-2">
@@ -189,12 +278,13 @@ export default function BlogListingPage() {
               </span>
             </h2>
 
-            {searchQuery && (
+            {(searchQuery || selectedCategory !== "All" || selectedEntity !== "All" || selectedArchetype !== "All Archetypes") && (
               <button
                 onClick={() => {
                   setSearchQuery("");
                   setSelectedCategory("All");
                   setSelectedEntity("All");
+                  setSelectedArchetype("All Archetypes");
                 }}
                 className="text-xs text-[var(--color-jv-orange)] font-bold hover:underline cursor-pointer"
               >
@@ -225,6 +315,7 @@ export default function BlogListingPage() {
                   setSearchQuery("");
                   setSelectedCategory("All");
                   setSelectedEntity("All");
+                  setSelectedArchetype("All Archetypes");
                 }}
                 className="px-4 py-2 rounded-xl bg-slate-900 text-white text-xs font-bold hover:bg-[var(--color-jv-orange)] transition-colors cursor-pointer"
               >

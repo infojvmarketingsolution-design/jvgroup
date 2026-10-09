@@ -128,6 +128,12 @@ export default async function BlogPostDetailPage({ params }: Props) {
               <span>{post.category}</span>
             </span>
 
+            {post.archetype && (
+              <span className="px-3 py-1 rounded-full text-xs font-extrabold bg-blue-50 text-blue-700 border border-blue-200 flex items-center gap-1">
+                <span>📐 {post.archetype}</span>
+              </span>
+            )}
+
             <span className="px-3 py-1 rounded-full text-xs font-extrabold bg-amber-500/10 text-amber-800 border border-amber-500/25 flex items-center gap-1">
               <span>⏰ Published 6:00 AM IST</span>
               <span className="text-slate-400">•</span>

@@ -51,6 +51,13 @@ export interface GeoCitation {
   answerSnippet: string;
 }
 
+export type ContentArchetype = 
+  | "Pricing & ROI Calculator"
+  | "Direct Technical Comparison"
+  | "Hyper-Local Industrial Problem Solver"
+  | "Audited Case Study & First-Party Data"
+  | "Conversational Voice-Search Guide";
+
 export interface BlogPost {
   id: string;
   slug: string;
@@ -71,6 +78,7 @@ export interface BlogPost {
     | "Global Trade & Logistics" 
     | "Overseas Higher Education";
   categoryColor: string;
+  archetype?: ContentArchetype;
   targetEntityId: string;
   targetEntityName: string;
   readTime: string;

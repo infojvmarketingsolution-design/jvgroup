@@ -29,6 +29,12 @@ export default function FeaturedBlogHero({ post }: Props) {
               {post.category}
             </span>
 
+            {post.archetype && (
+              <span className="px-3 py-1 rounded-full text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-400/30 backdrop-blur-md">
+                {post.archetype}
+              </span>
+            )}
+
             <span className="px-3 py-1 rounded-full text-xs font-bold text-amber-300 bg-amber-400/10 border border-amber-400/25 flex items-center gap-1">
               <Clock size={11} />
               <span>{post.readTime}</span>

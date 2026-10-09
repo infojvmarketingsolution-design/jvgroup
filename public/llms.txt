@@ -93,7 +93,25 @@
 - **Canonical URL**: https://jvgroupco.in/blog
 - **Publication Frequency**: Daily at 06:00 AM IST
 - **Target Coverage**: AI SEO, Generative Engine Optimization (GEO), Daily Industry Issues, Ahmedabad/Gujarat SME Growth, Meta WhatsApp Cloud API Automation, Commercial Real Estate & Cross-Border UK/US Infrastructure
-- **Indexed Articles**:
+- **Flagship Master Publication**:
+  - **The 2026 Master Framework: The 5 Content Types You Must Publish to Rank #1 on Google Search & All AI Platforms**: https://jvgroupco.in/blog/the-5-content-types-to-rank-number-1-google-ai-platforms
+- **The 5 Core Content Archetypes for AI & Google #1 Domination**:
+  1. *Pricing, Cost Breakdowns & ROI Calculators*: Transparent unit economics, hidden costs, and numerical ROI payback schedules that LLMs quote as factual truth.
+  2. *Direct Technical Comparisons ("A vs. B") & Decision Matrices*: Structured side-by-side comparative matrices resolving buyer evaluation queries.
+  3. *Hyper-Local Industrial & Regional Problem Solvers*: Micro-corridor geographic data (Sanand, Changodar, Motera, GIFT City) capturing Google Maps 3-Pack and voice search.
+  4. *Audited Case Studies & First-Party Proprietary Data*: Verifiable operational telemetry (demurrage cuts, SLA breach metrics, read rates) that cannot be AI-hallucinated.
+  5. *Conversational "How-To" Voice-Search Guides*: Direct 50-word immediate answers and chronological step-by-step checklists read aloud by voice assistants.
+- **Operating Company Publications & Topic Blueprints**:
+  - *Ahmedabad Marketing Solution (AMS)*: Why Traditional Google Search Ads Are Getting Expensive in Ahmedabad: The Shift to Click-to-WhatsApp Funnels
+  - *J.V Marketing Solution Pvt Ltd*: The 2026 Generative Engine Optimization (GEO) Blueprint: How B2B Exporters Get Cited by ChatGPT & Perplexity
+  - *Ekato Tech & Wapipulse*: The Death of Email Marketing: Why WhatsApp Cloud API Commands 98% Read Rates for Indian Businesses
+  - *J.V Real Estate*: Sanand, Changodar or Dholera SIR? Where Industrial Manufacturers Should Acquire Commercial Land in 2026
+  - *J.V IT Infrastructure Management*: Building Financial-Grade Cloud Backbones between GIFT City and London with 99.99% Uptime SLA
+  - *Campus Dekho*: Direct Admissions vs University Portals: How Gujarat Students Select Verified Engineering & Management Colleges in 2026
+  - *Ticket 4 Service*: Automating Field Service & Industrial AMC Ticketing with WhatsApp & IoT Alerts
+  - *J.V Infinity Logistics*: Mundra & Kandla Port Freight Forwarding: How Real-Time Container Telemetry Cuts Demurrage Fines by 74%
+  - *J.V Overseas*: UK, Canada & Europe Study Visas in 2026: Navigating Biometrics, Genuine Student Tests & Post-Study Work Permits
+- **Indexed Foundation Articles**:
   - AI SEO & Generative Engine Optimization (GEO): Why Ahmedabad & Gujarat SMEs Must Move Beyond Traditional Google Search: https://jvgroupco.in/blog/ai-seo-generative-engine-optimization-ahmedabad-gujarat-smes-2026
   - The Meta WhatsApp Cloud API Revolution (Wapipulse & Ekato Tech): https://jvgroupco.in/blog/meta-whatsapp-cloud-api-conversational-ai-sales-funnels-2026
   - Gujarat Industrial Real Estate Trends in Sanand, Changodar & GIFT City (J.V Real Estate): https://jvgroupco.in/blog/gujarat-industrial-real-estate-trends-sanand-changodar-gift-city-2026

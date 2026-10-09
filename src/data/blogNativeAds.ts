@@ -189,5 +189,47 @@ export const JV_NATIVE_ADS: Record<string, NativeAd> = {
     ],
     phone: "+91 99097 00606",
     whatsappNumber: "916354070709"
+  },
+  "jv-marketing-solutions-ltd-global": {
+    id: "ad-jv-global",
+    title: "J.V Marketing Solutions Limited (Global)",
+    tagline: "Cross-Border Cloud, Enterprise Software & Multi-Network Growth",
+    description:
+      "London-headquartered vehicle connecting transatlantic enterprises with high-availability IT infrastructure, custom engineering, and omnichannel ad scale across US, UK & Canada.",
+    targetCompanyId: "jv-marketing-solutions-ltd-global",
+    targetCompanyName: "J.V Marketing Solutions Ltd (Global)",
+    badge: "UK & Global Enterprise",
+    ctaText: "Connect with London Desk",
+    ctaUrl: "/companies/jv-marketing-solutions-ltd-global",
+    image: "/logos/jv-marketing-solutions-ltd-global.jpg",
+    accentColor: "#C2410C",
+    highlights: [
+      "London Desk: 2 Earlham Street, WC2H 9RY (+44 7344556070)",
+      "Financial-Grade Hybrid Cloud Architectures with 99.99% Uptime",
+      "Omni-Platform Paid Media across Meta, Google & LinkedIn ABM"
+    ],
+    phone: "+44 7344556070",
+    whatsappNumber: "916354070709"
+  },
+  "campus-dekho": {
+    id: "ad-campus-dekho",
+    title: "Campus Dekho — Higher Education Discovery",
+    tagline: "Compare Verified Colleges, Courses & Direct Admission Pathways",
+    description:
+      "Transparent engineering, management, and medical college comparisons across Gujarat and India. Verified fee structures, placement statistics, and counselor advisory.",
+    targetCompanyId: "campus-dekho",
+    targetCompanyName: "Campus Dekho",
+    badge: "EdTech Admission Portal",
+    ctaText: "Find Your Ideal College",
+    ctaUrl: "/companies/campus-dekho",
+    image: "/logos/campus-dekho.jpg",
+    accentColor: "#F36323",
+    highlights: [
+      "500+ Verified University & College Listings in India",
+      "Direct Admission Counseling & Seat Matrix Guidance",
+      "Scholarship Evaluations & Placement Transparency"
+    ],
+    phone: "+91 99097 00606",
+    whatsappNumber: "916354070709"
   }
 };

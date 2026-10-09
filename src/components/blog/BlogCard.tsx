@@ -54,8 +54,13 @@ export default function BlogCard({ post }: Props) {
       {/* Card Body */}
       <div className="p-6 sm:p-7 flex flex-col flex-1 justify-between space-y-4">
         <div className="space-y-3">
-          {/* Location Badges */}
+          {/* Location & Archetype Badges */}
           <div className="flex flex-wrap items-center gap-1.5 text-[11px] font-bold text-slate-500">
+            {post.archetype && (
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-blue-50 text-blue-700 border border-blue-200/60 font-black">
+                <span>{post.archetype}</span>
+              </span>
+            )}
             <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-slate-100 text-slate-700">
               <MapPin size={10} className="text-[var(--color-jv-orange)]" />
               <span>{post.locationImpact.city}</span>
