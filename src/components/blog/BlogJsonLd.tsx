@@ -39,6 +39,23 @@ export default function BlogJsonLd({ post }: Props) {
     },
     "keywords": post.keywords.join(", "),
     "articleSection": post.category,
+    "genre": post.archetype || "AI SEO & Technical Intelligence",
+    "abstract": post.summary,
+    "about": [
+      {
+        "@type": "Thing",
+        "name": post.targetEntityName
+      },
+      {
+        "@type": "Thing",
+        "name": post.category
+      }
+    ],
+    "copyrightHolder": {
+      "@type": "Organization",
+      "name": "JV Group",
+      "url": "https://jvgroupco.in"
+    },
     "inLanguage": "en-US",
     "speakable": {
       "@type": "SpeakableSpecification",

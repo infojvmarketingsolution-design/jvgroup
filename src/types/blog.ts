@@ -11,12 +11,19 @@ export interface AdvantageDisadvantageItem {
   description: string;
 }
 
+export interface BlogTableData {
+  caption?: string;
+  headers: string[];
+  rows: string[][];
+}
+
 export interface BlogSection {
   id: string;
   heading: string;
   subheading?: string;
   paragraphs: string[];
   bulletPoints?: string[];
+  table?: BlogTableData;
   statHighlight?: {
     value: string;
     label: string;

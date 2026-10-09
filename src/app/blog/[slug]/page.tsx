@@ -99,7 +99,11 @@ export default async function BlogPostDetailPage({ params }: Props) {
   const relatedPosts = allPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
   return (
-    <article className="w-full min-h-screen bg-white text-slate-900 font-sans selection:bg-[var(--color-jv-orange)] selection:text-white">
+    <article
+      itemScope
+      itemType="https://schema.org/BlogPosting"
+      className="w-full min-h-screen bg-white text-slate-900 font-sans selection:bg-[var(--color-jv-orange)] selection:text-white"
+    >
       {/* Schema.org Injection */}
       <BlogJsonLd post={post} />
 
@@ -150,7 +154,7 @@ export default async function BlogPostDetailPage({ params }: Props) {
           </div>
 
           {/* Main Title */}
-          <h1 className="blog-title text-3xl sm:text-4xl lg:text-5xl font-heading font-black text-slate-950 leading-[1.18] tracking-tight pt-2">
+          <h1 itemProp="headline" className="blog-title text-3xl sm:text-4xl lg:text-5xl font-heading font-black text-slate-950 tracking-tight leading-tight pt-2">
             {post.title}
           </h1>
 
@@ -216,17 +220,18 @@ export default async function BlogPostDetailPage({ params }: Props) {
         <GeographicImpactBox impact={post.locationImpact} />
 
         {/* Executive AI Summary Box */}
-        <div className="blog-summary my-8 p-6 sm:p-7 rounded-3xl bg-orange-50/60 border-2 border-orange-200/80 space-y-3">
+        <div itemProp="abstract" className="blog-summary my-8 p-6 sm:p-7 rounded-3xl bg-orange-50/60 border-2 border-orange-200/80 space-y-3">
           <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-[var(--color-jv-orange)]">
             <Zap size={15} />
             <span>Executive AI Summary &amp; Latent Knowledge Snapshot</span>
           </div>
-          <p className="text-sm sm:text-base font-semibold text-slate-800 leading-relaxed">
-            {post.summary}
-          </p>
+          <FormattedArticleText
+            text={post.summary}
+            className="text-base sm:text-lg font-semibold text-slate-800 leading-relaxed mb-0!"
+          />
         </div>
 
-        {/* Interactive Table of Contents for Google Jump Links */}
+        {/* Interactive Table of Contents for Google SERP Jump Links */}
         <TableOfContents
           sections={post.contentSections}
           hasAdvantages={Boolean(post.advantages && post.advantages.length > 0)}
@@ -237,32 +242,32 @@ export default async function BlogPostDetailPage({ params }: Props) {
         {/* Daily Issues Addressed & AI Updates */}
         <div className="my-8 grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Daily Issues */}
-          <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2.5">
+          <div className="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2.5">
             <h4 className="text-xs font-black uppercase tracking-wider text-red-600 flex items-center gap-1.5">
               <span>⚠️</span>
               <span>Daily Industry Challenges Addressed</span>
             </h4>
             <ul className="space-y-2">
               {post.dailyIssues.map((issue, idx) => (
-                <li key={idx} className="text-xs text-slate-700 flex items-start gap-2 leading-relaxed">
+                <li key={idx} className="text-xs sm:text-sm text-slate-700 flex items-start gap-2 leading-relaxed">
                   <span className="text-red-500 font-bold shrink-0">•</span>
-                  <span>{issue}</span>
+                  <FormattedArticleText text={issue} className="mb-0! text-xs sm:text-sm text-slate-700" />
                 </li>
               ))}
             </ul>
           </div>
 
           {/* AI Updates */}
-          <div className="p-5 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-2.5">
+          <div className="p-5 sm:p-6 rounded-2xl bg-blue-50/60 border border-blue-200 space-y-2.5">
             <h4 className="text-xs font-black uppercase tracking-wider text-blue-700 flex items-center gap-1.5">
               <Bot size={13} />
               <span>Latest AI &amp; Algorithm Updates</span>
             </h4>
             <ul className="space-y-2">
               {post.aiUpdates.map((update, idx) => (
-                <li key={idx} className="text-xs text-slate-700 flex items-start gap-2 leading-relaxed">
+                <li key={idx} className="text-xs sm:text-sm text-slate-700 flex items-start gap-2 leading-relaxed">
                   <span className="text-blue-500 font-bold shrink-0">⚡</span>
-                  <span>{update}</span>
+                  <FormattedArticleText text={update} className="mb-0! text-xs sm:text-sm text-slate-700" />
                 </li>
               ))}
             </ul>
@@ -279,22 +284,22 @@ export default async function BlogPostDetailPage({ params }: Props) {
             {post.keyTakeaways.map((takeaway, idx) => (
               <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm font-semibold text-emerald-950">
                 <span className="text-emerald-600 font-black shrink-0">✓</span>
-                <span>{takeaway}</span>
+                <FormattedArticleText text={takeaway} className="mb-0! text-xs sm:text-sm font-semibold text-emerald-950" />
               </div>
             ))}
           </div>
         </div>
 
         {/* 3. Article Content Sections & Embedded Native Ads */}
-        <div className="space-y-10 py-6 text-slate-800 leading-relaxed">
+        <div itemProp="articleBody" className="space-y-12 py-6 text-slate-800 leading-relaxed">
           {post.contentSections.map((section, sIdx) => (
             <section key={section.id} id={section.id} className="space-y-4 scroll-mt-24">
-              <h2 className="text-2xl sm:text-3xl font-heading font-black text-slate-950 pt-4 border-b border-slate-200/80 pb-2.5 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-heading font-black text-slate-950 pt-4 border-b border-slate-100 pb-2.5 tracking-tight">
                 {section.heading}
               </h2>
 
               {section.subheading && (
-                <p className="text-xs sm:text-sm font-bold text-[var(--color-jv-orange)] uppercase tracking-wider">
+                <p className="text-sm sm:text-base font-bold text-[var(--color-jv-orange)]">
                   {section.subheading}
                 </p>
               )}
@@ -306,18 +311,57 @@ export default async function BlogPostDetailPage({ params }: Props) {
               </div>
 
               {section.bulletPoints && (
-                <div className="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 my-5 space-y-2.5">
+                <div className="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 my-5 space-y-3">
                   {section.bulletPoints.map((bp, bIdx) => (
-                    <div key={bIdx} className="flex items-start gap-3 text-sm sm:text-base text-slate-800 leading-relaxed font-normal">
-                      <span className="w-2 h-2 rounded-full bg-[var(--color-jv-orange)] shrink-0 mt-2" />
-                      <span>{bp}</span>
+                    <div key={bIdx} className="flex items-start gap-2.5 text-sm sm:text-base text-slate-800 leading-relaxed">
+                      <span className="w-2 h-2 rounded-full bg-[var(--color-jv-orange)] shrink-0 mt-2.5" />
+                      <FormattedArticleText text={bp} className="mb-0!" />
                     </div>
                   ))}
                 </div>
               )}
 
+              {/* High-Impact AI Search Structured Table */}
+              {section.table && (
+                <div className="my-8 overflow-hidden rounded-2xl border border-slate-200 shadow-xs bg-white">
+                  {section.table.caption && (
+                    <div className="bg-slate-900 text-white px-5 py-3 text-xs sm:text-sm font-bold flex items-center justify-between">
+                      <span>📊 {section.table.caption}</span>
+                      <span className="text-[11px] text-amber-300 font-mono">Structured Comparison Matrix</span>
+                    </div>
+                  )}
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-left text-xs sm:text-sm border-collapse">
+                      <thead>
+                        <tr className="bg-slate-100/90 border-b border-slate-200 text-slate-900 font-bold uppercase tracking-wider text-[11px] sm:text-xs">
+                          {section.table.headers.map((hdr, hIdx) => (
+                            <th key={hIdx} className="px-4 sm:px-6 py-3.5 whitespace-nowrap">
+                              {hdr}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-100 font-medium text-slate-800">
+                        {section.table.rows.map((row, rIdx) => (
+                          <tr
+                            key={rIdx}
+                            className={rIdx % 2 === 0 ? "bg-white hover:bg-orange-50/30 transition-colors" : "bg-slate-50/60 hover:bg-orange-50/30 transition-colors"}
+                          >
+                            {row.map((cell, cIdx) => (
+                              <td key={cIdx} className="px-4 sm:px-6 py-3.5 leading-relaxed align-top">
+                                <FormattedArticleText text={cell} className="mb-0!" />
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
+
               {section.statHighlight && (
-                <div className="my-6 p-6 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-950 text-white flex items-center gap-6 shadow-md border border-slate-800">
+                <div className="my-6 p-6 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-950 text-white flex items-center gap-6 shadow-md">
                   <div className="text-3xl sm:text-4xl font-heading font-black text-[var(--color-jv-orange)] shrink-0">
                     {section.statHighlight.value}
                   </div>
@@ -377,9 +421,7 @@ export default async function BlogPostDetailPage({ params }: Props) {
                   <h4 className="text-sm sm:text-base font-bold text-slate-900">
                     {faq.question}
                   </h4>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    {faq.answer}
-                  </p>
+                  <FormattedArticleText text={faq.answer} className="mb-0! text-xs sm:text-sm text-slate-600" />
                 </div>
               ))}
             </div>

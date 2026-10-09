@@ -114,8 +114,19 @@ export const TOPIC_BLUEPRINTS: DailyTopicTemplate[] = [
         subheading: "An empirical comparison of ₹50,000 monthly ad spend deployed across both channels",
         paragraphs: [
           "Consider an Ahmedabad SME allocating ₹50,000 in monthly digital advertising budget. Under the traditional Google Search to Landing Page model, at ₹100 average CPC, the campaign generates 500 visitors. With an optimistic 4% form fill rate, the business captures only 20 leads, of which 40% never pick up the follow-up phone call, yielding 12 actual conversations (₹4,166 per real conversation).",
-          "By deploying Meta Click-to-WhatsApp ads managed by Ahmedabad Marketing Solution, the same ₹50,000 budget at ₹35 cost-per-messaging-conversation initiates 1,428 direct chats. With automated Wapipulse qualification, over 380 verified prospects engage actively—delivering a 31x increase in real buyer conversations."
+          "By deploying Meta Click-to-WhatsApp ads managed by [Ahmedabad Marketing Solution](/companies/ahmedabad-marketing-solution), the same ₹50,000 budget at ₹35 cost-per-messaging-conversation initiates 1,428 direct chats. With automated [Wapipulse](/companies/wapipulse) WhatsApp qualification, over 380 verified prospects engage actively—delivering a 31x increase in real buyer conversations."
         ],
+        table: {
+          caption: "Empirical Channel Economics (₹50,000 Monthly Spend)",
+          headers: ["Performance Metric", "Traditional Google Search Ads", "AMS Click-to-WhatsApp Funnel", "Net Advantage"],
+          rows: [
+            ["Cost Per Click (CPC)", "₹100 – ₹240", "₹28 – ₹45", "68% Lower Cost"],
+            ["Funnel Friction", "Multi-field Web Form (72% Drop)", "Zero Friction WhatsApp Chat", "Zero Form Abandonment"],
+            ["Lead / Chat Generation", "15 – 25 Form Submissions", "380+ Verified Inbound Chats", "15x Higher Lead Volume"],
+            ["Contact Number Accuracy", "25% Fake / Wrong Numbers", "100% Genuine Mobile Numbers", "Zero Bad Leads"],
+            ["Cost Per Verified Prospect", "₹3,300 – ₹4,200", "₹131 – ₹145", "96% Lower Acquisition Cost"]
+          ]
+        },
         bulletPoints: [
           "Traditional Landing Page: ₹50,000 budget = 500 clicks = 20 form fills = ~12 live conversations.",
           "AMS Click-to-WhatsApp Funnel: ₹50,000 budget = 1,428 clicks = 380+ live conversations.",
