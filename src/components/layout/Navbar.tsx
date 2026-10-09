@@ -115,9 +115,9 @@ export default function Navbar() {
             : "bg-white/95 backdrop-blur-sm border-b border-[#E2E8F0]/80 py-2 sm:py-2.5"
         }`}
       >
-      {/* Top Utility Strip (Ultra-Clean, Never Overflows on Any Laptop Screen) */}
-      <div className="hidden lg:flex items-center justify-between max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 pb-1 mb-1 border-b border-[#F1F5F9] text-[11px] text-[#64748B]">
-        <div className="flex items-center gap-2.5">
+      {/* Top Utility Strip (Ultra-Clean, Never Overflows on Any Screen at 100% Zoom) */}
+      <div className="hidden lg:flex items-center justify-between max-w-[1440px] mx-auto px-4 sm:px-5 lg:px-4 xl:px-6 2xl:px-8 pb-1 mb-1 border-b border-[#F1F5F9] text-[10.5px] xl:text-[11px] text-[#64748B]">
+        <div className="flex items-center gap-2 xl:gap-2.5">
           <span className="flex items-center gap-1.5 font-medium">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-jv-orange)] animate-pulse" />
             <strong className="text-[#18191C]">JV Group Ecosystem</strong>
@@ -126,12 +126,12 @@ export default function Navbar() {
           <span>Global B2B: India • UK • USA • Canada</span>
         </div>
 
-        <div className="flex items-center gap-3 font-semibold shrink-0">
+        <div className="flex items-center gap-2.5 xl:gap-3 font-semibold shrink-0">
           <a
             href="tel:+447344556070"
             className="hover:text-[var(--color-jv-orange)] transition-colors flex items-center gap-1.5"
           >
-            <Globe2 size={12} className="text-[var(--color-jv-orange)]" />
+            <Globe2 size={12} className="text-[var(--color-jv-orange)] shrink-0" />
             <span>Global: +44 7344556070</span>
           </a>
           <span className="text-[#CBD5E1]">|</span>
@@ -139,12 +139,12 @@ export default function Navbar() {
             href="tel:+919909700606"
             className="hover:text-[var(--color-jv-orange)] transition-colors flex items-center gap-1.5"
           >
-            <Phone size={12} className="text-[var(--color-jv-orange)]" />
+            <Phone size={12} className="text-[var(--color-jv-orange)] shrink-0" />
             <span>India: +91 99097 00606</span>
           </a>
           <Link
             href="/contact"
-            className="ml-2 px-3 py-1 rounded-full bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white text-[10px] font-bold tracking-wider uppercase hover:shadow-[0_2px_12px_rgba(243,99,35,0.4)] hover:-translate-y-0.5 transition-all flex items-center gap-1 whitespace-nowrap shadow-xs cursor-pointer"
+            className="ml-1 xl:ml-2 px-2.5 xl:px-3 py-0.5 xl:py-1 rounded-full bg-gradient-to-r from-[var(--color-jv-orange)] to-[#c2410c] text-white text-[9.5px] xl:text-[10px] font-bold tracking-wider uppercase hover:shadow-[0_2px_12px_rgba(243,99,35,0.4)] hover:-translate-y-0.5 transition-all flex items-center gap-1 whitespace-nowrap shadow-xs cursor-pointer"
           >
             <span>Partner With JV</span>
             <ArrowUpRight size={11} />
@@ -153,11 +153,11 @@ export default function Navbar() {
       </div>
 
       {/* Main Navigation Bar */}
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-2 xl:gap-4">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-5 lg:px-4 xl:px-6 2xl:px-8 flex items-center justify-between gap-1.5 lg:gap-2 xl:gap-3 2xl:gap-4">
         
         {/* Brand / Logo */}
-        <Link href="/" className="flex items-center gap-2.5 shrink-0 group">
-          <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white border border-[#E2E8F0] shadow-sm p-1 flex items-center justify-center overflow-hidden group-hover:border-[var(--color-jv-orange)] transition-colors shrink-0">
+        <Link href="/" className="flex items-center gap-2 xl:gap-2.5 shrink-0 group">
+          <div className="relative w-8 h-8 sm:w-9 sm:h-9 xl:w-10 xl:h-10 rounded-xl bg-white border border-[#E2E8F0] shadow-sm p-1 flex items-center justify-center overflow-hidden group-hover:border-[var(--color-jv-orange)] transition-colors shrink-0">
             <Image
               src="/jv-logo.jpg"
               alt="JV Group Logo"
@@ -168,28 +168,28 @@ export default function Navbar() {
             />
           </div>
           <div className="flex flex-col">
-            <span className="font-heading font-black text-base sm:text-lg tracking-tight text-[#18191C] group-hover:text-[var(--color-jv-orange)] transition-colors leading-none">
+            <span className="font-heading font-black text-sm sm:text-base xl:text-lg tracking-tight text-[#18191C] group-hover:text-[var(--color-jv-orange)] transition-colors leading-none">
               JV GROUP
             </span>
-            <span className="text-[8px] sm:text-[9px] tracking-[0.14em] uppercase text-[#64748B] font-bold mt-1">
+            <span className="text-[7.5px] sm:text-[8px] xl:text-[9px] tracking-[0.12em] xl:tracking-[0.14em] uppercase text-[#64748B] font-bold mt-0.5 xl:mt-1">
               Leadership With Trust
             </span>
           </div>
         </Link>
 
         {/* Desktop Single-Line Navigation (Comfortably fits on 100% zoom laptops) */}
-        <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1.5">
+        <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 2xl:gap-1.5">
           
           <Link
             href="/"
-            className="px-2.5 xl:px-3 py-1.5 rounded-lg text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all whitespace-nowrap"
+            className="px-1.5 lg:px-2 xl:px-2.5 2xl:px-3 py-1.5 rounded-lg text-[11px] xl:text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all whitespace-nowrap"
           >
             Home
           </Link>
 
           <Link
             href="/about"
-            className="px-2.5 xl:px-3 py-1.5 rounded-lg text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all whitespace-nowrap"
+            className="px-1.5 lg:px-2 xl:px-2.5 2xl:px-3 py-1.5 rounded-lg text-[11px] xl:text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all whitespace-nowrap"
           >
             About Us
           </Link>
@@ -200,19 +200,19 @@ export default function Navbar() {
               type="button"
               onClick={() => setBusinessDropdownOpen(!businessDropdownOpen)}
               onMouseEnter={() => setBusinessDropdownOpen(true)}
-              className={`px-2.5 xl:px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 whitespace-nowrap cursor-pointer ${
+              className={`px-1.5 lg:px-2 xl:px-2.5 2xl:px-3 py-1.5 rounded-lg text-[11px] xl:text-xs font-bold transition-all flex items-center gap-1 xl:gap-1.5 whitespace-nowrap cursor-pointer ${
                 businessDropdownOpen
                   ? "text-[var(--color-jv-orange)] bg-[#FFF4ED]"
                   : "text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED]"
               }`}
             >
               <span>Our Entities</span>
-              <span className="px-1.5 py-0.2 text-[9px] font-black rounded-full bg-[var(--color-jv-orange)] text-white">
+              <span className="px-1.5 py-0.5 text-[8px] xl:text-[9px] font-black rounded-full bg-[var(--color-jv-orange)] text-white">
                 9+
               </span>
               <ChevronDown
-                size={12}
-                className={`transition-transform duration-200 ${
+                size={11}
+                className={`transition-transform duration-200 xl:w-3 xl:h-3 ${
                   businessDropdownOpen ? "rotate-180" : ""
                 }`}
               />
@@ -222,7 +222,7 @@ export default function Navbar() {
             {businessDropdownOpen && (
               <div
                 onMouseLeave={() => setBusinessDropdownOpen(false)}
-                className="absolute top-full left-0 xl:left-1/2 xl:-translate-x-1/2 w-[720px] xl:w-[820px] max-w-[calc(100vw-32px)] mt-2 bg-white border border-[#E2E8F0] rounded-2xl shadow-[0_25px_60px_rgba(43,45,49,0.18)] p-4 sm:p-5 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
+                className="absolute top-full left-0 xl:-left-12 2xl:left-1/2 2xl:-translate-x-1/2 w-[720px] xl:w-[820px] max-w-[calc(100vw-32px)] mt-2 bg-white border border-[#E2E8F0] rounded-2xl shadow-[0_25px_60px_rgba(43,45,49,0.18)] p-4 sm:p-5 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
               >
                 {/* Header & Search */}
                 <div className="flex items-center justify-between pb-3.5 mb-3.5 border-b border-[#E2E8F0]">
@@ -309,66 +309,66 @@ export default function Navbar() {
 
           <Link
             href="/ecosystem"
-            className="px-2.5 xl:px-3 py-1.5 rounded-lg text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all whitespace-nowrap"
+            className="px-1.5 lg:px-2 xl:px-2.5 2xl:px-3 py-1.5 rounded-lg text-[11px] xl:text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all whitespace-nowrap"
           >
             Ecosystem
           </Link>
 
           <Link
             href="/services"
-            className="px-2.5 xl:px-3 py-1.5 rounded-lg text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all whitespace-nowrap"
+            className="px-1.5 lg:px-2 xl:px-2.5 2xl:px-3 py-1.5 rounded-lg text-[11px] xl:text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all whitespace-nowrap"
           >
             Services
           </Link>
 
           <Link
             href="/ai-seo"
-            className="px-2.5 xl:px-3 py-1.5 rounded-lg text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all flex items-center gap-1 whitespace-nowrap"
+            className="px-1.5 lg:px-2 xl:px-2.5 2xl:px-3 py-1.5 rounded-lg text-[11px] xl:text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all flex items-center gap-1 whitespace-nowrap"
           >
             <span>AI SEO / GEO</span>
-            <span className="text-[8px] font-black uppercase px-1 py-0.2 rounded bg-[var(--color-jv-orange)] text-white">
+            <span className="text-[7.5px] xl:text-[8px] font-black uppercase px-1 py-0.5 rounded bg-[var(--color-jv-orange)] text-white">
               AI
             </span>
           </Link>
 
           <Link
             href="/blog"
-            className="px-2.5 xl:px-3 py-1.5 rounded-lg text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all whitespace-nowrap"
+            className="px-1.5 lg:px-2 xl:px-2.5 2xl:px-3 py-1.5 rounded-lg text-[11px] xl:text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all whitespace-nowrap"
           >
             Blog
           </Link>
 
           <Link
             href="/global"
-            className="px-2.5 xl:px-3 py-1.5 rounded-lg text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all flex items-center gap-1 whitespace-nowrap"
+            className="px-1.5 lg:px-2 xl:px-2.5 2xl:px-3 py-1.5 rounded-lg text-[11px] xl:text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all flex items-center gap-1 whitespace-nowrap"
           >
             <span>Global B2B</span>
-            <span className="text-[8px] font-black uppercase px-1 py-0.2 rounded bg-[#FFF4ED] text-[var(--color-jv-orange)] border border-[var(--color-jv-orange)]/25">
+            <span className="text-[7.5px] xl:text-[8px] font-black uppercase px-1 py-0.5 rounded bg-[#FFF4ED] text-[var(--color-jv-orange)] border border-[var(--color-jv-orange)]/25">
               USA/UK
             </span>
           </Link>
 
           <Link
             href="/contact"
-            className="px-2.5 xl:px-3 py-1.5 rounded-lg text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all whitespace-nowrap"
+            className="px-1.5 lg:px-2 xl:px-2.5 2xl:px-3 py-1.5 rounded-lg text-[11px] xl:text-xs font-bold text-[#2B2D31] hover:text-[var(--color-jv-orange)] hover:bg-[#FFF4ED] transition-all whitespace-nowrap"
           >
             Contact
           </Link>
         </nav>
 
         {/* Right Action Area (Clean & Always Inside Display on 100% Zoom) */}
-        <div className="hidden lg:flex items-center gap-2 xl:gap-2.5 shrink-0">
+        <div className="hidden lg:flex items-center gap-1.5 xl:gap-2.5 shrink-0">
           
           {/* Quick Phone Hotline Button */}
           <div className="relative" ref={phoneRef}>
             <button
               type="button"
               onClick={() => setPhoneDropdownOpen(!phoneDropdownOpen)}
-              className="px-3 py-2 rounded-xl bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#18191C] hover:text-[var(--color-jv-orange)] text-xs font-bold border border-[#E2E8F0] flex items-center gap-2 transition-all whitespace-nowrap cursor-pointer shadow-xs"
+              className="px-2.5 xl:px-3 py-1.5 xl:py-2 rounded-xl bg-[#F8FAFC] hover:bg-[#FFF4ED] text-[#18191C] hover:text-[var(--color-jv-orange)] text-[11px] xl:text-xs font-bold border border-[#E2E8F0] flex items-center gap-1.5 xl:gap-2 transition-all whitespace-nowrap cursor-pointer shadow-xs"
             >
-              <Phone size={13} className="text-[var(--color-jv-orange)]" />
+              <Phone size={12} className="xl:w-3.5 xl:h-3.5 text-[var(--color-jv-orange)] shrink-0" />
               <span>+91 99097 00606</span>
-              <ChevronDown size={11} className="text-[#64748B]" />
+              <ChevronDown size={10} className="xl:w-3 xl:h-3 text-[#64748B] shrink-0" />
             </button>
 
             {/* Quick Hotline Dropdown */}
