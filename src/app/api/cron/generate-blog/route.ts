@@ -1,13 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 import { generateDailyBlogPost } from "@/lib/blogGenerator";
+import { getBlogPipelineDiagnostics } from "@/lib/blogService";
 
 export async function GET(req: NextRequest) {
   try {
     const post = generateDailyBlogPost(new Date());
+    const diagnostics = getBlogPipelineDiagnostics();
 
     return NextResponse.json({
       success: true,
-      message: "Daily 5:30 AM IST (00:00 UTC) AI SEO & GEO Blog verified & prepared.",
+      pipeline: diagnostics,
+      message: "2-Stage Pipeline: Stage 1 Draft (05:15 AM IST) & Stage 2 Public Unlock (05:30 AM IST / 00:00 UTC) active.",
       timestamp: new Date().toISOString(),
       post: {
         id: post.id,
