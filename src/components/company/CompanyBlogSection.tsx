@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { BookOpen, ArrowRight, Clock, Calendar, MapPin, Sparkles } from "lucide-react";
 import { BusinessEntity } from "@/data/businesses";
-import { INITIAL_BLOG_POSTS } from "@/data/blogPosts";
+import { getLiveBlogPosts } from "@/lib/blogService";
 import { BlogPost } from "@/types/blog";
 
 interface Props {
@@ -13,15 +13,17 @@ interface Props {
 }
 
 export default function CompanyBlogSection({ entity }: Props) {
+  const allPosts = getLiveBlogPosts();
+
   // Find posts directly associated with this entity or fallback to top ecosystem posts
-  const directMatches = INITIAL_BLOG_POSTS.filter(
+  const directMatches = allPosts.filter(
     (post) =>
       post.targetEntityId === entity.id ||
       post.targetEntityName.toLowerCase().includes(entity.shortName.toLowerCase()) ||
       post.targetEntityName.toLowerCase().includes(entity.id.toLowerCase())
   );
 
-  const otherPosts = INITIAL_BLOG_POSTS.filter(
+  const otherPosts = allPosts.filter(
     (post) => !directMatches.some((m) => m.id === post.id)
   );
 

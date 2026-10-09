@@ -3,12 +3,13 @@
 import React, { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { Search, Sparkles, Filter, Building2, BookOpen, Mail, CheckCircle2, ArrowRight, Check } from "lucide-react";
-import { INITIAL_BLOG_POSTS } from "@/data/blogPosts";
+import { getLiveBlogPosts } from "@/lib/blogService";
 import { BUSINESS_ENTITIES } from "@/data/businesses";
 import BlogCard from "@/components/blog/BlogCard";
 import FeaturedBlogHero from "@/components/blog/FeaturedBlogHero";
 
 export default function BlogListingPage() {
+  const [allPosts, setAllPosts] = useState(() => getLiveBlogPosts());
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [selectedEntity, setSelectedEntity] = useState<string>("All");
@@ -26,9 +27,14 @@ export default function BlogListingPage() {
     "Overseas Higher Education"
   ];
 
+  // Refresh posts on mount to match exact India client time
+  useEffect(() => {
+    setAllPosts(getLiveBlogPosts());
+  }, []);
+
   // Filter posts
   const filteredPosts = useMemo(() => {
-    return INITIAL_BLOG_POSTS.filter((post) => {
+    return allPosts.filter((post) => {
       // Category filter
       if (selectedCategory !== "All" && post.category !== selectedCategory) {
         return false;
@@ -50,9 +56,9 @@ export default function BlogListingPage() {
       }
       return true;
     });
-  }, [searchQuery, selectedCategory, selectedEntity]);
+  }, [allPosts, searchQuery, selectedCategory, selectedEntity]);
 
-  const featuredPost = INITIAL_BLOG_POSTS.find((p) => p.isFeatured) || INITIAL_BLOG_POSTS[0];
+  const featuredPost = allPosts.find((p) => p.isFeatured) || allPosts[0];
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();

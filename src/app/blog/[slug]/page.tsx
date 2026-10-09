@@ -19,26 +19,29 @@ import {
   Zap,
   Quote
 } from "lucide-react";
-import { INITIAL_BLOG_POSTS } from "@/data/blogPosts";
+import { getLiveBlogPosts, getBlogPostBySlug } from "@/lib/blogService";
 import BlogJsonLd from "@/components/blog/BlogJsonLd";
 import NativeAdBanner from "@/components/blog/NativeAdBanner";
 import AdvantagesDisadvantagesMatrix from "@/components/blog/AdvantagesDisadvantagesMatrix";
 import GeographicImpactBox from "@/components/blog/GeographicImpactBox";
 import BlogCard from "@/components/blog/BlogCard";
 
+export const dynamicParams = true;
+export const revalidate = 60;
+
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return INITIAL_BLOG_POSTS.map((post) => ({
+  return getLiveBlogPosts().map((post) => ({
     slug: post.slug
   }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = INITIAL_BLOG_POSTS.find((p) => p.slug === slug);
+  const post = getBlogPostBySlug(slug);
 
   if (!post) {
     return {
@@ -83,13 +86,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function BlogPostDetailPage({ params }: Props) {
   const { slug } = await params;
-  const post = INITIAL_BLOG_POSTS.find((p) => p.slug === slug);
+  const post = getBlogPostBySlug(slug);
 
   if (!post) {
     notFound();
   }
 
-  const relatedPosts = INITIAL_BLOG_POSTS.filter((p) => p.slug !== post.slug).slice(0, 3);
+  const allPosts = getLiveBlogPosts();
+  const relatedPosts = allPosts.filter((p) => p.slug !== post.slug).slice(0, 3);
 
   return (
     <article className="w-full min-h-screen bg-white text-slate-900 font-sans selection:bg-[var(--color-jv-orange)] selection:text-white">

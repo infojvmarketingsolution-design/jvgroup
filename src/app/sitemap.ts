@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 import { BUSINESS_ENTITIES } from "@/data/businesses";
-import { INITIAL_BLOG_POSTS } from "@/data/blogPosts";
+import { getLiveBlogPosts } from "@/lib/blogService";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://jvgroupco.in";
@@ -80,7 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
 
   // Dynamic Daily AI & SEO Blog Post Routes
-  const blogRoutes: MetadataRoute.Sitemap = INITIAL_BLOG_POSTS.map((post) => ({
+  const blogRoutes: MetadataRoute.Sitemap = getLiveBlogPosts().map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.updatedAt || post.publishedAt),
     changeFrequency: "daily",
